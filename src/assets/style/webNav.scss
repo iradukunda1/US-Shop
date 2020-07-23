@@ -1,0 +1,24 @@
+.web-nav-layout {
+  .header-content {
+    .nav-item{
+      p{
+        &:hover {
+          color: cornflowerblue;
+          border-bottom: 0.1rem solid black;
+        }
+      }
+    }
+  }
+  .header-options {
+    li {
+      list-style: none;
+      margin-right: 1em;
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+      &:hover {
+        color: gray;
+      }
+    }
+  }
+}

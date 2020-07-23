@@ -1,0 +1,44 @@
+.footer-classic {
+  background: rgb(248, 248, 248);
+  .context-dark,
+  .bg-gray-dark,
+  .bg-primary {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .nav-list li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .nav-list li a:hover:before {
+    margin-left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  ul,
+  ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-links{
+    router-link{
+      color:black;
+      &:hover {
+        color: #0076ad;
+        border-bottom: 1px solid blue;
+      }
+    }
+  }
+  .terms-policy {
+    p {
+      margin-bottom: 0;
+      cursor: pointer;
+      &:hover {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+}
