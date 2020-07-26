@@ -1,6 +1,6 @@
 <template>
   <div class="cardTemplate h-100 w-100">
-    <div class="card mb-4 shadow-sm h-100" id="img-card">
+    <div class="card mb-4 shadow-sm h-100" id="img-card" @click="navigateProductDetail(item)">
       <div class="set-data">
         <div class="img-set-data">
           <img :src="item.images_urls[0]" />
@@ -62,6 +62,7 @@ export default {
   },
   computed: mapState(["loggedUser"]),
   methods: {
+    
     navigateProductDetail(product) {
       this.$router.push("products/" + product.id);
       this.$store.dispatch("setResources", ["product", product]);

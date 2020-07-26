@@ -1,150 +1,184 @@
 <template>
-  <div class="product-details w-100 position-relative" v-if="product.id && !processing">
-    <div class="container ">
-      <div class="row py-3">
-        <div class="preview col-md-6">
-          <div class="preview-pic tab-content">
-            <div class="tab-pane active" id="pic-1">
-              <img src="/img/tsapal3.jpg" />
+  <div class="product-details w-100 h-100 position-relative">
+    <discount-ads />
+    <div class="product-detail-container" v-if="product.id && !processing">
+      <div class="images-views">
+        <div class="images-container d-inline-flex w-75" style="height: 35rem;">
+          <img
+            class="profile-image w-100 h-100 d-block"
+            :src="product.images_urls[0]"
+          />
+          <div class="image-discount-desc  position-absolute d-flex w-100">
+            <div class="d-block">
+              <div
+                class="back-button text-white p-2 m-2"
+                @click="$router.go(-1)"
+              >
+                <i class="fa fa-angle-left"></i> BACK
+              </div>
+              <div class="images-list-container mt-5">
+                <ul class="images-list pl-0">
+                  <li
+                    v-for="(image, index) in product.images_urls"
+                    :key="index"
+                    class="image-list "
+                  >
+                    <span
+                      class="profile d-block m-2"
+                      :style="{
+                        backgroundImage: 'url(' + image + ')'
+                      }"
+                    ></span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="tab-pane" id="pic-2"><img src="/img/2.jpg" /></div>
-            <div class="tab-pane" id="pic-3"><img src="/img/3.jpg" /></div>
-            <div class="tab-pane" id="pic-4"><img src="/img/4.jpg" /></div>
-            <div class="tab-pane" id="pic-5"><img src="/img/2.jpg" /></div>
+            <div class="cart-container ml-auto">
+              <div
+                class="cart-card-container mt-3 bg-white border-left border-top border-bottom"
+              >
+                <div class="cart-content px-4 py-3">
+                  <p class="h3">{{ product.name }}</p>
+                  <p class="d-flex pt-2">
+                    <span class="fa-12 pr-2">price</span>
+                    {{ product.price + product.currency }}
+                    <span
+                      class="pl-2 text-danger fa-14"
+                      style="text-decoration: line-through"
+                      >{{ product.price + 4 }}FRW</span
+                    >
+                  </p>
+                  <p class="fa-14 d-flex">
+                    Or 4 payments of
+                    <span class="font-weight-bold px-2">$13.20</span> by after
+                    <span class="font-weight-bold pl-1"
+                      >pay <i class="fa text-info fa-chain-broken"></i
+                    ></span>
+                  </p>
+                  <p class="h4 g-text py-2 fa">AFTER DISCOUNT</p>
+                  <div class="option-price">
+                    <p class="font-weight-bold fa-13">SELECT AN OPTION</p>
+                    <div
+                      class="option-lists"
+                      v-for="(product, index) in products"
+                      :key="index"
+                    >
+                      <div class="d-flex rounded option-list my-2">
+                        <span
+                          class="cart-profile d-block"
+                          :style="{
+                            backgroundImage:
+                              'url(' + product.images_urls[0] + ')'
+                          }"
+                        ></span>
+                        <div class="option-list-desc ml-3">
+                          <p class="font-weight-bold fa-13 mb-0">
+                            {{ product.quality }}
+                          </p>
+                          <p class="fa-14 mb-0">{{ product.option }}</p>
+                          <p class="mb-0">
+                            <span class="font-weight-bold fa-14">{{
+                              product.price + product.currency
+                            }}</span
+                            ><span
+                              class="text-muted fa-13 ml-2"
+                              style="text-decoration: line-through"
+                              >{{ product.price + 10 + product.currency }}
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="submit-cart">
+                    <div
+                      class="bg-button text-white fa fa-14 mt-4 rounded-0 w-100 btn p-2"
+                    >
+                      ADD TO CART
+                    </div>
+                    <p class="d-block pt-4">
+                      <span class="fa">Delivering to:</span><br />
+                      12345 on Sunday, July 26
+                      <span class="text-info cursor-pointer pl-2">Edit</span>
+                    </p>
+                    <p class="mb-0 py-2">
+                      <i class="fa fa-star text-info pr-1"></i>Arranged &
+                      Delivered By Florist
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <ul class="preview-thumbnail nav nav-tabs">
-            <li class="active">
-              <a data-target="#pic-1" data-toggle="tab"
-                ><img src="/img/tsapal3.jpg" class="w-100 h-50"
-              /></a>
-            </li>
-            <li>
-              <a data-target="#pic-2" data-toggle="tab"
-                ><img src="/img/2.jpg" class="w-100 h-50"
-              /></a>
-            </li>
-            <li>
-              <a data-target="#pic-3" data-toggle="tab"
-                ><img src="/img/3.jpg" class="w-100 h-50"
-              /></a>
-            </li>
-            <li>
-              <a data-target="#pic-4" data-toggle="tab"
-                ><img src="/img/4.jpg" class="w-100 h-50"
-              /></a>
-            </li>
-            <li>
-              <a data-target="#pic-5" data-toggle="tab"
-                ><img src="/img/2.jpg"
-              /></a>
-            </li>
-          </ul>
         </div>
-        <div class=" col-md-6">
-          <h3 class="product-title">{{ product.name }}</h3>
-          <div class="rating d-inline-block mb-0">
-            <div
-              class="total-stars"
-              :style="{ '--rating': productRatings }"
-            ></div>
-            <p class="review-no">
-              {{ product.comments && product.comments.length || "0" }} review{{
-               product.comments && product.comments.length > 1 ? "s" : ""
-              }}
+      </div>
+      <div class="product-description d-flex mx-0 mt-5">
+        <div class="col-md-5">
+          <p class="description text-justify pb-4">{{ product.description }}</p>
+          <div class="d-flex justify-content-between">
+            <ul class="pl-3">
+              <p class="font-weight-bold f-12">DETAILS</p>
+              <li class="fa-12 pb-2">
+                Better bouquet is approximately 11"H x 14"W
+              </li>
+              <li class="fa-12 pb-2">
+                The vase shown may be substituted with an available one of a
+                similar look, feel and value.
+              </li>
+            </ul>
+            <ul>
+              <p class="font-weight-bold f-12">STEMS</p>
+              <li class="fa-12 pb-2">Carnation</li>
+              <li class="fa-12 pb-2">Rose</li>
+              <li class="fa-12 pb-2">Sunflower</li>
+            </ul>
+          </div>
+          <p class="fa-13">ITEM {{ "   " + product.code }}</p>
+        </div>
+        <div class="col-md-7 px-0">
+          <div class="d-flex pb-4">
+            <p class="mb-0 rounded-circle bg-car-green px-2 py-3 my-auto mx-5">
+              <i class="fa pt-2 mt-1 px-3 fa-truck-moving"></i>
             </p>
+            <div class="px-1">
+              <p class="font-weight-bold">FRESH & SAFE DELIVERY</p>
+              <p class="text-justify fa-14">
+                The health and safety of our customers, florists and growers is
+                top priority. During this time, we will not require a signature
+                for delivery. All orders will no longer be hand delivered, but
+                be left at the front door with no contact and (as always) ready
+                to delight.
+              </p>
+            </div>
           </div>
-          <p class="product-description">{{ product.description }}</p>
-          <h4 class="price">
-            current price:
-            <span>{{ product.price + "" + product.currency }}</span>
-          </h4>
-          <p class="vote">
-            <strong>{{ productRatings * 100 || "10" }}%</strong> of buyers
-            enjoyed this product!
-            <strong>(87 votes)</strong>
-          </p>
-          <h6 class="sizes">
-            Quantity Available:
-            <span class="pl-1" data-toggle="tooltip" title="small">{{
-              product.stock
-            }}</span>
-          </h6>
-          <h5 class="colors">
-            colors:
-            <span
-              class="color orange not-available"
-              data-toggle="tooltip"
-              title="Not In store"
-            ></span>
-            <span class="color green"></span>
-            <span class="color blue"></span>
-          </h5>
-          <div class="action">
-            <button
-              class="add-to-cart btn btn-primary mr-1"
-              type="button"
-              @click="addToCart(product)"
-            >
-              add to cart <i class="fas fa-cart-plus"></i>
-            </button>
+          <div class="d-flex pb-4">
+            <p class="mb-0 rounded-circle bg-car-green px-2 py-3 my-auto mx-5">
+              <i class="fa fa-cannabis pt-2 px-3"></i>
+            </p>
+            <div class="px-1">
+              <p class="font-weight-bold">FRESHNESS FIRST</p>
+              <p class="text-justify fa-14">
+                Our bouquets are made of fresh cut flowers. To ensure your
+                bouquet is fresh and high quality, occasionally our expert
+                florists may make substitutions of color or flower variety.
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="ft-container mx-2">
-      <div class="feat">
-        <span class="txt-ft" aria-current="page">SIMILAR PRODUCTS</span>
-      </div>
-      <card-loader :loopCount="4" v-if="loading" />
-    </div>
-    <div class="row justify-content-around h-100 m-2">
-      <div
-        class="d-inline-block m-1"
-        v-for="(item, index) in similarProduct"
-        :key="index"
-      >
-        <card-template :item="item" />
-      </div>
-    </div>
-    <div class="comments mx-3 px-2" v-if="product.comments && product.comments.length">
-      <div class="ft-container mx-2">
-        <div class="feat">
-          <span class="txt-ft" aria-current="page">COMMENTS</span>
-        </div>
-      </div>
-      <div
-        class="row border-bottom mx-5 py-2"
-        id="products_comments"
-        v-for="(comment, index) in product.comments"
-        :key="index"
-      >
-        <div class="left-side">
-          <div class="d-flex ratings-stars">
-            <p class="fa mb-0 pb-2">Rating:</p>
-            <div
-              class="stars-icons"
-              :style="{ '--rating': comment.rating }"
-            ></div>
-          </div>
-          <p class="comment-content">{{ comment.content }}</p>
-        </div>
-        <div class="right-side ml-auto mt-auto d-flex">
-          Created by:
-          <p class="text-muted text-capitalize">{{ comment.user.username }}</p>
         </div>
       </div>
     </div>
   </div>
 </template>
-
 <script>
-  /* eslint-disable */
-import { mapGetters, mapActions, mapMutations } from "vuex";
+/* eslint-disable */
+
+import discountAds from "../shared/discount-ads";
+import { mapGetters, mapMutations } from "vuex";
 import CardTemplate from "../shared/CardTemplate";
 import {
   infoToaster,
   successToaster,
-  errorToaster,
+  errorToaster
 } from "../../components/shared/service/ErrorHandler.js";
 import _ from "lodash";
 
@@ -152,66 +186,67 @@ export default {
   name: "productDetail",
   components: {
     CardTemplate,
+    discountAds
   },
   data() {
     return {
       loading: false,
-      similarProduct: [
+      products: [
         {
-          image: "/img/1.jpg",
-          id: "12893276",
+          id: "2ghfg-12324-356tuiyuds-dfghj-ghfgu78i",
+          images_urls: ["/img/10.jpg", "/img/4.jpg", "/img/17.jpg"],
           description:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo velit blanditiis voluptate doloremque nihil fuga.",
-          name: "Kamambiri",
-          price: "100",
-          stock: "12",
-          currency: "Frw",
-        },
-        {
-          image: "/img/2.jpg",
-          id: "0978436",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo velit blanditiis voluptate doloremque nihil fuga.",
-          name: "Sandal",
-          price: "600",
-          stock: "12",
-          currency: "Frw",
-        },
-        {
-          image: "/img/3.jpg",
-          id: "8732576491",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo velit blanditiis voluptate doloremque nihil fuga.",
-          name: "Umoja",
-          price: "400",
-          stock: "12",
-          currency: "Frw",
-        },
-        {
-          id: "423r7202bhj",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo velit blanditiis voluptate doloremque nihil fuga.",
-          name: "Slippers",
+          name: "The grail of love",
           price: "150",
-          stock: "12",
-          currency: "Frw",
+          currency: "FRW",
+          code: "#KH-45",
+          option: "Beauty Louis",
+          offerPrice: "100$",
+          quality: "GOOD"
         },
-      ],
+        {
+          id: "2ghfg-12324-356tuiyuds-dfghjyiu7-@klj8i",
+          images_urls: ["/img/1.jpg", "/img/13.jpg", "/img/14.jpg"],
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo velit blanditiis voluptate doloremque nihil fuga.",
+          name: "Floeur de lotus",
+          price: "100",
+          currency: "FRW",
+          code: "DE#-56RT",
+          option: "Simple & sweet",
+          quality: "BEST",
+          offerPrice: "80$"
+        },
+        {
+          id: "2ghfg-12324-356tuiyuds-dfghjbnv765-yiutyuu78i",
+          images_urls: ["/img/3.jpg", "/img/12.jpg", "/img/8.jpg"],
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo velit blanditiis voluptate doloremque nihil fuga.",
+          name: "Spray of the sun",
+          price: "300",
+          currency: "FRW",
+          code: "#POQU-34R",
+          option: "Full & lush",
+          quality: "BETTER",
+          offerPrice: "200$"
+        }
+      ]
     };
   },
   methods: {
     fetchProduct() {
       const productId = this.$route.params.id;
       this.loader(true, {
-        context: "fetching  product detailes....",
-        area: "app",
+        context: "fetching  product details....",
+        area: "app"
       }),
         this.$store
           .dispatch("fetchProduct", productId)
-          .then((res) => {
+          .then(() => {
             this.loader(false);
           })
-          .catch((err) => {
+          .catch(() => {
             this.loader(false);
             errorToaster(
               "Error while fetching",
@@ -220,18 +255,6 @@ export default {
           });
     },
 
-    getSimilarProduct(productSeller) {
-      axios
-        .get(`${process.env.VUE_APP_BASE_URL}/products/similarProduct`, {
-          params: { productSeller: productSeller },
-        })
-        .then((response) => {
-          this.similarProduct = response.data;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    },
     ...mapMutations(["ADD_CART_LOCAL"]),
 
     addToCart(product) {
@@ -248,323 +271,95 @@ export default {
         );
         this.ADD_CART_LOCAL(product);
       }
-    },
+    }
   },
   computed: {
     ...mapGetters(["resources"]),
 
     product() {
       return this.resources.product;
-    },
-    productRatings() {
-      var totalRating = 0.0;
-      var commentsLength = this.product.comments.length * 5;
-      this.product.comments.forEach((comment) => {
-        totalRating += parseFloat(comment.rating);
-      });
-      var divisionOFComments = totalRating / commentsLength;
-      return divisionOFComments;
-    },
+    }
   },
   mounted() {
-    this.fetchProduct();
+    // this.fetchProduct();
   },
-  created() {
-    // this.$axios
-    //     .get(/products/${this.$route.params.id})
-    //     .then(response => {
-    //         this.product = response.data;
-    //         const starTotal = 5;
-    //         const starPercentage =
-    //             (Number(this.product.productRating) / starTotal) * 100;
-    //         const starPercentageRounded = `${Math.round(starPercentage / 10) *
-    //         10}%`;
-    //         document.querySelector(
-    //             `.stars-inner`
-    //         ).style.width = starPercentageRounded;
-    //
-    //         this.getSimilarProduct(this.product.productSeller);
-    //     })
-    //     .catch(error => {
-    //         console.log(error);
-    //         errorToaster("Error while fetching similar products", "");
-    //     });
-  },
+  created() {}
 };
 </script>
 
 <style lang="scss" scoped>
 .product-details {
-  .ft-container {
-    padding: 1em;
-
-    .feat {
-      border: 1px solid gainsboro;
-      height: 30px;
-      padding-top: 2px;
-
-      .txt-ft {
-        font-weight: bold;
-        color: #aba8a8;
-        font-family: "roboto";
-        font-size: 18px;
-        float: left;
-        margin-left: 1em;
+  .image-discount-desc {
+    .back-button {
+      border: 2px solid rgb(0, 124, 173);
+      cursor: pointer;
+      &:hover {
+        color: white;
+        background: rgb(0, 124, 173);
       }
     }
   }
-  .stars-icons {
-    --percent: calc(var(--rating) / 5 * 100%);
-    display: inline-block;
-    font-size: 20px;
-    font-family: Times;
-    line-height: 1;
-    &::before {
-      content: "★★★★★";
-      letter-spacing: 3px;
-      background: linear-gradient(
-        90deg,
-        yellow var(--percent),
-        black var(--percent)
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+  .cart-container {
+    .cart-card-container {
+      width: 25rem;
+      min-height: 40rem;
+      .cart-content {
+        height: calc(100vh - 58px);
+        overflow-y: overlay;
+      }
+      .cart-content::-webkit-scrollbar {
+        width: 8px;
+        background-color: transparent;
+      }
+      .cart-content::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 1, 53, 0.74);
+        border-radius: 35px;
+      }
+      .cart-content::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
     }
   }
-  .product-details {
-    background-color: white;
-    border: 1px solid gainsboro;
-  }
-
-  .preview {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  .total-stars {
-    --percent: calc(var(--rating) * 100%);
-    display: inline-block;
-    font-size: 40px;
-    font-family: Times;
-    line-height: 1;
-    &::before {
-      content: "★★★★★";
-      letter-spacing: 3px;
-      background: linear-gradient(
-        90deg,
-        yellow var(--percent),
-        black var(--percent)
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+  .images-list-container {
+    li {
+      list-style: none;
+      cursor: pointer;
+      .profile {
+        width: 60px;
+        height: 60px;
+        border: 2px solid lightcyan;
+        background-color: black;
+        background-size: cover;
+      }
+      &:hover {
+        color: gray;
+      }
     }
   }
-  @media screen and (max-width: 996px) {
-    .preview {
-      margin-bottom: 20px;
+  .option-list {
+    border: 2px solid gray;
+    cursor: pointer;
+    &:hover {
+      border: 2px solid rgb(0, 124, 173);
+    }
+    .cart-profile {
+      width: 70px;
+      height: 70px;
+      background-color: black;
+      background-size: cover;
     }
   }
-
-  .preview-pic {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
+  .product-description {
+    width: 54rem;
   }
-
-  .preview-thumbnail.nav-tabs {
-    border: none;
-    margin-top: 15px;
-  }
-
-  .preview-thumbnail.nav-tabs li {
-    width: 18%;
-    margin-right: 2.5%;
-  }
-
-  .preview-thumbnail.nav-tabs li img {
-    max-width: 100%;
-    display: block;
-  }
-
-  .preview-thumbnail.nav-tabs li a {
-    padding: 0;
-    margin: 0;
-  }
-
-  .preview-thumbnail.nav-tabs li:last-of-type {
-    margin-right: 0;
-  }
-
-  .tab-content {
-    overflow: hidden;
-  }
-
-  .tab-content img {
-    max-height: 370px;
-    width: 100%;
-    -webkit-animation-name: opacity;
-    animation-name: opacity;
-    -webkit-animation-duration: 0.3s;
-    animation-duration: 0.3s;
-  }
-
-  .card {
-    padding: 3em;
-    line-height: 1.5em;
-    border: none;
-    font-family: "Roboto", sans-serif;
-  }
-
-  @media screen and (min-width: 997px) {
-    .wrapper {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-    }
-  }
-
-  .details {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  .colors {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-  }
-
-  .product-title,
-  .price,
-  .sizes,
-  .colors {
-    text-transform: UPPERCASE;
-    font-weight: bold;
-  }
-
-  .checked,
-  .price span {
-    color: #ff9f1a;
-  }
-
-  .product-title,
-  .rating,
-  .product-description,
-  .price,
-  .vote,
-  .sizes {
-    margin-bottom: 15px;
-  }
-
-  .product-title {
-    margin-top: 0;
-  }
-
-  .size {
-    margin-right: 4px;
-  }
-
-  .size:first-of-type {
-    margin-left: 40px;
-  }
-
-  .color {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
-    height: 2em;
-    width: 2em;
-    border-radius: 2px;
-  }
-
-  .color:first-of-type {
-    margin-left: 20px;
-  }
-
-  .add-to-cart,
-  .like {
-    border: none;
-    text-transform: UPPERCASE;
-    font-weight: bold;
-    font-size: 0.8em;
-    color: #fff;
-    -webkit-transition: background 0.3s ease;
-    transition: background 0.3s ease;
-  }
-
-  .add-to-cart:hover,
-  .like:hover {
-    background: #b36800;
-    color: #fff;
-  }
-
-  .not-available {
+  .bg-car-green {
+    width: 100px;
+    height: 100px;
+    border: transparent;
+    background: #ced847;
     text-align: center;
-    line-height: 2em;
-  }
-
-  .not-available:before {
-    font-size: 13px;
-    font-family: fontawesome;
-    content: "\f00d";
-    color: #fff;
-  }
-
-  .orange {
-    background: #ff9f1a;
-  }
-
-  .green {
-    background: #85ad00;
-  }
-
-  .blue {
-    background: #0076ad;
-  }
-
-  .tooltip-inner {
-    padding: 1.3em;
-  }
-
-  @-webkit-keyframes opacity {
-    0% {
-      opacity: 0;
-      -webkit-transform: scale(3);
-      transform: scale(3);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: scale(1);
-      transform: scale(1);
-    }
-  }
-
-  @keyframes opacity {
-    0% {
-      opacity: 0;
-      -webkit-transform: scale(3);
-      transform: scale(3);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: scale(1);
-      transform: scale(1);
+    i {
+      font-size: 46px;
     }
   }
 }

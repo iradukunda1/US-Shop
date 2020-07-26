@@ -81,10 +81,19 @@ export default {
 .c-default {
   color: rgba(192, 0, 139, 0.93);
 }
-.fa-15 {
-  font-size: 1.3rem;
+.g-text {
+  color: #ced847;
 }
 .fa-12 {
   font-size: 12px;
+}
+.fa-13 {
+  font-size: 13px;
+}
+.fa-14 {
+  font-size: 14px;
+}
+.fa-15 {
+  font-size: 1.3rem;
 }
 </style>
