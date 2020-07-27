@@ -10,7 +10,7 @@
       </div>
       <div class="header-content d-flex ml-auto mt-3">
         <div class="nav-item" @click="$router.push('/')">
-          <p class="p-3 cursor-pointer mb-0">HOME</p>
+          <p class="p-3 cursor-pointer mb-0">SYMPATHY</p>
         </div>
         <div class="nav-item ">
           <p class="p-3 cursor-pointer mb-0">FLOWER</p>
@@ -19,10 +19,10 @@
           <p class="p-3 cursor-pointer mb-0">BIRTH-DAY</p>
         </div>
         <div class="nav-item ">
-          <p class="p-3 cursor-pointer mb-0">ABOUT</p>
+          <p class="p-3 cursor-pointer mb-0">ALL OCCASION</p>
         </div>
         <div class="nav-item">
-          <p class="p-3 cursor-pointer mb-0">CONTACT</p>
+          <p class="p-3 cursor-pointer mb-0">PLANTS & GIFTS</p>
         </div>
       </div>
       <div class="header-options ml-auto mt-3">
