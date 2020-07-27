@@ -49,19 +49,19 @@ export default {
 </style>
 <style scoped lang="scss">
 .extra-list-view {
-  width: 80%;
+  width: 100%;
   right: 0;
   top: 0;
   bottom: 0;
   height: 100vh;
   z-index: 20;
-  background: rgba(0, 0, 0, 0.004);
+  background: rgba(255, 107, 96, 0.04);
   font-family: "Roboto", sans-serif;
   .header-content-container {
     right: 0;
     top: 0;
     bottom: 0;
-    width: 45%;
+    width: 35%;
     .header {
       background: #f3f1f1;
       margin: auto;
