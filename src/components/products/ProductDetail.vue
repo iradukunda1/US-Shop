@@ -37,7 +37,7 @@
               <div
                 class="cart-card-container mt-3 bg-white border-left border-top border-bottom"
               >
-                <div class="cart-content px-4 py-3">
+                <div v-if="!deliveryForm" class="cart-content px-4 py-3">
                   <p class="h3">{{ product.name }}</p>
                   <p class="d-flex pt-2">
                     <span class="fa-12 pr-2">price</span>
@@ -99,13 +99,63 @@
                     <p class="d-block pt-4">
                       <span class="fa">Delivering to:</span><br />
                       12345 on Sunday, July 26
-                      <span class="text-info cursor-pointer pl-2">Edit</span>
+                      <span
+                        class="text-info cursor-pointer pl-2"
+                        @click="deliveryForm = !deliveryForm"
+                        >Edit</span
+                      >
                     </p>
                     <p class="mb-0 py-2">
                       <i class="fa fa-star text-info pr-1"></i>Arranged &
                       Delivered By Florist
                     </p>
                   </div>
+                </div>
+                <div class="delivery-location px-4 py-4" v-if="deliveryForm">
+                  <div class="delivery-header d-flex px-3">
+                    <div class="header-content">
+                      <p class="mb-0">Enter Location to</p>
+                      <p>Estimate Delivery</p>
+                    </div>
+                    <i
+                      class="fa fa-times cursor-pointer ml-auto fa-15"
+                      @click="deliveryForm = !deliveryForm"
+                    ></i>
+                  </div>
+                  <form @submit.prevent>
+                    <div class="mt-3 d-block">
+                      <label for="deliveryZip" class="col-md fa fa-12"
+                        >DELIVERY ZIP</label
+                      >
+                      <div class="col-md-12">
+                        <input
+                          id="deliveryZip"
+                          v-model="location.zip"
+                          class="form-control rounded-0  fa-12 py-4"
+                          placeholder="delivery zip ie:.097456"
+                          required
+                          autocomplete="off"
+                        />
+                      </div>
+                    </div>
+                    <div class="w-100 mt-2">
+                      <label class="col-md fa-12 fa">LOCATION TYPE</label>
+                      <div class="col-md-12" style="height: 50px">
+                        <b-form-select
+                          id="locationType"
+                          v-model="location.location"
+                          class="form-control cursor-pointer rounded-0  h-100"
+                          :options="locations"
+                        >
+                        </b-form-select>
+                      </div>
+                    </div>
+                    <div
+                      class="bg-button text-white fa-14 mt-5 fa rounded-0 col-md-12 btn py-2 px-4"
+                    >
+                      CONTINUE TO DELIVERY DATE
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -190,6 +240,18 @@ export default {
   },
   data() {
     return {
+      deliveryForm: false,
+      location:{
+        location:null
+      },
+      locations: [
+        { value: null, text: "Please select location", disabled: true},
+        { value: "0", text: "Home/Residence" },
+        { value: "1", text: "Business" },
+        { value: "2", text: "Apartment" },
+        { value: "3", text: "Funeral Home" },
+        { value: "4", text: "Other" }
+      ],
       loading: false,
       products: [
         {
@@ -300,8 +362,8 @@ export default {
     }
   }
   .cart-container {
+    width: 35%;
     .cart-card-container {
-      width: 25rem;
       min-height: 40rem;
       .cart-content {
         height: calc(100vh - 58px);
@@ -350,7 +412,7 @@ export default {
     }
   }
   .product-description {
-    width: 54rem;
+    width: 65%;
   }
   .bg-car-green {
     width: 100px;
