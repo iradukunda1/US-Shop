@@ -9,7 +9,7 @@
         <span class="small ml-5">an FTD company</span>
       </div>
       <div class="header-content d-flex ml-auto mt-3">
-        <div class="nav-item ">
+        <div class="nav-item" @click="$router.push('/')">
           <p class="p-3 cursor-pointer mb-0">HOME</p>
         </div>
         <div class="nav-item ">

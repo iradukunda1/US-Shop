@@ -1,4 +1,5 @@
-/ * eslint-disable */;
+/* eslint-disable */
+
 import Vue from "vue";
 import vueRouter from "vue-router";
 import store from "../store/index";
@@ -36,7 +37,7 @@ const router = new vueRouter({
           component: () => import("../views/About.vue")
         },
         {
-          path: "/productsDGF",
+          path: "/products",
           name: "Products",
           component: () => import("../views/Products.vue")
         },

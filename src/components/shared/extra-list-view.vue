@@ -49,7 +49,7 @@ export default {
 </style>
 <style scoped lang="scss">
 .extra-list-view {
-  width:80%;
+  width: 80%;
   right: 0;
   top: 0;
   bottom: 0;
