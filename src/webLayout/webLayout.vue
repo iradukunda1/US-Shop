@@ -55,6 +55,7 @@ export default {
     overflow: visible;
   }
   .web-content {
+    position: relative;
     grid-area: content;
     background: white;
     min-height: 306px;

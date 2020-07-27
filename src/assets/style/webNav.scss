@@ -6,6 +6,9 @@
           color: cornflowerblue;
           border-bottom: 0.1rem solid black;
         }
+        &:active{
+          color:blue
+        }
       }
     }
   }
