@@ -69,14 +69,14 @@ export default {
     },
     remove() {
       this.loading = true;
-      const products = JSON.parse(localStorage.getItem("iki-cart"));
+      const products = JSON.parse(localStorage.getItem("iki-purchase"));
       for (let i = 0; i < products.length; i++) {
         if (products[i].id === this.product.id) {
           products.splice(i, 1);
         }
       }
       this.SET_CART_PRODUCTS(products);
-      localStorage.setItem("iki-cart", JSON.stringify(products));
+      localStorage.setItem("iki-purchase", JSON.stringify(products));
       this.loading = false;
       this.$emit("remove-success", this.product);
     },
