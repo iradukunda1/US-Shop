@@ -294,7 +294,7 @@ export default {
         "Your Item Removed Successfully From Product Quantity List"
       );
       this.SET_CART_PRODUCTS(this.cartProducts);
-      localStorage.setItem("iki-cart", JSON.stringify(this.cartProducts));
+      localStorage.setItem("iki-purchase", JSON.stringify(this.cartProducts));
     },
 
     QtyProduct(item) {

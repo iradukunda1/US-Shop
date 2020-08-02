@@ -4,7 +4,7 @@ import router from "../router/index";
 import axios from "axios";
 
 export default {
-  /*------------------cart handler----------------*/
+  /*------------------purchase handler----------------*/
 
   SET_CART_PRODUCTS: (state, products) => {
     state.cartProducts = [];
@@ -12,7 +12,7 @@ export default {
   },
   ADD_CART_LOCAL: (state, product) => {
     state.cartProducts.push(product);
-    localStorage.setItem("iki-cart", JSON.stringify(state.cartProducts));
+    localStorage.setItem("iki-purchase", JSON.stringify(state.cartProducts));
   },
   ADD_ORDER_LOCAL: (state, product) => {
     state.orderProducts.push(product);

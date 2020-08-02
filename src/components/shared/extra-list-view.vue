@@ -14,6 +14,7 @@
       </div>
       <div class="different-content">
         <login v-if="title == 'Login'" />
+        <checkout v-if="title == 'checkout'" />
       </div>
     </div>
   </div>
@@ -21,10 +22,11 @@
 
 <script>
 /* eslint-disable */
+import checkout from "./checkout-form";
 import login from "../../views/login";
 export default {
   props: ["title"],
-  components: { login },
+  components: { login, checkout },
   name: "extra-list-view",
   methods: {
     close() {
@@ -34,19 +36,6 @@ export default {
   mounted() {}
 };
 </script>
-<style>
-.exchange-enter-active {
-  transition: all 0.8s ease;
-}
-.exchange-leave-active {
-  transition: all 0.1s ease;
-}
-.exchange-enter,
-.exchange-leave-to .exchange-leave-active {
-  transform: translateY(-20px);
-  opacity: 0;
-}
-</style>
 <style scoped lang="scss">
 .extra-list-view {
   width: 100%;

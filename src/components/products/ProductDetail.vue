@@ -71,7 +71,7 @@
                             class="cart-profile d-block"
                             :style="{
                               backgroundImage:
-                                'url(' + product.images_urls[0] + ')'
+                                'url(' + product.images_urls[2] + ')'
                             }"
                           ></span>
                           <div class="option-list-desc ml-3">
@@ -96,7 +96,7 @@
                     <div class="submit-cart">
                       <div
                         class="bg-button text-white fa fa-14 mt-4 rounded-0 w-100 btn p-2"
-                        @click="deliveryForm = !deliveryForm"
+                        @click="addToCart"
                       >
                         ADD TO CART
                       </div>
@@ -411,9 +411,26 @@ export default {
     };
   },
   methods: {
+    ...mapMutations(["ADD_CART_LOCAL"]),
+    addToCart() {
+      this.deliveryForm = !this.deliveryForm
+      const data = _.find(this.$store.getters.cartProducts, this.product);
+      if (data) {
+        infoToaster(
+                "Already Added",
+                `Your Product <b> ${this.product} </b> is Already Added`
+        );
+      } else {
+        successToaster(
+                "Added Successfully",
+                `The Product <b> ${this.product} </b> was Added Successfully`
+        );
+        this.ADD_CART_LOCAL(this.product);
+      }
+    },
     checkout(){
-      // this.$store.dispatch("setView", "checkout");
-      // this.$store.dispatch("setAccessories", ["details"]);
+      this.$store.dispatch("setView", "checkout");
+      this.$store.dispatch("setAccessories", ["details"]);
     },
     fetchProduct() {
       const productId = this.$route.params.id;

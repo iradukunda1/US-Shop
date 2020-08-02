@@ -76,7 +76,7 @@ const router = new vueRouter({
           path: "/cart",
           name: "Cart",
           component: () =>
-            import("../components/products/cart/CartProducts.vue")
+            import("../components/products/purchase/CartProducts.vue")
           // beforeEnter: (to, from, next) => {
           //   if (!!store.state.auth.token) {
           //     next();
@@ -111,7 +111,7 @@ const router = new vueRouter({
         {
           path: "/checkout",
           name: "Checkout",
-          component: () => import("../components/products/cart/Checkout.vue")
+          component: () => import("../components/products/purchase/Checkout.vue")
           // beforeEnter: (to, from, next) => {
           //   if (!!store.state.auth.token) {
           //     next();
