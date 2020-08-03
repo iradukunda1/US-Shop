@@ -1,7 +1,7 @@
 <template>
   <div class="web-layout-content">
     <transition name="slide">
-     <extra-list-view v-if="view || accessories.details" :title="view"/>
+      <extra-list-view v-if="view || accessories.details" :title="view" />
     </transition>
     <web-nav></web-nav>
     <web-content></web-content>
@@ -40,7 +40,7 @@ export default {
   padding: 0;
   height: 100%;
   grid-template-columns: auto;
-  grid-template-rows: 75px 1fr auto;
+  grid-template-rows: 95px 1fr auto;
   grid-template-areas:
     "navbar"
     "content"

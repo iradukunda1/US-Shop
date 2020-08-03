@@ -18,40 +18,38 @@
         </div>
         <span class="small ml-5">an FTD company</span>
       </div>
-      <div class="header-content d-flex ml-auto mt-3 ">
-        <div
-          class="nav-item"
-          @click="$router.push('/')"
-          @mouseover="
-            (showSympathy = !showSympathy),
-              (showFlower = false),
-              (showBirthDay = false),
-              (showOccasion = false),
-              (showGift = false),
-              (showHelp = false)
-          "
-        >
+      <div
+        v-if="$route.name !== 'Purchase'"
+        class="header-content d-flex ml-auto mt-3 "
+      >
+        <div class="nav-item">
           <p
             class="p-3 cursor-pointer mb-0"
             :class="{ 'bottom-line': showSympathy }"
+            @mouseover="
+              (showSympathy = !showSympathy),
+                (showFlower = false),
+                (showBirthDay = false),
+                (showOccasion = false),
+                (showGift = false),
+                (showHelp = false)
+            "
           >
             SYMPATHY
           </p>
         </div>
-        <div
-          class="nav-item "
-          @mouseover="
-            (showFlower = !showFlower),
-              (showSympathy = false),
-              (showBirthDay = false),
-              (showOccasion = false),
-              (showGift = false),
-              (showHelp = false)
-          "
-        >
+        <div class="nav-item ">
           <p
             class="p-3 cursor-pointer mb-0"
             :class="{ 'bottom-line': showFlower }"
+            @mouseover="
+              (showFlower = !showFlower),
+                (showSympathy = false),
+                (showBirthDay = false),
+                (showOccasion = false),
+                (showGift = false),
+                (showHelp = false)
+            "
           >
             FLOWER
           </p>
@@ -72,20 +70,18 @@
             BIRTH-DAY
           </p>
         </div>
-        <div
-          class="nav-item "
-          @mouseover="
-            (showOccasion = !showOccasion),
-              (showSympathy = false),
-              (showFlower = false),
-              (showBirthDay = false),
-              (showGift = false),
-              (showHelp = false)
-          "
-        >
+        <div class="nav-item ">
           <p
             class="p-3 cursor-pointer mb-0"
             :class="{ 'bottom-line': showOccasion }"
+            @mouseover="
+              (showOccasion = !showOccasion),
+                (showSympathy = false),
+                (showFlower = false),
+                (showBirthDay = false),
+                (showGift = false),
+                (showHelp = false)
+            "
           >
             ALL OCCASION
           </p>
@@ -108,6 +104,49 @@
         </div>
       </div>
       <div
+        v-if="$route.name == 'Purchase'"
+        class="purchase-navbar row mx-0 w-100 justify-content-between pt-4"
+      >
+        <div class="back-button-container px-5 fa-12 font-weight-bold">
+          <p class="mb-0 mt-3 cursor-pointer" @click="$router.push('/cart')">
+            <i class="fa fa-angle-left"></i> BACK TO CART
+          </p>
+        </div>
+        <div class="row mx-0 px-4 mr-5 fa-14 purchase-tab mt-2 mb-1">
+          <div class="nav-item ">
+            <p
+              class="p-3  mb-0"
+              :class="{ 'bottom-line': visited == 'delivery' }"
+            >
+              DELIVERY
+            </p>
+          </div>
+          <div class="nav-item mx-5">
+            <p
+              class="p-3  mb-0"
+              :class="{ 'bottom-line': visited == 'payment' }"
+            >
+              PAYMENT
+            </p>
+          </div>
+          <div class="nav-item ">
+            <p
+              class="p-3  mb-0"
+              :class="{ 'bottom-line': visited == 'review' }"
+            >
+              REVIEW
+            </p>
+          </div>
+        </div>
+        <div class="secure-tab pr-5  mr-5">
+          <p class="mb-0 mt-3">
+            <span class="fa-12 pr-1">Secure Checkout</span>
+            <i class="fas fa-lock"></i>
+          </p>
+        </div>
+      </div>
+      <div
+        v-if="$route.name !== 'Purchase'"
         class="header-options ml-auto mt-3"
         @mouseover="
           (showSympathy = false),
@@ -140,7 +179,11 @@
             <p class="mb-0 fa-12">SEARCH</p>
           </li>
           <li class="web-navbar-cart d-block  mx-4" id="popover-container">
-            <div class="mb-0  cart-container" id="cart-popover">
+            <div
+              class="mb-0  cart-container"
+              id="cart-popover"
+              @click="$router.push('/cart')"
+            >
               <i class="fas fa-cart-plus fa-15"></i>
               <span
                 class="badge badge-primary position-absolute cart-length-badge"
@@ -154,7 +197,7 @@
             <p class="mb-0 fa-12">ACCOUNT</p>
           </li>
           <!--          <b-popover-->
-          <!--            target="cart-popover"-->
+          <!--            target="purchase-popover"-->
           <!--            triggers="hover"-->
           <!--            placement="bottom-right"-->
           <!--            container="popover-container"-->
@@ -167,7 +210,7 @@
           <!--              <div class="justify-content-center align-items-center">-->
           <!--                <h3 class="mb-0 mx-5">Oops!</h3>-->
           <!--                <h4 class="mb-0">No Products Found</h4>-->
-          <!--                <p class="mx-5">Your cart is empty</p>-->
+          <!--                <p class="mx-5">Your purchase is empty</p>-->
           <!--              </div>-->
           <!--            </div>-->
           <!--          </b-popover>-->
@@ -240,12 +283,33 @@
         <div class="row mx-0 w-100 justify-content-between px-5">
           <ul>
             <p class="font-weight-bold fa-14">Featured Birthday</p>
-            <li>All Birthday</li>
-            <li>Same Day Birthday Flower Delivery</li>
+            <li
+              @click="
+                $router.push('/shop/' + 'all-Birthday'),
+                  (showBirthDay = !showBirthDay)
+              "
+            >
+              All Birthday
+            </li>
+            <li
+              @click="
+                $router.push('/shop/' + 'same-day-birthday-flower'),
+                  (showBirthDay = !showBirthDay)
+              "
+            >
+              Same Day Birthday Flower Delivery
+            </li>
           </ul>
           <ul>
             <p class="font-weight-bold fa-14">Birthday Flowers</p>
-            <li>All Birthday Flowers</li>
+            <li
+              @click="
+                $router.push('/shop/' + 'birthday-flowers'),
+                  (showBirthDay = !showBirthDay)
+              "
+            >
+              All Birthday Flowers
+            </li>
             <li>Birthday Roses</li>
           </ul>
           <ul>
@@ -387,6 +451,7 @@ import {
 export default {
   data() {
     return {
+      visited: "delivery",
       showSympathy: false,
       showFlower: false,
       showBirthDay: false,
@@ -504,12 +569,14 @@ export default {
   computed: {
     ...mapState(["cartProducts", "loggedUser"]),
 
-    ...mapGetters(["auth"]),
+    ...mapGetters(["auth", "accessories"]),
 
     user() {
       return this.auth;
     },
-
+    purchase() {
+      return this.accessories.details;
+    },
     cartProducts() {
       return this.$store.getters.cartProducts;
     },
@@ -526,6 +593,9 @@ export default {
         this.totalValue += parseFloat(product.price);
       });
       this.$store.state.resources.totalPrice = this.totalValue;
+    },
+    purchase() {
+      if (this.purchase) this.visited = this.purchase;
     }
   },
   mounted() {},
@@ -539,14 +609,14 @@ export default {
         this.$store.dispatch("setAccessories", ["details"]);
       }
     },
-    /* Initially loading the cart products from local storage */
+    /* Initially loading the purchase products from local storage */
     QtyProduct(product) {
       return this.cartProducts.filter(v => v.id === product.id).length;
     },
     ...mapMutations(["SET_CART_PRODUCTS", "ADD_LOGGED_USER"]),
 
     getLocalProducts() {
-      const products = JSON.parse(localStorage.getItem("iki-cart"));
+      const products = JSON.parse(localStorage.getItem("iki-purchase"));
       if (products) {
         this.SET_CART_PRODUCTS(products);
       }
@@ -555,7 +625,7 @@ export default {
     loc_logout() {
       this.$store.dispatch("logout");
       // Promise.all([
-      //   localStorage.removeItem("_auth" && "iki-cart"),
+      //   localStorage.removeItem("_auth" && "iki-purchase"),
       //   this.$store.dispatch("logout"),
       // ]).then(() => {
       //   this.$router.replace({ name: "Home" });

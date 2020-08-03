@@ -73,27 +73,54 @@ export default {
 </script>
 <style lang="scss">
 .cursor-pointer {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 .bg-grey {
-  background: rgb(245, 245, 245);
+  background: rgb(248, 248, 248) !important;
 }
 .c-default {
-  color: rgba(192, 0, 139, 0.93);
+  color: rgba(192, 0, 139, 0.93) !important;
+}
+.w-95{
+  width: 95% !important;
+}
+.w-90{
+  width: 90% !important;
+}
+.w-80{
+  width: 80% !important;
+}
+.w-70{
+  width: 70% !important;
+}
+.w-60 {
+  width: 60% !important;
+}
+.w-30{
+  width: 30% !important;
+}
+.w-20{
+  width: 20% !important;
+}
+.h-50px {
+  height: 50px !important;
 }
 .g-text {
-  color: #ced847;
+  color: #ced847 !important;
 }
 .fa-12 {
-  font-size: 12px;
+  font-size: 12px !important;
 }
 .fa-13 {
-  font-size: 13px;
+  font-size: 13px !important;
 }
 .fa-14 {
-  font-size: 14px;
+  font-size: 14px !important;
 }
 .fa-15 {
-  font-size: 1.3rem;
+  font-size: 1.3rem !important;
+}
+.fa-16 {
+  font-size: 16px !important;
 }
 </style>

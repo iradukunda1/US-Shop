@@ -3,11 +3,11 @@
     <div class="top-nav-container">
       <discount-ads />
       <div class="images w-100 d-inline-flex">
-        <img class="home-images w-100 h-100 d-block" src="/img/19.jpg" />
+        <img class="home-images w-100 h-100 d-block" src="/img/su-image.png" />
         <div
           class="row justify-content-center position-absolute image-discount-desc w-100 m-0"
         >
-          <div class="pt-5 text-white mt-5 discount-container">
+          <div class="pt-5  mt-5 discount-container">
             <p class="h2  mx-2">Christmas in July Sale</p>
             <p>Get the scoop on our biggest summer savings.</p>
             <button
@@ -41,12 +41,13 @@
         </div>
         <div class="p-2 shop-sale-button">Shop July Sale</div>
       </div>
-      <div class="separation-image w-100 d-inline-flex" style="height: 25rem;">
+      <div class="separation-image w-100 d-inline-flex" style="height: 30rem;">
         <img class="home-images w-100 h-100 d-block" src="/img/22.jpg" />
         <div
-          class="row justify-content-center position-absolute image-discount-desc w-100 mx-0 mt-5"
+          class="row justify-content-center position-absolute image-discount-desc w-100 mx-0"
+          style="height: 30rem;"
         >
-          <div class="pt-5  mt-5">
+          <div class="my-auto">
             <p class="h2 mx-5 f-15">For Leo Birthdays</p>
             <p>Bold & beautiful, flowers are perfect for a Leo.</p>
             <button class="btn text-white p-2 ml-5 bg-button">
@@ -147,7 +148,9 @@
           </div>
         </div>
         <p @click="showAll = !showAll">
-          <span class="cursor-pointer text-primary" v-if="showAll">show Less</span>
+          <span class="cursor-pointer text-primary" v-if="showAll"
+            >show Less</span
+          >
           <span class="cursor-pointer text-primary" v-else>Read More</span>
         </p>
       </div>
@@ -163,6 +166,7 @@ import ProductFilter from "@/components/products/filters/ProductFilter.vue";
 import deliveryTimer from "@/components/shared/delivery-timer.vue";
 import discountAds from "@/components/shared/discount-ads.vue";
 import CardTemplate from "../components/shared/CardTemplate";
+import products from "@/components/products/controllers/products";
 
 export default {
   name: "home",
@@ -180,98 +184,10 @@ export default {
       categories: ["food", "naked", "bad"],
       price: ["High", "low"],
       fabric: ["tissue", "hard", "leather"],
-
-      products: [
-        {
-          id:"2ghfg-12324-356tuiyuds-dfghjy-#iu78i",
-          images_urls: ["/img/2.jpg", "/img/20.jpg", "/img/16.jpg"],
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo velit blanditiis voluptate doloremque nihil fuga.",
-          name: "Wonder wild",
-          price: "600",
-          currency: "FRW",
-          code:"#NBG_@#",
-          offerPrice: "500$"
-        },
-        {
-          id:"2ghfg-12324-356tuiyuds-dfghjy-iu744354e",
-          images_urls: ["/img/3.jpg", "/img/15.jpg", "/img/21.jpg"],
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo velit blanditiis voluptate doloremque nihil fuga.",
-          name: "Valentine 's beauty",
-          price: "400",
-          currency: "FRW",
-          code:"#LOUI34",
-          offerPrice: "350$"
-        },
-        {
-          id:"2ghfg-12324-356tuiyuds-dfghj-ghfgu78i",
-          images_urls: ["/img/10.jpg", "/img/4.jpg", "/img/17.jpg"],
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo velit blanditiis voluptate doloremque nihil fuga.",
-          name: "The grail of love",
-          price: "150",
-          currency: "FRW",
-          code:"#KH-45",
-          offerPrice: "100$"
-        },
-        {
-          id:"2ghfg-12324-356tuiyuds-dfghjyiu7-@klj8i",
-          images_urls: ["/img/1.jpg", "/img/13.jpg", "/img/14.jpg"],
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo velit blanditiis voluptate doloremque nihil fuga.",
-          name: "Floeur de lotus",
-          price: "100",
-          currency: "FRW",
-          code:"DE#-56RT",
-          offerPrice: "80$"
-        },
-        {
-          id:"2ghfg-12324-356tuiyuds-dfghjbnv765-yiutyuu78i",
-          images_urls: ["/img/3.jpg", "/img/12.jpg", "/img/8.jpg"],
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo velit blanditiis voluptate doloremque nihil fuga.",
-          name: "Spray of the sun",
-          price: "300",
-          currency: "FRW",
-          code:"#POQU-34R",
-          offerPrice: "200$"
-        },
-        {
-          id:"2ghfg-12324-356tuiyuds-dfghjyiu78i-uiyui",
-          images_urls: ["/img/1.jpg", "/img/10.jpg", "/img/11.jpg"],
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo velit blanditiis voluptate doloremque nihil fuga.",
-          name: "Stylish flowers",
-          price: "50",
-          currency: "FRW",
-          code:"#SF_43",
-          offerPrice: "40$"
-        },
-        {
-          id:"2ghfg-12324-356tuiyuds-dfg455-hghjyiu78i",
-          images_urls: ["/img/7.jpg", "/img/19.jpg", "/img/1.jpg"],
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo velit blanditiis voluptate doloremque nihil fuga.",
-          name: "New reality",
-          price: "2050",
-          currency: "FRW",
-          code:"#@SAD3",
-          offerPrice: "10$"
-        },
-        {
-          id:"2ghfg-12324-356tuiyuds-dfghj35r@-yiu78i",
-          images_urls: ["/img/6.jpg", "/img/20.jpg", "/img/16.jpg"],
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo velit blanditiis voluptate doloremque nihil fuga.",
-          name: "Wind of love",
-          price: "900",
-          currency: "FRW",
-          code:"#GDS-21",
-          offerPrice: "60$"
-        }
-      ]
+      products: products.products
     };
+  },
+  mounted() {
   }
 };
 </script>

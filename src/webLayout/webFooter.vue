@@ -1,7 +1,7 @@
 <template>
-  <footer class="section footer-classic text-black  bg-gray w-100">
+  <footer class="section footer-classic text-black  bg-grey w-100">
     <div class="footer-content border-top border-bottom px-5 pt-3 pb-5 d-flex">
-      <div class="row w-100">
+      <div class="row w-100" v-if="$route.name !== 'Purchase'">
         <div class="footer-logo d-block col-md-5">
           <div class="mb-0">
             <span class="c-default mr-2 h3">S.U</span>
@@ -28,7 +28,9 @@
           </dl>
           <dl class="contact-list">
             <dt>email:</dt>
-            <dd><a href="mailto:#" class="text-dark">SUBouquet@gmail.com</a></dd>
+            <dd>
+              <a href="mailto:#" class="text-dark">SUBouquet@gmail.com</a>
+            </dd>
           </dl>
           <dl class="contact-list">
             <dt>phones:</dt>
@@ -56,19 +58,51 @@
             <li class="pt-3">
               <h6>CONNECT</h6>
               <div class="col">
-                <span class="cursor-pointer"><img src="/img/icons/facebook .png" alt="fIcon"/></span>
-                <span class="cursor-pointer mx-2"><img src="/img/icons/instagram.png" alt="iIcon"/></span>
-                <span class="cursor-pointer mr-2"><img src="/img/icons/twitter .png" alt="tIcon"/></span>
-                <span class="cursor-pointer"><img src="/img/icons/youtube.png" alt="yIcon"/></span>
+                <span class="cursor-pointer"
+                  ><img src="/img/icons/facebook .png" alt="fIcon"
+                /></span>
+                <span class="cursor-pointer mx-2"
+                  ><img src="/img/icons/instagram.png" alt="iIcon"
+                /></span>
+                <span class="cursor-pointer mr-2"
+                  ><img src="/img/icons/twitter .png" alt="tIcon"
+                /></span>
+                <span class="cursor-pointer"
+                  ><img src="/img/icons/youtube.png" alt="yIcon"
+                /></span>
               </div>
             </li>
           </ul>
         </div>
       </div>
+      <div
+        class="purchase-footer mt-5 justify-content-center row w-100 mx-0"
+        v-if="$route.name === 'Purchase'"
+      >
+        <div class="footer-logo d-block pt-4">
+          <div class="mb-0 mt-2">
+            <span class="c-default mr-2 h3">S.U</span>
+            <span class="text-info h4 mt-1">BOUQUETS</span>
+          </div>
+          <span class="small ml-5">an FTD company</span>
+        </div>
+        <div class="footer-image-container">
+          <span
+            class="footer-image d-block mb-2"
+            :style="{
+              backgroundImage: 'url(' + '/img/footer_image.png' + ')'
+            }"
+          ></span>
+        </div>
+      </div>
     </div>
-    <div class="row no-gutters terms-policy px-2 py-3 justify-content-center small mb-3">
-      <p class="pr-1">Terms & Conditions</p>  |
-      <p class="mx-3">Privacy Policy</p> |   
+    <div
+      class="row no-gutters terms-policy px-2 py-3 justify-content-center small mb-3"
+    >
+      <p class="pr-1">Terms & Conditions</p>
+      |
+      <p class="mx-3">Privacy Policy</p>
+      |
       <div class="rights mb-0 pl-1">
         <span>© </span><span class="copyright-year">2020</span><span> </span
         ><span>S.U-Bouquet</span><span>. </span
@@ -82,6 +116,6 @@ export default {
   name: "web-footer"
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../assets/style/webFooter";
 </style>

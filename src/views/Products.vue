@@ -10,7 +10,6 @@
             <span class="txt-ft" aria-current="page">PRODUCTS</span>
           </div>
           <card-loader :loopCount="8" v-if="loading" />
-          <products-list :products_list="products_list" :loading="loading" />
           <modal @reloadProduct="updateProducts()" />
         </div>
       </div>
@@ -20,7 +19,6 @@
 
 <script>
   /* eslint-disable */
-import ProductsList from "@/components/products/ProductsList";
 import CardLoader from "@/components/shared/CardLoader";
 import ProductFilter from "@/components/products/filters/ProductFilter";
 import modal from "@/components/shared/Modal";
@@ -30,7 +28,6 @@ import _ from "lodash";
 export default {
   name: "allProducts",
   components: {
-    ProductsList,
     CardLoader,
     ProductFilter,
     modal,
