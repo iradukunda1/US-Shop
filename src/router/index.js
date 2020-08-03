@@ -37,14 +37,14 @@ const router = new vueRouter({
           component: () => import("../views/About.vue")
         },
         {
-          path: "/products",
-          name: "Products",
-          component: () => import("../views/Products.vue")
-        },
-        {
           path: "/products/:id",
           name: "Profile",
           component: () => import("../components/products/ProductDetail.vue")
+        },
+        {
+          path:"/shop/:params",
+          name:"Shop the SU-Flower",
+          component: () => import('../components/products/ProductsList')
         },
         {
           path: "/Me",
@@ -73,10 +73,10 @@ const router = new vueRouter({
           component: () => import("../views/contactUs.vue")
         },
         {
-          path: "/cart",
-          name: "Cart",
+          path: "/purchase",
+          name: "Purchase",
           component: () =>
-            import("../components/products/purchase/CartProducts.vue")
+            import("../components/products/purchase/purchase-components.vue")
           // beforeEnter: (to, from, next) => {
           //   if (!!store.state.auth.token) {
           //     next();
@@ -91,10 +91,15 @@ const router = new vueRouter({
           // }
         },
         {
+          path: "/cart",
+          name: "Cart",
+          component: () => import("../components/products/carts/cart")
+        },
+        {
           path: "/payments",
           name: "Payments",
           component: () =>
-            import("../components/products/payments/paymentSelector.vue"),
+            import("../components/products/payments/paymentSelector.vue")
           // beforeEnter: (to, from, next) => {
           //   if (!!store.state.auth.token) {
           //     next();
@@ -111,7 +116,8 @@ const router = new vueRouter({
         {
           path: "/checkout",
           name: "Checkout",
-          component: () => import("../components/products/purchase/Checkout.vue")
+          component: () =>
+            import("../components/products/purchase/Checkout.vue")
           // beforeEnter: (to, from, next) => {
           //   if (!!store.state.auth.token) {
           //     next();

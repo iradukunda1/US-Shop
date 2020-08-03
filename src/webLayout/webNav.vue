@@ -18,8 +18,11 @@
         </div>
         <span class="small ml-5">an FTD company</span>
       </div>
-      <div v-if="!showPruchase" class="header-content d-flex ml-auto mt-3 ">
-        <div class="nav-item" @click="$router.push('/')">
+      <div
+        v-if="$route.name !== 'Purchase'"
+        class="header-content d-flex ml-auto mt-3 "
+      >
+        <div class="nav-item">
           <p
             class="p-3 cursor-pointer mb-0"
             :class="{ 'bottom-line': showSympathy }"
@@ -100,39 +103,51 @@
           </p>
         </div>
       </div>
-      <div v-if="showPruchase"  class="purchase-navbar row mx-0 w-100 justify-content-between pt-4">
+      <div
+        v-if="$route.name == 'Purchase'"
+        class="purchase-navbar row mx-0 w-100 justify-content-between pt-4"
+      >
         <div class="back-button-container px-5 fa-12 font-weight-bold">
-         <p class="mb-0 mt-3 cursor-pointer"> <i class="fa fa-angle-left"></i> BACK TO CART </p></div>
+          <p class="mb-0 mt-3 cursor-pointer" @click="$router.push('/cart')">
+            <i class="fa fa-angle-left"></i> BACK TO CART
+          </p>
+        </div>
         <div class="row mx-0 px-4 mr-5 fa-14 purchase-tab mt-2 mb-1">
           <div class="nav-item ">
             <p
-                    class="p-3 cursor-pointer mb-0"
-                    :class="{ 'bottom-line': showFlower }"
+              class="p-3  mb-0"
+              :class="{ 'bottom-line': visited == 'delivery' }"
             >
               DELIVERY
             </p>
           </div>
           <div class="nav-item mx-5">
             <p
-                    class="p-3 cursor-pointer mb-0"
+              class="p-3  mb-0"
+              :class="{ 'bottom-line': visited == 'payment' }"
             >
               PAYMENT
             </p>
           </div>
           <div class="nav-item ">
             <p
-                    class="p-3 cursor-pointer mb-0"
-                    :class="{ 'bottom-line': showOccasion }"
+              class="p-3  mb-0"
+              :class="{ 'bottom-line': visited == 'review' }"
             >
               REVIEW
             </p>
-          </div></div>
+          </div>
+        </div>
         <div class="secure-tab pr-5  mr-5">
-          <p class="mb-0 mt-3"><span class="fa-12">Secure Checkout</span> <i class="fas fa-lock"></i></p>
+          <p class="mb-0 mt-3">
+            <span class="fa-12 pr-1">Secure Checkout</span>
+            <i class="fas fa-lock"></i>
+          </p>
         </div>
       </div>
-      <div v-if="!showPruchase"
-           class="header-options ml-auto mt-3"
+      <div
+        v-if="$route.name !== 'Purchase'"
+        class="header-options ml-auto mt-3"
         @mouseover="
           (showSympathy = false),
             (showFlower = false),
@@ -164,7 +179,11 @@
             <p class="mb-0 fa-12">SEARCH</p>
           </li>
           <li class="web-navbar-cart d-block  mx-4" id="popover-container">
-            <div class="mb-0  cart-container" id="cart-popover">
+            <div
+              class="mb-0  cart-container"
+              id="cart-popover"
+              @click="$router.push('/cart')"
+            >
               <i class="fas fa-cart-plus fa-15"></i>
               <span
                 class="badge badge-primary position-absolute cart-length-badge"
@@ -264,12 +283,33 @@
         <div class="row mx-0 w-100 justify-content-between px-5">
           <ul>
             <p class="font-weight-bold fa-14">Featured Birthday</p>
-            <li>All Birthday</li>
-            <li>Same Day Birthday Flower Delivery</li>
+            <li
+              @click="
+                $router.push('/shop/' + 'all-Birthday'),
+                  (showBirthDay = !showBirthDay)
+              "
+            >
+              All Birthday
+            </li>
+            <li
+              @click="
+                $router.push('/shop/' + 'same-day-birthday-flower'),
+                  (showBirthDay = !showBirthDay)
+              "
+            >
+              Same Day Birthday Flower Delivery
+            </li>
           </ul>
           <ul>
             <p class="font-weight-bold fa-14">Birthday Flowers</p>
-            <li>All Birthday Flowers</li>
+            <li
+              @click="
+                $router.push('/shop/' + 'birthday-flowers'),
+                  (showBirthDay = !showBirthDay)
+              "
+            >
+              All Birthday Flowers
+            </li>
             <li>Birthday Roses</li>
           </ul>
           <ul>
@@ -411,7 +451,7 @@ import {
 export default {
   data() {
     return {
-      showPruchase:false,
+      visited: "delivery",
       showSympathy: false,
       showFlower: false,
       showBirthDay: false,
@@ -529,12 +569,14 @@ export default {
   computed: {
     ...mapState(["cartProducts", "loggedUser"]),
 
-    ...mapGetters(["auth"]),
+    ...mapGetters(["auth", "accessories"]),
 
     user() {
       return this.auth;
     },
-
+    purchase() {
+      return this.accessories.details;
+    },
     cartProducts() {
       return this.$store.getters.cartProducts;
     },
@@ -551,6 +593,9 @@ export default {
         this.totalValue += parseFloat(product.price);
       });
       this.$store.state.resources.totalPrice = this.totalValue;
+    },
+    purchase() {
+      if (this.purchase) this.visited = this.purchase;
     }
   },
   mounted() {},

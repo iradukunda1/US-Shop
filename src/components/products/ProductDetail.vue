@@ -412,23 +412,23 @@ export default {
   },
   methods: {
     ...mapMutations(["ADD_CART_LOCAL"]),
+
     addToCart() {
-      this.deliveryForm = !this.deliveryForm
+      this.deliveryForm = !this.deliveryForm;
       const data = _.find(this.$store.getters.cartProducts, this.product);
-      if (data) {
-        infoToaster(
-                "Already Added",
-                `Your Product <b> ${this.product} </b> is Already Added`
-        );
-      } else {
-        successToaster(
-                "Added Successfully",
-                `The Product <b> ${this.product} </b> was Added Successfully`
-        );
-        this.ADD_CART_LOCAL(this.product);
-      }
+      // if (data) {
+      //   infoToaster(
+      //           "Already Added",
+      //           `Your Product <b> ${this.product} </b> is Already Added`
+      //   );
+      // } else {
+      //   successToaster(
+      //           "Added Successfully",
+      //           `The Product <b> ${this.product} </b> was Added Successfully`
+      //   );
+      this.ADD_CART_LOCAL(this.product);
     },
-    checkout(){
+    checkout() {
       this.$store.dispatch("setView", "checkout");
       this.$store.dispatch("setAccessories", ["details"]);
     },
@@ -450,37 +450,17 @@ export default {
               "sorry you seems to be offline"
             );
           });
-    },
-
-    ...mapMutations(["ADD_CART_LOCAL"]),
-
-    addToCart(product) {
-      const data = _.find(this.$store.getters.cartProducts, product);
-      if (data) {
-        infoToaster(
-          "Already Added",
-          `Your Product <b> ${product.name} </b> is Already Added`
-        );
-      } else {
-        successToaster(
-          "Added Successfully",
-          `The Product <b> ${product.name} </b> was Added Successfully`
-        );
-        this.ADD_CART_LOCAL(product);
-      }
     }
   },
   computed: {
     ...mapGetters(["resources"]),
-
     product() {
       return this.resources.product;
     }
   },
   mounted() {
     // this.fetchProduct();
-  },
-  created() {}
+  }
 };
 </script>
 

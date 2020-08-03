@@ -3,7 +3,7 @@
     <div class="gift-lists" v-for="(gift, index) in gifts" :key="index">
       <div class="d-flex border rounded p-2 gift-list my-2 cursor-pointer">
         <div class="select-gift-box my-auto">
-          <b-form-checkbox type="checkbox" class="" />
+          <b-form-checkbox type="checkbox" />
         </div>
         <span
           class="gift-profile d-block ml-3"
@@ -27,17 +27,21 @@
       </div>
     </div>
     <div class="gift-options mt-4 mb-3">
-      <div
+      <a
         class="bg-button text-white fa-14  text-center font-weight-bold rounded-0 col-md-12 btn py-2 px-4"
+        href="javascript:;;"
         @click="checkout"
       >
         CHECKOUT
-      </div>
+      </a>
       <div
         class="item-option-container row w-100 mx-0 justify-content-between mt-4"
       >
         <div class="d-block ">
-          <p class="cursor-pointer fa-13 fa text-info font-weight-bold">
+          <p
+            class="cursor-pointer fa-13 fa text-info font-weight-bold"
+            @click="$router.push('/'), $store.dispatch('setView')"
+          >
             Continue Shopping
           </p>
           <p class="fa-12 small text-muted">Cart ID: 1355197982</p>
@@ -103,7 +107,7 @@ export default {
   methods: {
     checkout() {
       this.$store.dispatch("setView");
-      this.$router.push("cart");
+      this.$router.push("/purchase");
     }
   }
 };

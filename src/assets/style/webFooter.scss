@@ -23,9 +23,9 @@
     padding: 0;
     margin: 0;
   }
-  .footer-links{
-    router-link{
-      color:black;
+  .footer-links {
+    router-link {
+      color: black;
       &:hover {
         color: #0076ad;
         border-bottom: 1px solid blue;
@@ -40,5 +40,11 @@
         border-bottom: 1px solid black;
       }
     }
+  }
+  .footer-image {
+    width: 48.2rem;
+    height: 6rem;
+    background-color: black;
+    background-size: cover;
   }
 }

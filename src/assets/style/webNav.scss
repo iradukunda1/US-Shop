@@ -179,16 +179,6 @@
           margin-bottom: 0;
           font-weight: bold;
           font-size: 14px;
-          &:hover {
-            transform: scaleX(1);
-            transition-timing-function: cubic-bezier(0.18, 1.14, 0.96, 0.2);
-            transition-duration: 0.3s;
-            color: cornflowerblue;
-            border-bottom: 0.3rem solid rgb(23, 162, 184);
-          }
-          &:active {
-            color: blue;
-          }
         }
         .bottom-line {
           color: cornflowerblue;

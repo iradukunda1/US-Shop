@@ -76,10 +76,34 @@ export default {
   cursor: pointer !important;
 }
 .bg-grey {
-  background: rgb(245, 245, 245) !important;
+  background: rgb(248, 248, 248) !important;
 }
 .c-default {
   color: rgba(192, 0, 139, 0.93) !important;
+}
+.w-95{
+  width: 95% !important;
+}
+.w-90{
+  width: 90% !important;
+}
+.w-80{
+  width: 80% !important;
+}
+.w-70{
+  width: 70% !important;
+}
+.w-60 {
+  width: 60% !important;
+}
+.w-30{
+  width: 30% !important;
+}
+.w-20{
+  width: 20% !important;
+}
+.h-50px {
+  height: 50px !important;
 }
 .g-text {
   color: #ced847 !important;
