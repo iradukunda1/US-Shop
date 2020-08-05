@@ -3,6 +3,7 @@
     <div class="navbar-header d-flex position-relative mb-0 px-3 w-100">
       <div
         class="header-log d-block mt-3"
+        @click="$router.push('/')"
         @mouseover="
           (showHelp = false),
             (showSympathy = false),
@@ -105,14 +106,14 @@
       </div>
       <div
         v-if="$route.name == 'Purchase'"
-        class="purchase-navbar row mx-0 w-100 justify-content-between pt-4"
+        class="purchase-navbar row mx-0 w-100 justify-content-between mt-2 pt-4"
       >
         <div class="back-button-container px-5 fa-12 font-weight-bold">
           <p class="mb-0 mt-3 cursor-pointer" @click="$router.push('/cart')">
             <i class="fa fa-angle-left"></i> BACK TO CART
           </p>
         </div>
-        <div class="row mx-0 px-4 mr-5 fa-14 purchase-tab mt-2 mb-1">
+        <div class="row mx-0 px-4 mr-5 fa-14 purchase-tab mt-1 mb-1">
           <div class="nav-item ">
             <p
               class="p-3  mb-0"
@@ -285,7 +286,10 @@
             <p class="font-weight-bold fa-14">Featured Birthday</p>
             <li
               @click="
-                $router.push('/shop/' + 'all-Birthday'),
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'all-Birthday' }
+                }),
                   (showBirthDay = !showBirthDay)
               "
             >
@@ -293,7 +297,10 @@
             </li>
             <li
               @click="
-                $router.push('/shop/' + 'same-day-birthday-flower'),
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'same-day-birthday-flower' }
+                }),
                   (showBirthDay = !showBirthDay)
               "
             >
@@ -304,18 +311,48 @@
             <p class="font-weight-bold fa-14">Birthday Flowers</p>
             <li
               @click="
-                $router.push('/shop/' + 'birthday-flowers'),
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'birthday-flowers' }
+                }),
                   (showBirthDay = !showBirthDay)
               "
             >
               All Birthday Flowers
             </li>
-            <li>Birthday Roses</li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'birthday-roses' }
+                }),
+                  (showBirthDay = !showBirthDay)
+              "
+            >
+              Birthday Roses
+            </li>
           </ul>
           <ul>
             <p class="font-weight-bold fa-14">Birthday Plants & Gifts</p>
-            <li>Birthday Plants</li>
-            <li>Birthday Gifts</li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'birthday-plants' }
+                }),
+                  (showBirthDay = !showBirthDay)
+              "
+            >
+              Birthday Plants
+            </li>
+            <li
+                @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'birthday-delivery' }
+                }),
+                  (showBirthDay = !showBirthDay)
+              ">Birthday Gifts</li>
           </ul>
           <ul class="border-left">
             <p class="font-weight-bold fa-14">Shop Birthday by Recipient</p>
@@ -598,7 +635,6 @@ export default {
       if (this.purchase) this.visited = this.purchase;
     }
   },
-  mounted() {},
   methods: {
     view(data) {
       if (this.user.token) {

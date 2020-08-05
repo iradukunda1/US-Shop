@@ -106,6 +106,7 @@
     min-height: 10rem;
     max-height: inherit;
     opacity: 1;
+    box-shadow: 0px 9px 12px -6px rgb(108, 117, 125);
     z-index: 1000;
     ul {
       padding-right: 4rem;
@@ -182,7 +183,7 @@
         }
         .bottom-line {
           color: cornflowerblue;
-          border-bottom: 0.3rem solid rgb(23, 162, 184);
+          border-bottom: 5px solid rgb(23, 162, 184);
         }
       }
     }

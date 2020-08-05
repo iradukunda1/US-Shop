@@ -1,26 +1,7 @@
 <template>
   <div class="products-list w-100 position-relative h-100">
     <div class="product-list-container">
-      <div
-        class="w-100 row mx-0 same-day-birthday-image"
-        v-if="this.$route.params.params == 'same-day-birthday-flower'"
-      >
-        <img
-          src="/img/same-day-birthDay.png"
-          class="w-100"
-          alt="same-day-birthday-image"
-        />
-      </div>
-      <div
-        class="w-100 row mx-0 birthday-flowers-cover"
-        v-if="this.$route.params.params == 'birthday-flowers'"
-      >
-        <img
-          src="/img/birthday-flowers-cover.png"
-          class="w-100"
-          alt="birthday-flowers-cover"
-        />
-      </div>
+      <images-container />
       <delivery-timer />
       <div
         class="header-options row mx-0 w-100 justify-content-between py-3 px-5 border-bottom"
@@ -231,28 +212,8 @@
           </div>
         </transition>
         <div class="body-components" :class="showFilter ? 'w-75' : 'w-100'">
-          <birthDayCollection
-            class="mb-4"
-            @itemsLength="resultLength"
-            v-if="
-              result.length !== 0 && this.$route.params.params == 'all-Birthday'
-            "
-          />
-          <sameDayBirthDayFlower
-            class="mb-4"
-            @itemsLength="resultLength"
-            v-if="
-              result.length !== 0 &&
-                this.$route.params.params == 'same-day-birthday-flower'
-            "
-          />
-          <birthdayFlowers
-            class="mb-4"
-            @itemsLength="resultLength"
-            v-if="
-              result.length !== 0 &&
-                this.$route.params.params == 'birthday-flowers'
-            "
+          <tabs-components
+              @itemsLength="resultLength"
           />
           <div
             class="empty-result bg-grey mx-auto w-95 mb-5 py-5"
@@ -271,17 +232,15 @@
 <script>
 /* eslint-disable */
 import deliveryTimer from "../shared/delivery-timer";
-import birthDayCollection from "../products/birthDays/birth-day-collection";
-import sameDayBirthDayFlower from "../products/birthDays/same-day-birthday";
-import birthdayFlowers from "../products/birthDays/birthday-flowers";
+import TabsComponents from "@/components/products/tabs-components";
+import ImagesContainer from "@/components/shared/images-container";
 export default {
   name: "Shop the SU-Flower",
   props: ["products_list", "loading"],
-  components: {
+  components:{
     deliveryTimer,
-    birthDayCollection,
-    sameDayBirthDayFlower,
-    birthdayFlowers
+    TabsComponents,
+    ImagesContainer
   },
   data() {
     return {
