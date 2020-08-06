@@ -80,7 +80,7 @@
         happiness. What better way to brighten up one’s big day than with a
         vibrant sunflower bouquet? Or, choose an elegant hanging spider plant
         that is easy to take care of and will add a splash of green to any room.
-        At ProFlowers, our birthday plant delivery is second to none. We have
+        At SU-Bouquets, our birthday plant delivery is second to none. We have
         plenty of happy birthday flowers and happy birthday gift baskets that
         are suitable for any birthday guy or gal in your life. We even have a
         variety of same-day delivery options to choose from, so you don’t show

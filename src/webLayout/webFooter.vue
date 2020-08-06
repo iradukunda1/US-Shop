@@ -35,8 +35,8 @@
           <dl class="contact-list">
             <dt>phones:</dt>
             <dd>
-              <a href="tel:#">0784141587 </a> <span> or </span>
-              <a href="tel:#"> 078537573</a>
+              <a href="tel:#">+250789871587 </a> <span> or </span>
+              <a href="tel:#">+250785384373</a>
             </dd>
           </dl>
         </div>
