@@ -4,7 +4,7 @@
       <p class="font-weight-bold fa-14">Same Day Birthday Delivery</p>
       <p class="text-justify fa-14">
         Make their birthday a truly special one with beautiful flowers and gifts
-        for same day delivery from ProFlowers. Whether they love roses,
+        for same day delivery from SU-Bouquets. Whether they love roses,
         sunflowers or tulips, we have the most amazing selection of all their
         favorites.
       </p>
@@ -67,11 +67,11 @@
       <p class="font-weight-bold fa-14 pb-2">Same-Day Birthday Flowers</p>
       <p class="text-justify fa-13">
         When you’re looking for the perfect birthday gift for someone special,
-        and need it in a hurry, look no further than ProFlowers’ for fresh and
+        and need it in a hurry, look no further than SU-Bouquets’ for fresh and
         fabulous same-day birthday flower and gift delivery. Shop our collection
         of birthday flowers to find a bouquet that will fit everyone’s personal
         style. Whether it’s an elegant arrangement of fragrant lilies or a fun
-        and colorful assortment of Gerbera daisies, ProFlowers offers all of the
+        and colorful assortment of Gerbera daisies, SU-Bouquets offers all of the
         most-requested blooms and bouquet designs. Whatever flowers your loved
         one is dreaming of, you’ll find the perfect bouquet that can be
         delivered same-day at their peak of freshness and ready to enjoy.
@@ -86,13 +86,13 @@
         directly to your loved one, for guaranteed freshness and beauty.
       </p>
       <p class="text-justify fa-13">
-        Short on time but need a great birthday gift? No problem! ProFlowers
+        Short on time but need a great birthday gift? No problem! SU-Bouquets
         carries last-minute flowers for all your special moments and
         celebrations, including birthdays. Our convenient delivery options
         ensure your gift arrives just in time to make his or her special day
         even better. Choose from same day, next day, or even Sunday delivery.
         And when you need a little extra gifting inspiration, our customer
-        service specialists are always ready to help. ProFlowers makes it fast
+        service specialists are always ready to help. SU-Bouquets makes it fast
         and easy to find and send the most amazing same-day birthday flowers to
         friends and family nationwide.
       </p>
@@ -101,7 +101,7 @@
 </template>
 
 <script>
-import cardTemplate from "../../shared/CardTemplate";
+import cardTemplate from "../../../shared/CardTemplate";
 export default {
   name: "same-day-birthday",
   components: { cardTemplate },

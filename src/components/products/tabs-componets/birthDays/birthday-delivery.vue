@@ -1,13 +1,11 @@
 <template>
-  <div class="birthday-flowers w-100 position-relative pt-2 pl-5 pr-5">
+  <div class="birthday-gifts w-100 position-relative pt-2 pl-5 pr-5">
     <div class="header-content">
-      <p class="font-weight-bold fa-14">Birthday Flowers</p>
+      <p class="font-weight-bold fa-14">Birthday Gift Delivery</p>
       <p class="text-justify fa-14">
-        Birthday Flowers Delivery - A birthday delivery of fresh, fragrant
-        flowers or a sweet, thoughtful gift is an easy and personal way to let
-        someone know you remembered their special day. Our wide variety of
-        birthday flower bouquets and gifts is always the right choice for every
-        birthday on your list.
+        Sending a great birthday gift is easy with SU-Bouquets. Whether you’re
+        shopping for mom, dad, brother or friends, we have a wide selection of
+        wonderful gift ideas everyone will love.
       </p>
     </div>
     <div class="birth-product-container row justify-content-around w-100 mx-0">
@@ -20,22 +18,6 @@
         <card-template :item="product" :showOptions="false" />
       </div>
     </div>
-    <nav aria-label="...">
-      <ul class="pagination row mx-0 w-100 justify-content-center my-4">
-        <li class="page-item  active">
-          <span class="page-link rounded-circle mx-2"> 1</span>
-        </li>
-        <li class="page-item">
-          <span class="page-link rounded-circle mx-2 cursor-pointer">2</span>
-        </li>
-        <li class="page-item">
-          <span class="page-link border-0 cursor-pointer"
-            ><i class="fa fa fa-angle-double-right"></i
-          ></span>
-        </li>
-      </ul>
-    </nav>
-
     <div class="row mx-0 w-100 button-collection justify-content-center">
       <a
         class="fa-14 my-4 text-center font-weight-bold rounded-0 mx-2 btn py-2 px-4"
@@ -65,7 +47,7 @@
         class="fa-14 my-4 text-center font-weight-bold rounded-0 mx-2 btn py-2 px-4"
         href="javascript:;;"
       >
-        Birthday Roses
+        Unique Birthday Gifts Delivery
       </a>
       <a
         class="fa-14 my-4 text-center font-weight-bold rounded-0 mx-2 btn py-2 px-4"
@@ -81,36 +63,41 @@
       </a>
     </div>
     <div class="footer-content mt-4">
-      <p class="font-weight-bold fa-14 pb-2">Birthday Flowers</p>
+      <p class="font-weight-bold fa-14 pb-2">Birthday Delivery Online</p>
       <p class="text-justify fa-13">
-        Happy birthday flowers are the perfect gift to celebrate another year of
-        smiles, milestones, and laughs! Our wide variety of birthday flower
-        delivery bouquets and gifts is always the right choice for every
-        birthday on your list. From mixed arrangements to birthday flowers
-        paired with gifts and goodies, ProFlowers has your birthday shopping
-        covered.
+        Whether you want to say "I love you," "You’re a great friend," or "Enjoy
+        your special day," SU-Bouquets can help you say it with a bouquet of
+        beautiful celebration roses. This collection of online birthday roses is
+        like no other. From one dozen rainbow roses, to pink pearl bouquets of
+        roses, and even potted rose baskets, we’ve got the best assortment of
+        happy birthday roses online.
       </p>
-      <p class="font-weight-bold fa-14 pb-2">
-        We Help You Send the Right Message
+      <p class="text-justify fa-13 pt-2">
+        When you send birthday flowers with SU-Bouquets, you’ll love the shopping
+        experience just as much as the recipient will love receiving their
+        bouquet gift. We give you a variety of colors, quantities, and types of
+        rose bouquets from which to choose. Or if their special day lands in the
+        winter, gift them with the Serenity bouquet that comes with white
+        lilies, roses, and a hint of soft green hydrangea to create the most
+        beautiful winter wonderland arrangement. With our large collection of
+        roses, you can get the perfect birthday gift ideas from SU-Bouquets.
       </p>
       <p class="text-justify fa-13">
-        Trust ProFlowers to help you deliver some birthday love to that special
-        someone. We've even got birthday flower cards with living flowers
-        inside. Sending happy birthday flower bouquets lets your favorite
-        birthday guys and gals know how much they mean to you. Whether you’re
-        shopping for Mother’s Day flowers delivered on Sunday or holiday gifts —
-        order flowers online with us, and you’re sure to make their day!
+        What could be better for those birthday folks with a green thumb than
+        potted roses for their thriving garden? For the best in birthday rose
+        delivery, choose SU-Bouquets. Next time you need a special gift for an
+        anniversary, birthday or graduation, take advantage of our flower
+        delivery coupons for great deals for all occasions.
       </p>
     </div>
   </div>
 </template>
-<script>
-/* eslint-disable */
-import products from "@/components/products/controllers/products";
-import cardTemplate from "@/components/shared/CardTemplate";
 
+<script>
+import cardTemplate from "@/components/shared/CardTemplate";
+import products from "@/components/products/controllers/products";
 export default {
-  name: "birthday-flowers",
+  name: "birthday-delivery",
   components: { cardTemplate },
   data() {
     return {
@@ -124,7 +111,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.birthday-flowers {
+.birthday-gifts {
   .button-collection {
     a {
       color: black;

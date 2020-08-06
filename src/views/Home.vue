@@ -82,7 +82,7 @@
           <div class="first-phase">
             <p class="font-weight-bold">
               Fresh from Our Fields, Expertly Designed and Delivered Flowers by
-              ProFlowers
+              SU-Bouquets
             </p>
             <p class="text-justify ">
               Flowers and plants are always a great gift for those you hold
@@ -108,7 +108,7 @@
               or Any Day
             </p>
             <p class="text-justify ">
-              ProFlowers is the perfect online flower delivery destination for
+              SU-Bouquets is the perfect online flower delivery destination for
               any occasion, whether it’s your most cherished holiday or any
               ordinary day that calls for a spontaneous show of appreciation.
               Our birthday flowers can be customized with the vase of your
@@ -141,7 +141,7 @@
               offer discount flowers for lovers on a budget! If you are new to
               floral gifting, check out our expert flower guide, the Florapedia,
               to learn more about different types of flowers, flower and plant
-              tips, and more. Follow ProFlowers on Facebook, Twitter, Instagram
+              tips, and more. Follow SU-Bouquets on Facebook, Twitter, Instagram
               and Pinterest for gifting advice and floral inspiration throughout
               the year.
             </p>

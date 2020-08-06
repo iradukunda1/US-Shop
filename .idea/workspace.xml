@@ -26,30 +26,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2282b4ea-dcd3-41e6-9e55-05835be1a1bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/img/logos/2gold-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/birthDays/birth-day-collection.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/birthDays/birthday-delivery.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/birthDays/birthday-flowers.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/birthDays/birthday-plants.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/birthDays/birthday-roses.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/carts/cart.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/carts/list-view.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/controllers/products.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/purchase/delivery.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-components.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shared/images-container.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/anniversary-flowers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/get-well-flower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/just-because.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/new-baby-flowers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/romantic-flowers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/sympathy-flowers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/occasions/anniversary-flowers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/occasions/get-well-flowers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/occasions/just-because-gifts.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/occasions/new-baby-flowers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/occasions/romantic-flowers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/sympathy/same-day-sympathy-flowers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/sympathy/sympathy-flowers-gifts.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/sympathy/sympathy-flowers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/sympathy/sympathy-plants.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/22.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/su-image.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/su-image.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/style/webFooter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/webFooter.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/style/webNav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/webNav.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/ProductDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/ProductDetail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/ProductsList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/ProductsList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/purchase/CartProducts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/purchase/purchase-components.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/CardTemplate.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/CardTemplate.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/gift-card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/gift-card.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Products.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Products.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/birthDays/birth-day-collection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/birthDays/birth-day-collection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/birthDays/birthday-delivery.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/birthDays/birthday-delivery.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/birthDays/birthday-flowers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/birthDays/birthday-flowers.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/birthDays/birthday-plants.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/birthDays/birthday-plants.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/birthDays/birthday-roses.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/birthDays/birthday-roses.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/birthDays/same-day-birthday.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/birthDays/same-day-birthday.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/tabs-components.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-components.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/images-container.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/images-container.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/webLayout/webFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/webLayout/webFooter.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/webLayout/webNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/webLayout/webNav.vue" afterDir="false" />
     </list>
@@ -79,6 +80,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -91,6 +93,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\OneDrive\Documents\Downloads\Documents\US-Shop\src\components\products\tabs-componets" />
       <recent name="C:\Users\user\OneDrive\Documents\Downloads\Documents\US-Shop\src\components\products\carts" />
     </key>
   </component>
@@ -113,7 +116,8 @@
       <workItem from="1595917599496" duration="26997000" />
       <workItem from="1596110843122" duration="10267000" />
       <workItem from="1596330942574" duration="30587000" />
-      <workItem from="1596418072936" duration="47074000" />
+      <workItem from="1596418072936" duration="60048000" />
+      <workItem from="1596683622204" duration="3164000" />
     </task>
     <servers />
   </component>
@@ -165,19 +169,28 @@
       <screen x="0" y="36" width="1280" height="764" />
     </state>
     <state x="418" y="181" width="424" height="494" key="FileChooserDialogImpl/0.36.1280.764@0.36.1280.764" timestamp="1595490954977" />
+    <state x="0" y="0" key="FileDocumentManager.FileCacheConflict" timestamp="1596651002292">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="0" y="0" key="FileDocumentManager.FileCacheConflict/0.0.1366.738@0.0.1366.738" timestamp="1596651002292" />
     <state x="154" y="16" width="992" height="740" key="SettingsEditor" timestamp="1596387654498">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="154" y="16" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1596387654498" />
     <state x="144" y="53" width="992" height="740" key="SettingsEditor/0.36.1280.764@0.36.1280.764" timestamp="1595491712787" />
+    <state x="0" y="0" width="585" height="738" key="find.popup" timestamp="1596661049413">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="0" y="0" width="585" height="738" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1596661049413" />
     <state x="324" y="142" key="run.anything.popup" timestamp="1596468527243">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="324" y="142" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1596468527243" />
     <state x="304" y="183" key="run.anything.popup/0.36.1280.764@0.36.1280.764" timestamp="1596178863647" />
-    <state x="303" y="121" width="672" height="678" key="search.everywhere.popup" timestamp="1595779115810">
-      <screen x="0" y="36" width="1280" height="764" />
+    <state x="323" y="82" width="718" height="655" key="search.everywhere.popup" timestamp="1596661073320">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state x="323" y="82" width="718" height="655" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1596661073320" />
     <state x="303" y="121" width="672" height="678" key="search.everywhere.popup/0.36.1280.764@0.36.1280.764" timestamp="1595779115810" />
   </component>
 </project>

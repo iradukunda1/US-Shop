@@ -23,6 +23,22 @@
         v-if="$route.name !== 'Purchase'"
         class="header-content d-flex ml-auto mt-3 "
       >
+        <div class="nav-item BIRTH-DAY">
+          <p
+            class="p-3 cursor-pointer mb-0"
+            @mouseover="
+              (showBirthDay = !showBirthDay),
+                (showSympathy = false),
+                (showFlower = false),
+                (showOccasion = false),
+                (showGift = false),
+                (showHelp = false)
+            "
+            :class="{ 'bottom-line': showBirthDay }"
+          >
+            BIRTH-DAY
+          </p>
+        </div>
         <div class="nav-item">
           <p
             class="p-3 cursor-pointer mb-0"
@@ -42,38 +58,6 @@
         <div class="nav-item ">
           <p
             class="p-3 cursor-pointer mb-0"
-            :class="{ 'bottom-line': showFlower }"
-            @mouseover="
-              (showFlower = !showFlower),
-                (showSympathy = false),
-                (showBirthDay = false),
-                (showOccasion = false),
-                (showGift = false),
-                (showHelp = false)
-            "
-          >
-            FLOWER
-          </p>
-        </div>
-        <div class="nav-item ">
-          <p
-            class="p-3 cursor-pointer mb-0"
-            @mouseover="
-              (showBirthDay = !showBirthDay),
-                (showSympathy = false),
-                (showFlower = false),
-                (showOccasion = false),
-                (showGift = false),
-                (showHelp = false)
-            "
-            :class="{ 'bottom-line': showBirthDay }"
-          >
-            BIRTH-DAY
-          </p>
-        </div>
-        <div class="nav-item ">
-          <p
-            class="p-3 cursor-pointer mb-0"
             :class="{ 'bottom-line': showOccasion }"
             @mouseover="
               (showOccasion = !showOccasion),
@@ -85,6 +69,22 @@
             "
           >
             ALL OCCASION
+          </p>
+        </div>
+        <div class="nav-item ">
+          <p
+            class="p-3 cursor-pointer mb-0"
+            :class="{ 'bottom-line': showFlower }"
+            @mouseover="
+              (showFlower = !showFlower),
+                (showSympathy = false),
+                (showBirthDay = false),
+                (showOccasion = false),
+                (showGift = false),
+                (showHelp = false)
+            "
+          >
+            FLOWER
           </p>
         </div>
         <div class="nav-item">
@@ -227,13 +227,53 @@
         <div class="row mx-0 w-100 justify-content-center">
           <ul>
             <p class="font-weight-bold fa-14 ">Sympathy Flowers</p>
-            <li>All Sympathy Flowers</li>
-            <li>Same Day Sympathy Flower Delivery</li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'sympathy-flowers' }
+                }),
+                  (showSympathy = !showSympathy)
+              "
+            >
+              All Sympathy Flowers
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'same-day-sympathy-flowers' }
+                }),
+                  (showSympathy = !showSympathy)
+              "
+            >
+              Same Day Sympathy Flower Delivery
+            </li>
           </ul>
           <ul class="mr-5">
             <p class="font-weight-bold fa-14 ">Sympathy Plants & Gifts</p>
-            <li>Sympathy Plants</li>
-            <li>Sympathy Gifts</li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'sympathy-plants' }
+                }),
+                  (showSympathy = !showSympathy)
+              "
+            >
+              Sympathy Plants
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'sympathy-flowers-gifts' }
+                }),
+                  (showSympathy = !showSympathy)
+              "
+            >
+              Sympathy Gifts
+            </li>
           </ul>
           <ul class="border-left">
             <p class="font-weight-bold fa-14 ">Funeral Flowers & Sprays</p>
@@ -346,13 +386,16 @@
               Birthday Plants
             </li>
             <li
-                @click="
+              @click="
                 $router.push({
                   name: 'Shop the SU-Flower',
                   params: { params: 'birthday-delivery' }
                 }),
                   (showBirthDay = !showBirthDay)
-              ">Birthday Gifts</li>
+              "
+            >
+              Birthday Gifts
+            </li>
           </ul>
           <ul class="border-left">
             <p class="font-weight-bold fa-14">Shop Birthday by Recipient</p>
@@ -370,10 +413,61 @@
         <div class="row mx-0 w-100 justify-content-center">
           <ul>
             <p class="font-weight-bold fa-14">All Occasions</p>
-            <li>Just Because</li>
-            <li>Get Well</li>
-            <li>Anniversary</li>
-            <li>Love & Romance</li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'anniversary-flowers' }
+                }),
+                  (showOccasion = !showOccasion)
+              "
+            >
+              Anniversary
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'new-baby-flowers' }
+                }),
+                  (showOccasion = !showOccasion)
+              "
+            >
+              Baby
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'just-because-gifts' }
+                }),
+                  (showOccasion = !showOccasion)
+              "
+            >
+              Just Because
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'get-well-flowers' }
+                }),
+                  (showOccasion = !showOccasion)
+              "
+            >
+              Get Well
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'romantic-flowers' }
+                }),
+                  (showOccasion = !showOccasion)
+              "
+            >
+              Love & Romance
+            </li>
           </ul>
           <ul>
             <li>Thinking of You</li>

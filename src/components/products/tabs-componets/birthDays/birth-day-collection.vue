@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import cardTemplate from "../../shared/CardTemplate";
+import cardTemplate from "../../../shared/CardTemplate";
 import products from "@/components/products/controllers/products";
 
 export default {
