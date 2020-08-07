@@ -1,5 +1,8 @@
 <template>
   <div class="web-layout-content">
+    <transition name="fade" mode="out-in">
+      <delivery-address-modal v-if="resources.trigger.triggerDeliveryAddress" />
+    </transition>
     <transition name="slide">
       <extra-list-view v-if="view || accessories.details" :title="view" />
     </transition>
@@ -15,10 +18,12 @@ import webNav from "./webNav";
 import webFooter from "./webFooter";
 import webContent from "./webContent";
 import { mapGetters } from "vuex";
+import DeliveryAddressModal from "@/components/products/address/delivery-address-modal";
 
 export default {
   name: "webLayout",
   components: {
+    DeliveryAddressModal,
     webFooter,
     webContent,
     webNav,
@@ -26,6 +31,7 @@ export default {
   },
   computed: {
     ...mapGetters({
+      resources: "resources",
       view: "view",
       accessories: "accessories"
     })

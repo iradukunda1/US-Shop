@@ -25,6 +25,7 @@
         <div class="row mx-0 w-100 ">
           <div
             class="sign-button btn rounded-0 bg-white text-dark fa-13 fa pt-2 px-3"
+            @click="sign()"
           >
             SIGN IN
           </div>
@@ -35,7 +36,9 @@
         <a
           class="bg-button text-white fa-14 my-4 text-center font-weight-bold rounded-0 w-100 btn py-2 px-4"
           href="javascript:;;"
-          @click="$router.push('/purchase')"
+          @click="
+            $router.push({ name: 'Purchase', params: { params: 'delivery' } })
+          "
         >
           CHECKOUT
         </a>
@@ -69,6 +72,19 @@ export default {
     return {
       coupon: ""
     };
+  },
+  methods: {
+    sign() {
+      if (this.$store.getters.auth.token) {
+        this.$store.dispatch("setResources", [
+          "user",
+          this.$store.getters.auth.user
+        ]);
+      } else {
+        this.$store.dispatch("setView", "Login");
+        this.$store.dispatch("setAccessories", ["details"]);
+      }
+    }
   }
 };
 </script>

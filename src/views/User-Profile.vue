@@ -33,7 +33,7 @@
 import Profile from '@/components/Profile.vue'
 import Orders from '@/components/products/orders/orders.vue'
 import AddressTable from '@/components/products/address/table.vue'
-import AddressForm from '@/components/products/address/form.vue'
+import AddressForm from '@/components/products/address/delivery-address-form.vue'
 export default {
   components: { Profile, Orders, AddressTable, AddressForm },
   data () {

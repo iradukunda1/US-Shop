@@ -36,7 +36,7 @@
     /* eslint-disable */
 import CartCalculator from './CartCalculator'
 import addressTable from '../address/table.vue'
-import addressForm from '../address/form.vue'
+import addressForm from '../address/delivery-address-form.vue'
 
 export default {
   name: 'Checkout',

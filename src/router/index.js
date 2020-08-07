@@ -73,7 +73,7 @@ const router = new vueRouter({
           component: () => import("../views/contactUs.vue")
         },
         {
-          path: "/purchase",
+          path: "/purchase/:params",
           name: "Purchase",
           component: () =>
             import("../components/products/purchase/purchase-components.vue")
