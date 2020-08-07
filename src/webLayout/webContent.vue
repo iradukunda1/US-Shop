@@ -4,8 +4,12 @@
   </div>
 </template>
 <script>
+import { mapGetters } from "vuex";
 export default {
-  name: "webContent"
+  name: "webContent",
+  computed: {
+    ...mapGetters(["resources"])
+  }
 };
 </script>
 <style>
@@ -20,6 +24,19 @@ export default {
 }
 .slide-leave-to {
   transform: translateX(500px);
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.check_state {
+  width: 20px;
+  display: inline-flex;
 }
 .loader,
 .loader:after {

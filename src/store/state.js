@@ -27,7 +27,8 @@ export default {
     categories:[],
     category:{},
     tags:[],
-    tag:{}
+    tag:{},
+    trigger:{}
   },
   accessories: {
     view: null,

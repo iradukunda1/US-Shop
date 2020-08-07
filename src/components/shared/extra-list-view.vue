@@ -44,7 +44,7 @@ export default {
   bottom: 0;
   height: 100vh;
   z-index: 20;
-  background: rgba(255, 107, 96, 0.04);
+  background: rgba(0 ,0 ,0 , 0.02);
   font-family: "Roboto", sans-serif;
   .header-content-container {
     right: 0;

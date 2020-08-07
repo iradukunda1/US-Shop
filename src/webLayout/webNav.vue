@@ -106,40 +106,56 @@
       </div>
       <div
         v-if="$route.name == 'Purchase'"
-        class="purchase-navbar row mx-0 w-100 justify-content-between mt-2 pt-4"
+        class="purchase-navbar row mx-0 w-100 justify-content-between mt-2 pt-4 px-5"
       >
-        <div class="back-button-container px-5 fa-12 font-weight-bold">
-          <p class="mb-0 mt-3 cursor-pointer" @click="$router.push('/cart')">
+        <div class="back-button-container  fa-12 font-weight-bold">
+          <p
+            class="mb-0 mt-3 cursor-pointer"
+            @click="$router.push({ name: 'Cart' })"
+          >
             <i class="fa fa-angle-left"></i> BACK TO CART
           </p>
         </div>
-        <div class="row mx-0 px-4 mr-5 fa-14 purchase-tab mt-1 mb-1">
+        <div class="row mx-0 fa-14 purchase-tab mt-1 mb-1">
           <div class="nav-item ">
             <p
               class="p-3  mb-0"
-              :class="{ 'bottom-line': visited == 'delivery' }"
+              :class="{
+                'bottom-line': this.$route.params.params == 'delivery'
+              }"
             >
+              <i
+                class="fa-check mr-2 fa"
+                v-if="
+                  $route.params.params == 'payment' ||
+                    $route.params.params == 'review'
+                "
+              ></i>
               DELIVERY
             </p>
           </div>
           <div class="nav-item mx-5">
             <p
               class="p-3  mb-0"
-              :class="{ 'bottom-line': visited == 'payment' }"
+              :class="{ 'bottom-line': this.$route.params.params == 'payment' }"
             >
+              <i
+                class="fa-check mr-2 fa"
+                v-if="$route.params.params == 'review'"
+              ></i>
               PAYMENT
             </p>
           </div>
           <div class="nav-item ">
             <p
               class="p-3  mb-0"
-              :class="{ 'bottom-line': visited == 'review' }"
+              :class="{ 'bottom-line': this.$route.params.params == 'review' }"
             >
               REVIEW
             </p>
           </div>
         </div>
-        <div class="secure-tab pr-5  mr-5">
+        <div class="secure-tab">
           <p class="mb-0 mt-3">
             <span class="fa-12 pr-1">Secure Checkout</span>
             <i class="fas fa-lock"></i>
@@ -582,7 +598,6 @@ import {
 export default {
   data() {
     return {
-      visited: "delivery",
       showSympathy: false,
       showFlower: false,
       showBirthDay: false,
@@ -724,15 +739,11 @@ export default {
         this.totalValue += parseFloat(product.price);
       });
       this.$store.state.resources.totalPrice = this.totalValue;
-    },
-    purchase() {
-      if (this.purchase) this.visited = this.purchase;
     }
   },
   methods: {
     view(data) {
       if (this.user.token) {
-        this.$router.push("/Me");
         this.$store.dispatch("setResources", ["user", this.user]);
       } else {
         this.$store.dispatch("setView", data);

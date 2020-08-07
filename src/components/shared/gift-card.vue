@@ -40,7 +40,7 @@
         <div class="d-block ">
           <p
             class="cursor-pointer fa-13 fa text-info font-weight-bold"
-            @click="$router.push('/'), $store.dispatch('setView')"
+            @click="$router.push({name:'Home'}), $store.dispatch('setView')"
           >
             Continue Shopping
           </p>
@@ -107,7 +107,7 @@ export default {
   methods: {
     checkout() {
       this.$store.dispatch("setView");
-      this.$router.push("/purchase");
+      this.$router.push({ name: "Purchase", params: { params: "delivery" } });
     }
   }
 };

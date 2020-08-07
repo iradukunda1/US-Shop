@@ -26,32 +26,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2282b4ea-dcd3-41e6-9e55-05835be1a1bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/img/anniversary-flowers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/get-well-flower.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/just-because.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/new-baby-flowers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/romantic-flowers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/sympathy-flowers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/occasions/anniversary-flowers.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/occasions/get-well-flowers.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/occasions/just-because-gifts.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/occasions/new-baby-flowers.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/occasions/romantic-flowers.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/sympathy/same-day-sympathy-flowers.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/sympathy/sympathy-flowers-gifts.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/sympathy/sympathy-flowers.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/sympathy/sympathy-plants.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/address/delivery-address-form.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/address/delivery-address-modal.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/purchase/payment.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/purchase/purchase-items-calculator.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/purchase/review.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/birthDays/birth-day-collection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/birthDays/birth-day-collection.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/birthDays/birthday-delivery.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/birthDays/birthday-delivery.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/birthDays/birthday-flowers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/birthDays/birthday-flowers.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/birthDays/birthday-plants.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/birthDays/birthday-plants.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/birthDays/birthday-roses.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/birthDays/birthday-roses.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/birthDays/same-day-birthday.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/birthDays/same-day-birthday.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/tabs-components.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-components.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/images-container.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/images-container.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webLayout/webFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/webLayout/webFooter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/address/form.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/carts/cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/carts/cart.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/purchase/Checkout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/purchase/Checkout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/purchase/delivery.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/purchase/delivery.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/purchase/purchase-components.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/purchase/purchase-components.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/extra-list-view.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/extra-list-view.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/gift-card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/gift-card.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/User-Profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User-Profile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webLayout/webContent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/webLayout/webContent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webLayout/webLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/webLayout/webLayout.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/webLayout/webNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/webLayout/webNav.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +109,9 @@
       <workItem from="1596110843122" duration="10267000" />
       <workItem from="1596330942574" duration="30587000" />
       <workItem from="1596418072936" duration="60048000" />
-      <workItem from="1596683622204" duration="3164000" />
+      <workItem from="1596683622204" duration="15541000" />
+      <workItem from="1596741955303" duration="4934000" />
+      <workItem from="1596801360796" duration="12476000" />
     </task>
     <servers />
   </component>
