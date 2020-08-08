@@ -98,6 +98,42 @@
     >
       <img src="/img/sympathy-plant.png" class="w-100" alt="sympathy-plants" />
     </div>
+    <div
+      class="w-100 row mx-0 summer-flowers"
+      v-if="this.$route.params.params == 'summer-flowers'"
+    >
+      <img src="/img/summer-flower.png" class="w-100" alt="summer-flowers" />
+    </div>
+    <div
+      class="w-100 row mx-0 best-selling-flowers"
+      v-if="this.$route.params.params == 'best-selling-flowers'"
+    >
+      <img
+        src="/img/best-flower.png"
+        class="w-100"
+        alt="best-selling-flowers"
+      />
+    </div>
+    <div
+      class="w-100 row mx-0 best-selling-plants"
+      v-if="this.$route.params.params == 'best-selling-plants'"
+    >
+      <img
+        src="/img/best-selling-plant.png"
+        class="w-100"
+        alt="best-selling-plants"
+      />
+    </div>
+    <div
+      class="w-100 row mx-0 same-day-plant-delivery"
+      v-if="this.$route.params.params == 'same-day-plant-delivery'"
+    >
+      <img
+        src="/img/same-day-plant-delivery.png"
+        class="w-100"
+        alt="same-day-plant-delivery"
+      />
+    </div>
   </div>
 </template>
 

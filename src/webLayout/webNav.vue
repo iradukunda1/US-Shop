@@ -306,7 +306,17 @@
         <div class="row mx-0 w-100 justify-content-center">
           <ul>
             <p class="font-weight-bold fa-14">Featured Flowers Summer</p>
-            <li v-for="featFlo in Featured_Flowers" :key="featFlo">
+            <li
+              v-for="featFlo in Featured_Flowers"
+              :key="featFlo"
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: featFlo.replace(/\s/g, '-').toLowerCase() }
+                }),
+                  (showFlower = !showFlower)
+              "
+            >
               {{ featFlo }}
             </li>
             <p class="font-weight-bold fa-14">Flowers by Delivery Type</p>
@@ -515,7 +525,19 @@
         <div class="row mx-0 w-100 justify-content-center">
           <ul>
             <p class="font-weight-bold fa-14">Featured Plants</p>
-            <li v-for="featPlant in Featured_plants" :key="featPlant">
+            <li
+              v-for="featPlant in Featured_plants"
+              :key="featPlant"
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: {
+                    params: featPlant.replace(/\s/g, '-').toLowerCase()
+                  }
+                }),
+                  (showGift = !showGift)
+              "
+            >
               {{ featPlant }}
             </li>
             <p class="font-weight-bold fa-14">Shop Plants</p>
@@ -611,8 +633,8 @@ export default {
       Featured_Flowers: [
         "Summer Flowers",
         "Best Selling Flowers",
-        "New Flowers Limited",
-        "Edition Collection "
+        "New Flowers",
+        "Limited Edition Collection"
       ],
       Flowers_by_Delivery: [
         "Same Day Flower",
@@ -622,9 +644,9 @@ export default {
       ],
       shop_by_type: [
         " All Flowers",
-        "Alstroemerias ",
+        "Alstroemerias",
         "Carnations",
-        "Daisies ",
+        "Daisies",
         "Gerberas",
         " Hydrangeas",
         "Irises",
@@ -668,10 +690,9 @@ export default {
         "Birthday for Him"
       ],
       Featured_plants: [
-        "Best Selling ",
-        "Plants New",
-        "Plants Same",
-        "Day Plant Delivery"
+        "Best Selling Plants",
+        "New Plants",
+        "Same Day Plant Delivery"
       ],
       shop_plants: [
         "All Plants ",
@@ -701,9 +722,9 @@ export default {
       ],
       gourmet_foods: [
         "All Gourmet",
-        "Food Gifts ",
+        "Food Gifts",
         "Candy Gifts",
-        " Chocolate ",
+        " Chocolate",
         "Covered Strawberries",
         " Chocolate Gifts",
         "Desserts & Baked Goods",

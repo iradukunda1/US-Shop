@@ -13,16 +13,18 @@
         <card-template :item="product" :showOptions="false" />
       </div>
     </div>
+    <empty-results v-if="!products.length"/>
   </div>
 </template>
 
 <script>
 import cardTemplate from "@/components/shared/CardTemplate";
 import products from "@/components/products/controllers/products";
+import EmptyResults from "@/components/products/tabs-componets/empty-results";
 
 export default {
   name: "sympathy-flowers-gifts",
-  components: { cardTemplate },
+  components: {EmptyResults, cardTemplate },
   data() {
     return {
       products: products.products

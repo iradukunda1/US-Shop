@@ -18,6 +18,7 @@
         <card-template :item="product" :showOptions="false" />
       </div>
     </div>
+    <empty-results v-if="!products.length"/>
     <div class="row mx-0 w-100 button-collection justify-content-center">
       <a
         class="fa-14 my-4 text-center font-weight-bold rounded-0 mx-2 btn py-2 px-4"
@@ -120,10 +121,11 @@
 <script>
 import cardTemplate from "@/components/shared/CardTemplate";
 import products from "@/components/products/controllers/products";
+import EmptyResults from "@/components/products/tabs-componets/empty-results";
 
 export default {
   name: "birthday-plants",
-  components: { cardTemplate },
+  components: {EmptyResults, cardTemplate },
   data() {
     return {
       products: products.products
