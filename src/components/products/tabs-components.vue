@@ -107,6 +107,55 @@
           this.$route.params.params == 'sympathy-flowers-gifts'
       "
     />
+    <summer-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'summer-flowers'
+      "
+    />
+    <best-selling-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'best-selling-flowers'
+      "
+    />
+    <new-flowers-limited
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'new-flowers'"
+    />
+    <limited-edition-collection
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'limited-edition-collection'
+      "
+    />
+    <best-selling-plants
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'best-selling-plants'
+      "
+    />
+    <new-plants
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'new-plants'"
+    />
+    <same-day-plant-delivery
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'same-day-plant-delivery'
+      "
+    />
   </div>
 </template>
 
@@ -126,10 +175,24 @@ import SympathyFlowers from "@/components/products/tabs-componets/sympathy/sympa
 import SameDaySympathyFlowers from "@/components/products/tabs-componets/sympathy/same-day-sympathy-flowers";
 import SympathyPlants from "@/components/products/tabs-componets/sympathy/sympathy-plants";
 import SympathyFlowersGifts from "@/components/products/tabs-componets/sympathy/sympathy-flowers-gifts";
+import SummerFlowers from "@/components/products/tabs-componets/flowers/summer-flowers";
+import BestSellingFlowers from "@/components/products/tabs-componets/flowers/best-selling-flowers";
+import NewFlowersLimited from "@/components/products/tabs-componets/flowers/new-flowers-limited";
+import LimitedEditionCollection from "@/components/products/tabs-componets/flowers/limited-edition-collection";
+import BestSellingPlants from "@/components/products/tabs-componets/gift-plants/best-selling-plants";
+import NewPlants from "@/components/products/tabs-componets/gift-plants/new-plants";
+import SameDayPlantDelivery from "@/components/products/tabs-componets/gift-plants/same-day-plant-delivery";
 
 export default {
   name: "tabs-components",
   components: {
+    SameDayPlantDelivery,
+    NewPlants,
+    BestSellingPlants,
+    LimitedEditionCollection,
+    NewFlowersLimited,
+    BestSellingFlowers,
+    SummerFlowers,
     SympathyFlowersGifts,
     SympathyPlants,
     SameDaySympathyFlowers,

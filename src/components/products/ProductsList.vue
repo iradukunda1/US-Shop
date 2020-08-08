@@ -215,15 +215,6 @@
           <tabs-components
               @itemsLength="resultLength"
           />
-          <div
-            class="empty-result bg-grey mx-auto w-95 mb-5 py-5"
-            v-if="result.length === 0"
-          >
-            <p class="fa-15 text-center w-100 py-4">
-              We're sorry, there are no results available for your combination
-              of filters
-            </p>
-          </div>
         </div>
       </div>
     </div>

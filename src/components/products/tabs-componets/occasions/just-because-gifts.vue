@@ -18,6 +18,7 @@
         <card-template :item="product" :showOptions="false" />
       </div>
     </div>
+    <empty-results v-if="!products.length"/>
     <nav aria-label="...">
       <ul class="pagination row mx-0 w-100 justify-content-center my-4">
         <li class="page-item  active">
@@ -111,10 +112,11 @@
 <script>
 import cardTemplate from "@/components/shared/CardTemplate";
 import products from "@/components/products/controllers/products";
+import EmptyResults from "@/components/products/tabs-componets/empty-results";
 
 export default {
   name: "just-because-gifts",
-  components: { cardTemplate },
+  components: {EmptyResults, cardTemplate },
   data() {
     return {
       products: products.products

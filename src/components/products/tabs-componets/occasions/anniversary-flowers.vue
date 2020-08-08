@@ -17,6 +17,7 @@
         <card-template :item="product" :showOptions="false" />
       </div>
     </div>
+    <empty-results v-if="!products.length"/>
     <div class="footer-content mt-4">
       <p class="font-weight-bold fa-14 pb-2">
         Anniversary Flowers and Romantic Gifts
@@ -56,10 +57,11 @@
 <script>
 import cardTemplate from "@/components/shared/CardTemplate";
 import products from "@/components/products/controllers/products";
+import EmptyResults from "@/components/products/tabs-componets/empty-results";
 
 export default {
   name: "anniversary-flowers",
-  components: { cardTemplate },
+  components: {EmptyResults, cardTemplate },
   data() {
     return {
       products: products.products
