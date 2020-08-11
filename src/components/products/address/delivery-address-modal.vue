@@ -4,11 +4,13 @@
   >
     <div class="delivery-address-modal-container p-3 position-relative">
       <b-row class="delivery-address-header mx-0 w-100 p-2">
-        <h4 class="form-title p-2 mb-0 mt-5">Verify Your Delivery Address</h4>
+        <p class="form-title p-2 mb-0 mt-5 h4">Verify Your Delivery Address</p>
         <span class="px-2 d-flex ml-auto close-list" @click="close()"
           ><i class="fas fa-times cursor-pointer fa-15"></i
         ></span>
-        <p class="text-justify fa-16 font-weight-bold text-black-50 pl-2 mr-4">
+        <p
+          class="address-header-text text-justify fa-16 font-weight-bold text-black-50 pl-2 mr-4"
+        >
           To avoid confusion with delivery your order we'd like to validate the
           delivery address you entered .
         </p>
@@ -37,13 +39,13 @@
           class="row mx-0 w-100 button-collection justify-content-between mt-2"
         >
           <div
-            class="fa-14  text-center font-weight-bold fa text-white bg-button rounded-0 mx-2 btn py-2 px-4"
+            class="fa-14 action-button text-center font-weight-bold fa text-white bg-button rounded-0 mx-2 btn py-2 px-4"
             @click="continuePayment()"
           >
             CONTINUE
           </div>
           <div
-            class="fa-14 border rounded text-center text-primary font-weight-bold rounded-0 mx-2 btn py-2 px-4"
+            class="fa-14 border action-button rounded text-center text-primary font-weight-bold rounded-0 mx-2 btn py-2 px-4"
             @click="close()"
           >
             CANCEL
@@ -133,6 +135,73 @@ export default {
   }
   .delivery-address-list::-webkit-scrollbar-track {
     background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .delivery-address-modal {
+    .delivery-address-modal-container {
+      width: 75% !important;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .delivery-address-modal {
+    .delivery-address-modal-container {
+      width: 85% !important;
+      height: 80% !important;
+      .delivery-address-header {
+        .form-title {
+          width: 90% !important;
+          font-size: 1.4rem !important;
+          margin-top: 2rem !important;
+          padding: 0.5rem 0 !important;
+        }
+        .close-list {
+          width: 10%;
+          padding: 0.5rem 0 !important;
+        }
+        .address-header-text {
+          padding: 0.5rem !important;
+          margin: 0 !important;
+        }
+      }
+    }
+  }
+}
+@media screen and(max-width: 375px) {
+  .delivery-address-modal {
+    .delivery-address-modal-container {
+      width: 80% !important;
+      height: 70% !important;
+      .delivery-address-header {
+        .form-title {
+          width: 90% !important;
+          font-size: 100% !important;
+          padding: 0.5rem 0 !important;
+          font-weight: 600;
+        }
+        .close-list {
+          padding: 0.5rem 0 !important;
+          i {
+            font-size: 0.91rem !important;
+          }
+        }
+        .address-header-text {
+          padding: 0.8rem 0 !important;
+          margin: 0 !important;
+          font-size: 73% !important;
+        }
+      }
+      .action-button {
+        padding: 0.4rem !important;
+        font-size: 65% !important;
+      }
+    }
+  }
+}
+@media screen and( max-width: 320px) {
+  .delivery-address-modal {
   }
 }
 </style>

@@ -1,34 +1,36 @@
 <template>
   <div class="payment w-100 h-auto position-relative">
     <p class="help row mx-0 d-flex w-100 justify-content-end pr-4 pt-3">
-      <span
+      <span class="chat-link-container"
         ><i class="fas fa-comment-dots pr-3"></i>
         <a href="javascript:;;" class="fa-12">Click to Chat</a></span
-      ><span class="fa-12 pl-3 pt-1"
+      ><span class="fa-12 pl-3 pt-1 contact-link-container"
         ><a href="javascript:;;">Need Help? +250780633340</a>
       </span>
     </p>
-    <div class="row justify-content-center mx-0 w-100 my-4 pb-5">
-      <div class="delivery-info-container w-50">
+    <div
+      class="row justify-content-center payment-content-container mx-0 w-100 my-4 pb-5"
+    >
+      <div class="payment-info-container w-50">
         <p class="header font-weight-bold h3 mb-0">Enter Payment Info</p>
-        <p class="fa-13 font-italic text-black-50 mb-5">
+        <p class="fa-13 font-italic text-black-50 mb-5 sub-header">
           All fields required unless noted otherwise.
         </p>
         <div class="w-75 payment-form pt-2">
-          <div class="w-100 border-bottom my-3">
+          <div class="mr-5 border-bottom my-3">
             <p class="mb-0 font-weight-bold fa-14 pb-2">
               SELECT PAYMENT METHOD
             </p>
           </div>
           <div class="w-100 mb-2 select-payment-method-area">
-            <div class="w-75 d-flex">
+            <div class="w-75 d-flex select-payment-method">
               <b-form-radio></b-form-radio>
               <p class="pr-2">Credit Card</p>
             </div>
           </div>
           <div class="w-100 mb-2 card-number-area">
             <label class="fa-12 font-weight-bold">CARD NUMBER</label>
-            <div class="w-75 h-50px d-flex border rounded-0">
+            <div class="w-75 h-50px d-flex card-number border rounded-0">
               <input
                 placeholder="Card Number"
                 type="text"
@@ -38,7 +40,7 @@
             </div>
           </div>
           <div class="w-100 mb-5 card-info-area pb-3">
-            <div class="w-75 h-50px d-flex">
+            <div class="w-75 h-50px card-info d-flex">
               <div class="state-area w-50 h-100">
                 <label class="fa-12 fa">EXPIRED DATE</label>
                 <input
@@ -85,4 +87,102 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.payment {
+  .cart-list-items {
+    height: calc(100vh - 270px);
+    overflow-y: overlay;
+  }
+  .cart-list-items::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+  }
+  .cart-list-items::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 124, 173);
+    border-radius: 35px;
+  }
+  .cart-list-items::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+@media screen and (max-width: 768px) {
+  .payment {
+    .payment-content-container {
+      padding: 0 3rem 3rem 3rem !important;
+      .payment-info-container {
+        width: 60% !important;
+        .payment-form {
+          width: 100% !important;
+        }
+      }
+      .payment-items {
+        width: 40% !important;
+      }
+    }
+  }
+}
+@media (min-width: 375px) and (max-width: 425px) {
+  .payment {
+    .payment-content-container {
+      .payment-info-container {
+        width: 100% !important;
+        .header {
+          font-size: 1.6rem !important;
+        }
+      }
+      .payment-items {
+        width: 95% !important;
+      }
+    }
+  }
+}
+@media screen and(max-width: 375px) {
+  .payment {
+    .payment-content-container .payment-info-container .header {
+      font-size: 1.3rem !important;
+    }
+    .chat-link-container {
+      font-size: 70%;
+      padding-top: 0.25rem;
+      i {
+        padding-right: 0.25rem !important;
+      }
+      a {
+        font-size: 90% !important;
+      }
+    }
+    .contact-link-container {
+      padding-left: 0.5rem !important;
+      a {
+        font-size: 84% !important;
+      }
+    }
+    .card-number,
+    .card-info {
+      width: 95% !important;
+    }
+  }
+}
+@media screen and( max-width: 320px) {
+  .payment {
+    .payment-content-container {
+      .payment-info-container {
+        width: 100% !important;
+        .header {
+          font-size: 0.9rem !important;
+        }
+        .sub-header{
+          margin-bottom: 0 !important;
+        }
+      }
+      .payment-items {
+        width: 95% !important;
+      }
+    }
+    .card-number,
+    .card-info {
+      width: 100% !important;
+    }
+  }
+}
+</style>

@@ -3,11 +3,11 @@
     <form @submit.prevent>
       <div class="w-100 mb-2" v-if="this.$route.params.params == 'delivery'">
         <label class="fa-12 fa">LOCATION TYPE</label>
-        <div class="w-60 h-50px d-flex">
+        <div class="w-60 h-50px d-flex location-area">
           <b-form-select
             id="locationType"
             v-model="delivery.residence"
-            class="form-control cursor-pointer rounded-0  h-100"
+            class="form-control cursor-pointer location-input rounded-0  h-100"
             :options="locations"
           >
           </b-form-select
@@ -18,7 +18,7 @@
       </div>
       <div class="w-100 mb-2 recipient-firstName-area">
         <label class="fa-12 fa">Recipient First Name</label>
-        <div class="w-75 h-50px">
+        <div class="w-75 h-50px recipient-firstName">
           <input
             placeholder="Recipient First Name"
             type="text"
@@ -29,7 +29,7 @@
       </div>
       <div class="w-100 mb-2 recipient-lastName-area">
         <label class="fa-12 fa">Recipient Last Name</label>
-        <div class="w-75 h-50px">
+        <div class="w-75 h-50px recipient-lastName">
           <input
             placeholder="Recipient Last Name"
             type="text"
@@ -43,7 +43,7 @@
         v-if="this.$route.params.params == 'delivery'"
       >
         <label class="fa-12 fa">Company / Business Name</label>
-        <div class="w-75 h-50px">
+        <div class="w-75 h-50px Company-businessName">
           <input
             placeholder="Company/Business Name"
             type="text"
@@ -54,7 +54,7 @@
       </div>
       <div class="w-100 mb-2 street-address-area">
         <label class="fa-12 fa">Street Address</label>
-        <div class="w-75 h-50px">
+        <div class="w-75 h-50px street-address">
           <input
             placeholder="Street Address"
             type="text"
@@ -65,7 +65,7 @@
       </div>
       <div class="w-100 mb-2 apartment-area">
         <label class="fa-12 fa">Apartment or Suite</label>
-        <div class="w-75 h-50px">
+        <div class="w-75 h-50px apartment">
           <input
             placeholder="Apartment or Suite (optional)"
             type="text"
@@ -76,7 +76,7 @@
       </div>
       <div class="w-100 mb-2 city-area">
         <label class="fa-12 fa">City</label>
-        <div class="w-75 h-50px">
+        <div class="w-75 h-50px city-input">
           <input
             placeholder="City"
             type="text"
@@ -86,7 +86,7 @@
         </div>
       </div>
       <div class="w-100 mb-5 state-zip-area">
-        <div class="w-75 h-50px d-flex">
+        <div class="w-75 h-50px d-flex state-zip-inputs">
           <div class="state-area w-50 h-100">
             <label class="fa-12 fa">SELECT STATE</label>
             <b-form-select
@@ -108,7 +108,7 @@
       </div>
       <div class="w-100 mb-2 country-area">
         <label class="fa-12 fa" for="deliveryCountry">COUNTRY</label>
-        <div class="w-75 h-50px">
+        <div class="w-75 h-50px country-input">
           <b-form-select
             id="deliveryCountry"
             v-model="delivery.country"
@@ -120,7 +120,7 @@
       </div>
       <div class="w-100 mb-2 delivery-PhoneNumber-area">
         <label class="fa-12 fa">Delivery Phone Number</label>
-        <div class="w-60 h-50px d-flex">
+        <div class="w-60 h-50px d-flex delivery-PhoneNumber">
           <vue-tel-input
             id="phoneNumber"
             class="form-control rounded-0  h-100"
@@ -132,7 +132,7 @@
         </div>
       </div>
       <div class="w-100 mb-2 my-4">
-        <div class="w-75 d-flex">
+        <div class="w-75 subscription-area d-flex">
           <b-form-checkbox type="checkbox" />
           <p
             class="mb-0 pl-2 fa-13 text-black-50 pt-1"
@@ -172,14 +172,14 @@
       </div>
       <div
         v-if="this.$route.params.params == 'delivery'"
-        class="bg-button w-50 text-white fa-14  font-weight-bold rounded-0  btn py-2 px-4"
+        class="bg-button w-50 text-white fa-14  continue-payment-button font-weight-bold rounded-0  btn py-2 px-4"
         @click="contPayments()"
       >
         CONTINUE TO PAYMENT
       </div>
       <div
         v-if="this.$route.params.params === 'payment'"
-        class="bg-button w-50 text-white fa-14  font-weight-bold rounded-0  btn py-2 px-4"
+        class="bg-button w-50 text-white fa-14 review-button font-weight-bold rounded-0  btn py-2 px-4"
         @click="reviewOrder()"
       >
         REVIEW ORDER
@@ -248,3 +248,69 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+@media screen and (max-width: 768px) {
+  .delivery-address-form {
+  }
+}
+@media screen and (max-width: 425px) {
+  .delivery-address-form {
+    .continue-payment-button {
+      width: 80% !important;
+      margin: 2rem 0 !important;
+    }
+    .review-button {
+      width: 80% !important;
+      margin: 2rem 0 !important;
+    }
+  }
+}
+@media screen and(max-width: 375px) {
+  .delivery-address-form {
+    .location-area,
+    .delivery-PhoneNumber {
+      width: 90% !important;
+    }
+    .recipient-firstName,
+    .recipient-lastName,
+    .Company-businessName,
+    .street-address,
+    .apartment,
+    .city-input,
+    .state-zip-inputs,
+    .country-input,
+    .subscription-area,
+    .email-area {
+      width: 95% !important;
+    }
+  }
+}
+@media screen and( max-width: 320px) {
+  .delivery-address-form {
+    .location-area,
+    .delivery-PhoneNumber {
+      width: 95% !important;
+    }
+    .recipient-firstName,
+    .recipient-lastName,
+    .Company-businessName,
+    .street-address,
+    .apartment,
+    .city-input,
+    .state-zip-inputs,
+    .country-input,
+    .subscription-area,
+    .email-area {
+      width: 100% !important;
+    }
+    .continue-payment-button {
+      width: 90% !important;
+      font-size: 70% !important;
+    }
+    .review-button {
+      width: 90% !important;
+      font-size: 70% !important;
+    }
+  }
+}
+</style>

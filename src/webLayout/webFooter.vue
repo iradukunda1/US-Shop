@@ -1,8 +1,8 @@
 <template>
   <footer class="section footer-classic text-black  bg-grey w-100">
     <div class="footer-content border-top border-bottom px-5 pt-3 pb-5 d-flex">
-      <div class="row w-100" v-if="$route.name !== 'Purchase'">
-        <div class="footer-logo d-block col-md-5">
+      <div class="row w-100 mx-0" v-if="$route.name !== 'Purchase'">
+        <div class="footer-logo d-block mb-3 col-md-5">
           <div class="mb-0">
             <span class="c-default mr-2 h3">S.U</span>
             <span class="text-info h4 mt-1">BOUQUETS</span>
@@ -20,7 +20,7 @@
             </button>
           </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 mb-3">
           <h5>Contacts</h5>
           <dl class="contact-list">
             <dt>Address:</dt>
@@ -40,7 +40,7 @@
             </dd>
           </dl>
         </div>
-        <div class="col-md-2 footer-links">
+        <div class="col-md-2 mb-3 footer-links">
           <h5>Links</h5>
           <ul>
             <li>
@@ -79,20 +79,19 @@
         class="purchase-footer mt-5 justify-content-center row w-100 mx-0"
         v-if="$route.name === 'Purchase'"
       >
-        <div class="footer-logo d-block pt-4">
+        <div class="footer-logo d-block pt-3 col-md-3">
           <div class="mb-0 mt-2">
             <span class="c-default mr-2 h3">S.U</span>
             <span class="text-info h4 mt-1">BOUQUETS</span>
           </div>
           <span class="small ml-5">an FTD company</span>
         </div>
-        <div class="footer-image-container">
-          <span
-            class="footer-image d-block mb-2"
-            :style="{
-              backgroundImage: 'url(' + '/img/footer_image.png' + ')'
-            }"
-          ></span>
+        <div class="footer-image-container col-md-8">
+          <img
+            class="footer-image d-block mb-2 w-100"
+            src="/img/footer_image.png"
+            alt="companies-image"
+          />
         </div>
       </div>
     </div>
@@ -118,4 +117,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "../assets/style/webFooter";
+@media screen and (max-width: 768px) {
+}
+@media (min-width: 375px) and (max-width: 425px) {
+}
+@media screen and( max-width: 320px) {
+}
 </style>

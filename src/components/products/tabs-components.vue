@@ -223,4 +223,285 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+@media screen and( max-width: 768px) {
+  .tabs-components-container {
+    .same-day-birthday {
+      padding: 1rem !important;
+    }
+    .birth-day-collection {
+      padding: 1rem !important;
+    }
+    .birthday-gifts {
+      padding: 1rem !important;
+    }
+    .birthday-flowers {
+      padding: 1rem !important;
+    }
+    .birthday-plants {
+      padding: 1rem !important;
+    }
+    .birthday-roses {
+      padding: 1rem !important;
+    }
+    .best-selling-flowers {
+      padding: 1rem !important;
+    }
+    .limited-edition-collection {
+      padding: 1rem !important;
+    }
+    .new-flowers-limited {
+      padding: 1rem !important;
+    }
+    .summer-flowers {
+      padding: 1rem !important;
+    }
+    .best-selling-plants {
+      padding: 1rem !important;
+    }
+    .new-plants {
+      padding: 1rem !important;
+    }
+    .same-day-plant-delivery {
+      padding: 1rem !important;
+    }
+    .anniversary-flowers {
+      padding: 1rem !important;
+    }
+    .get-well-flowers {
+      padding: 1rem !important;
+    }
+    .just-because-gifts {
+      padding: 1rem !important;
+    }
+    .new-baby-flowers {
+      padding: 1rem !important;
+    }
+    .romantic-flowers {
+      padding: 1rem !important;
+    }
+    .same-day-sympathy-flowers {
+      padding: 1rem !important;
+    }
+    .sympathy-flowers {
+      padding: 1rem !important;
+    }
+    .sympathy-flowers-gifts {
+      padding: 1rem !important;
+    }
+    .sympathy-plants {
+      padding: 1rem !important;
+    }
+  }
+}
+@media screen and( max-width: 425px) {
+  .tabs-components-container {
+    .same-day-birthday {
+      padding: 1rem !important;
+    }
+    .birth-day-collection {
+      padding: 1rem !important;
+    }
+    .birthday-gifts {
+      padding: 1rem !important;
+    }
+    .birthday-flowers {
+      padding: 1rem !important;
+    }
+    .birthday-plants {
+      padding: 1rem !important;
+    }
+    .birthday-roses {
+      padding: 1rem !important;
+    }
+    .best-selling-flowers {
+      padding: 1rem !important;
+    }
+    .limited-edition-collection {
+      padding: 1rem !important;
+    }
+    .new-flowers-limited {
+      padding: 1rem !important;
+    }
+    .summer-flowers {
+      padding: 1rem !important;
+    }
+    .best-selling-plants {
+      padding: 1rem !important;
+    }
+    .new-plants {
+      padding: 1rem !important;
+    }
+    .same-day-plant-delivery {
+      padding: 1rem !important;
+    }
+    .anniversary-flowers {
+      padding: 1rem !important;
+    }
+    .get-well-flowers {
+      padding: 1rem !important;
+    }
+    .just-because-gifts {
+      padding: 1rem !important;
+    }
+    .new-baby-flowers {
+      padding: 1rem !important;
+    }
+    .romantic-flowers {
+      padding: 1rem !important;
+    }
+    .same-day-sympathy-flowers {
+      padding: 1rem !important;
+    }
+    .sympathy-flowers {
+      padding: 1rem !important;
+    }
+    .sympathy-flowers-gifts {
+      padding: 1rem !important;
+    }
+    .sympathy-plants {
+      padding: 1rem !important;
+    }
+  }
+}
+@media screen and( max-width: 375px) {
+  .tabs-components-container {
+    .same-day-birthday {
+      padding: 1rem !important;
+    }
+    .birth-day-collection {
+      padding: 1rem !important;
+    }
+    .birthday-gifts {
+      padding: 1rem !important;
+    }
+    .birthday-flowers {
+      padding: 1rem !important;
+    }
+    .birthday-plants {
+      padding: 1rem !important;
+    }
+    .birthday-roses {
+      padding: 1rem !important;
+    }
+    .best-selling-flowers {
+      padding: 1rem !important;
+    }
+    .limited-edition-collection {
+      padding: 1rem !important;
+    }
+    .new-flowers-limited {
+      padding: 1rem !important;
+    }
+    .summer-flowers {
+      padding: 1rem !important;
+    }
+    .best-selling-plants {
+      padding: 1rem !important;
+    }
+    .new-plants {
+      padding: 1rem !important;
+    }
+    .same-day-plant-delivery {
+      padding: 1rem !important;
+    }
+    .anniversary-flowers {
+      padding: 1rem !important;
+    }
+    .get-well-flowers {
+      padding: 1rem !important;
+    }
+    .just-because-gifts {
+      padding: 1rem !important;
+    }
+    .new-baby-flowers {
+      padding: 1rem !important;
+    }
+    .romantic-flowers {
+      padding: 1rem !important;
+    }
+    .same-day-sympathy-flowers {
+      padding: 1rem !important;
+    }
+    .sympathy-flowers {
+      padding: 1rem !important;
+    }
+    .sympathy-flowers-gifts {
+      padding: 1rem !important;
+    }
+    .sympathy-plants {
+      padding: 1rem !important;
+    }
+  }
+}
+@media screen and( max-width: 320px) {
+  .tabs-components-container {
+    .same-day-birthday {
+      padding: 1rem !important;
+    }
+    .birth-day-collection {
+      padding: 1rem !important;
+    }
+    .birthday-gifts {
+      padding: 1rem !important;
+    }
+    .birthday-flowers {
+      padding: 1rem !important;
+    }
+    .birthday-plants {
+      padding: 1rem !important;
+    }
+    .birthday-roses {
+      padding: 1rem !important;
+    }
+    .best-selling-flowers {
+      padding: 1rem !important;
+    }
+    .limited-edition-collection {
+      padding: 1rem !important;
+    }
+    .new-flowers-limited {
+      padding: 1rem !important;
+    }
+    .summer-flowers {
+      padding: 1rem !important;
+    }
+    .best-selling-plants {
+      padding: 1rem !important;
+    }
+    .new-plants {
+      padding: 1rem !important;
+    }
+    .same-day-plant-delivery {
+      padding: 1rem !important;
+    }
+    .anniversary-flowers {
+      padding: 1rem !important;
+    }
+    .get-well-flowers {
+      padding: 1rem !important;
+    }
+    .just-because-gifts {
+      padding: 1rem !important;
+    }
+    .new-baby-flowers {
+      padding: 1rem !important;
+    }
+    .romantic-flowers {
+      padding: 1rem !important;
+    }
+    .same-day-sympathy-flowers {
+      padding: 1rem !important;
+    }
+    .sympathy-flowers {
+      padding: 1rem !important;
+    }
+    .sympathy-flowers-gifts {
+      padding: 1rem !important;
+    }
+    .sympathy-plants {
+      padding: 1rem !important;
+    }
+  }
+}
+</style>

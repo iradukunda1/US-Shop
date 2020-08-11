@@ -1,17 +1,17 @@
 <template>
   <div class="gift-cards w-100 h-100 position-relative">
     <div class="gift-lists" v-for="(gift, index) in gifts" :key="index">
-      <div class="d-flex border rounded p-2 gift-list my-2 cursor-pointer">
+      <div class="row mx-0 w-100 justify-content-around border rounded p-2 gift-list my-2 cursor-pointer">
         <div class="select-gift-box my-auto">
           <b-form-checkbox type="checkbox" />
         </div>
         <span
-          class="gift-profile d-block ml-3"
+          class="gift-profile d-block"
           :style="{
             backgroundImage: 'url(' + gift.images_urls + ')'
           }"
         ></span>
-        <div class="gift-desc mx-auto pt-2">
+        <div class="gift-desc pt-2">
           <p class=" fa-16 text-black-50 mb-0 pb-2">
             {{ gift.name }}
           </p>
@@ -96,7 +96,7 @@ export default {
           images_urls: "/img/icons/CKJ.webp",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo velit blanditiis voluptate doloremque nihil fuga.",
-          name: "Delicious Box of Chocolate",
+          name: "Delicious Chocolate",
           price: "100",
           currency: "FRW",
           code: "DE#-56RT"

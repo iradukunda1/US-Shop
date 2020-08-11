@@ -7,7 +7,7 @@
       >
         SIGN IN
       </div>
-      <span class="fa-13 text-justify mb-0 pl-3 w-75">
+      <span class="fa-13 text-justify mb-0 pl-3 w-75 saved-address-text">
         Get access to saved addresses and payment info.
       </span>
     </div>
@@ -81,6 +81,34 @@ export default {
     &:hover {
       color: white;
       background-color: rgb(0, 124, 173) !important;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .purchase-items-calculator {
+    .sign-button {
+      width: 25% !important;
+      padding: 0.5rem 0 !important;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .purchase-items-calculator {
+  }
+}
+@media screen and(max-width: 375px) {
+  .purchase-items-calculator {
+  }
+}
+@media screen and( max-width: 320px) {
+  .purchase-items-calculator {
+    .sign-button {
+      width: 40% !important;
+      padding: 0.8rem 0 !important;
+    }
+    .saved-address-text{
+      width: 60% !important;
+      line-height: 1.2 !important;
     }
   }
 }

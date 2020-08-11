@@ -73,4 +73,21 @@ export default {
   mounted() {},
 };
 </script>
-<style></style>
+<style lang="scss" scoped>
+@media screen and (max-width: 768px) {
+  .cart-calculator {
+  }
+}
+@media (min-width: 375px) and (max-width: 425px) {
+  .cart-calculator {
+  }
+}
+@media screen and(max-width: 375px) {
+  .cart-calculator {
+  }
+}
+@media screen and( max-width: 320px) {
+  .cart-calculator {
+  }
+}
+</style>

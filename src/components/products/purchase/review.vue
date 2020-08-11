@@ -5,18 +5,18 @@
         ><a href="javascript:;;">Need Help? +250780633340</a>
       </span>
     </p>
-    <div class="row justify-content-center mx-0 w-100 my-4 pb-5">
-      <div class="delivery-info-container w-50">
-        <div class="w-75 delivery-form pt-2">
+    <div class="row review-content-container justify-content-center mx-0 w-100 my-4 pb-5">
+      <div class="review-info-container w-50">
+        <div class="w-75 cart-items pt-2">
           <list-view />
           <div
-            class="bg-button w-50 text-white fa-14 font-weight-bold  rounded-0 btn py-2 mb-2 px-4 mt-5"
+            class="bg-button place-order-button w-50 text-white fa-14 font-weight-bold  rounded-0 btn py-2 mb-2 px-4 mt-5"
           >
             PLACE YOUR ORDER
           </div>
         </div>
       </div>
-      <div class="delivery-items w-25">
+      <div class="review-items w-25">
         <div class="w-100">
           <div
             class="sign-button text-white btn rounded-0 mb-2 font-weight-bold bg-button w-100 fa-13 py-3 px-4"
@@ -91,6 +91,63 @@ export default {
     &:hover {
       color: white;
       background-color: rgb(0, 124, 173) !important;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .review-component {
+    .review-content-container {
+      padding: 0 3rem 3rem 3rem !important;
+      .review-info-container {
+        width: 60% !important;
+      }
+      .review-items {
+        width: 40% !important;
+      }
+    }
+  }
+}
+@media (min-width: 375px) and (max-width: 425px) {
+  .review-component {
+    .review-content-container {
+      padding: 0 3rem 3rem 3rem !important;
+      .review-info-container {
+        width: 100% !important;
+        .cart-items{
+          width: 100% !important;
+          .place-order-button{
+            display: none !important;
+          }
+        }
+      }
+      .review-items {
+        width: 95% !important;
+        .sign-button{
+          margin: 2rem 0 !important;
+        }
+      }
+    }
+  }
+}
+@media screen and( max-width: 320px) {
+  .review-component {
+    .review-content-container {
+      padding:0 2rem 3rem 1rem !important;
+      .review-info-container {
+        width: 100% !important;
+        .cart-items{
+          width: 100% !important;
+          .place-order-button{
+            display: none !important;
+          }
+        }
+      }
+      .review-items {
+        width: 95% !important;
+        .sign-button{
+          margin: 2rem 0 !important;
+        }
+      }
     }
   }
 }

@@ -40,12 +40,16 @@ export default {
 </script>
 
 <style lang="scss">
+html{
+  height: 100vh;
+  width: 100%;
+}
 .web-layout-content {
   display: grid;
-  width: 100%;
   padding: 0;
+  width: 100%;
   height: 100%;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
   grid-template-rows: 95px 1fr auto;
   grid-template-areas:
     "navbar"
@@ -64,13 +68,10 @@ export default {
     position: relative;
     grid-area: content;
     background: white;
-    min-height: 306px;
+    min-height: 36vh;
   }
   .footer-classic {
-    background-color: white;
     grid-area: footer;
-    width: 100%;
-    transition: all 1s !important;
   }
   .dropdown-toggle::after {
     display: none !important;
