@@ -7,7 +7,7 @@
         shows you still choose them.
       </p>
     </div>
-    <div class="birth-product-container row justify-content-around w-100 mx-0">
+    <div class="birth-product-container row justify-content-center w-100 mx-0">
       <div
         class="my-2 mx-2"
         v-for="(product, index) in products"

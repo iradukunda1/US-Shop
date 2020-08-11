@@ -43,8 +43,8 @@ export default {
   top: 0;
   bottom: 0;
   height: 100vh;
-  z-index: 20;
-  background: rgba(0 ,0 ,0 , 0.02);
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.02);
   font-family: "Roboto", sans-serif;
   .header-content-container {
     right: 0;
@@ -78,5 +78,33 @@ export default {
 }
 .different-content::-webkit-scrollbar-track {
   background-color: transparent;
+}
+@media screen and (max-width: 768px) {
+  .extra-list-view {
+    .header-content-container {
+      width: 50%;
+    }
+  }
+}
+@media (min-width: 375px) and (max-width: 425px) {
+  .extra-list-view {
+    .header-content-container {
+      width: 80%;
+    }
+  }
+}
+@media screen and(max-width: 375px) {
+  .extra-list-view {
+    .header-content-container {
+      width: 90%;
+    }
+  }
+}
+@media screen and( max-width: 320px) {
+  .extra-list-view {
+    .header-content-container {
+      width: 100%;
+    }
+  }
 }
 </style>

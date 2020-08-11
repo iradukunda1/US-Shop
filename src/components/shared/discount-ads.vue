@@ -3,7 +3,8 @@
     <div class="justify-content-center d-flex p-3">
       <p class="text-white mb-0">
         Get 20% Off – our biggest summer sale, happening right now
-        <a href="#" class="text-white font-weight-bold"> SHOP THE SALE</a> <i class="fa fa-angle-right"></i>
+        <a href="#" class="text-white font-weight-bold"> SHOP THE SALE</a>
+        <i class="fa fa-angle-right"></i>
       </p>
     </div>
   </div>
@@ -15,11 +16,32 @@ export default {
 </script>
 
 <style scoped lang="scss">
-   .discount-ads{
-    a{
-      &:hover{
-        color: blue;
-      }
+@media screen and (max-width: 768px) {
+  .discount-ads {
+    div {
+      font-size: 70%;
     }
-   }
+  }
+}
+@media (min-width: 375px) and (max-width: 425px) {
+  .discount-ads {
+    div {
+      font-size: 55%;
+    }
+  }
+}
+@media screen and(max-width: 375px) {
+  .discount-ads {
+    div {
+      font-size: 55%;
+    }
+  }
+}
+@media screen and( max-width: 320px) {
+  .discount-ads {
+    div {
+      font-size: 45%;
+    }
+  }
+}
 </style>

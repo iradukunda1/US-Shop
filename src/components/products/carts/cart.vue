@@ -1,14 +1,17 @@
 <template>
   <div class="cart-products">
     <p class="help row mx-0 d-flex w-100 justify-content-end pr-4 pt-3">
-      <span
+      <span class="chat-link-container"
         ><i class="fas fa-comment-dots pr-3"></i>
         <a href="javascript:;;" class="fa-12">Click to Chat</a></span
-      ><span class="fa-12 pl-3 pt-1"
+      ><span class="fa-12 pl-3 pt-1 contact-link-container"
         ><a href="javascript:;;">Need Help? +250780633340</a>
       </span>
     </p>
-    <p class="justify-content-end d-flex w-25" @click="$router.push('/')">
+    <p
+      class="justify-content-end d-flex go-to-shop w-25"
+      @click="$router.push({ name: 'Home' })"
+    >
       <i class="fas fa-angle-left pr-2"></i
       ><a href="javascript:;;" class="font-weight-bold fa-13"
         >CONTINUE SHOPPING</a
@@ -101,6 +104,83 @@ export default {
     &:hover {
       color: white;
       background-color: rgb(0, 124, 173) !important;
+    }
+  }
+}
+@media (min-width: 375px) and (max-width: 425px) {
+  .cart-products {
+    .go-to-shop {
+      width: 40% !important;
+      a {
+        font-size: 75% !important;
+      }
+    }
+    .delivery-info-container {
+      width: 90% !important;
+      margin-left: 2rem !important;
+    }
+    .delivery-items {
+      margin-top: 3rem !important;
+      width: 80% !important;
+    }
+  }
+}
+@media screen and(max-width: 375px) {
+  .cart-products {
+    .delivery-items {
+      width: 90% !important;
+    }
+    .go-to-shop {
+      width: 45% !important;
+      padding-left: 1rem;
+      margin-top: 2rem;
+      a {
+        font-size: 70% !important;
+      }
+    }
+  }
+}
+@media screen and( max-width: 320px) {
+  .cart-products {
+    .chat-link-container {
+      font-size: 70%;
+      padding-top: 0.25rem;
+      i{
+        padding-right: 0.25rem !important;
+      }
+     a {
+        font-size: 90% !important;
+      }
+    }
+    .contact-link-container {
+      padding-left: 0.5rem !important;
+      a {
+        font-size: 84% !important;
+      }
+    }
+    .go-to-shop {
+      width: 50% !important;
+      a {
+        font-size: 70% !important;
+      }
+    }
+    .delivery-info-container {
+      width: 85% !important;
+      margin-left: 0 !important;
+      .header {
+        font-size: 1.3rem !important;
+        font-weight: 500 !important;
+        line-height: 1.2 !important;
+      }
+      .delivery-form {
+        width: 100% !important;
+      }
+    }
+    .delivery-items {
+      .sign-button {
+        width: 25% !important;
+        padding: 0.5rem 0 !important;
+      }
     }
   }
 }

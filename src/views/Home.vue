@@ -7,13 +7,12 @@
         <div
           class="row justify-content-center position-absolute image-discount-desc w-100 m-0"
         >
-          <div class="pt-5  mt-5 discount-container">
-            <p class="h2  mx-2">Christmas in July Sale</p>
-            <p>Get the scoop on our biggest summer savings.</p>
-            <button
-              class="btn text-dark bg-white p-2"
-              style="margin-left: 7rem"
-            >
+          <div class="pt-5  mt-5 discount-container w-95">
+            <p class="h2  mx-2 text-center">Christmas in July Sale</p>
+            <p class="text-center">
+              Get the scoop on our biggest summer savings.
+            </p>
+            <button class="btn text-dark bg-white p-2 mx-auto d-flex">
               SHOP SALE
             </button>
           </div>
@@ -23,15 +22,14 @@
     </div>
     <div class="flower-product-container w-100">
       <div class="best-shop-sellers position-relative mb-0">
-        <div class="py-4 px-0" style="text-align: center">
+        <div class="py-4 px-0 text-center">
           <h3>Shop Sale Best Sellers</h3>
         </div>
         <div
-          class="wrapper mb-3 row justify-content-center w-100"
-          style="text-align: center"
+          class="wrapper mb-3 row justify-content-center text-center mx-0 w-100"
         >
           <div
-            class="mx-3"
+            class="mx-3 mb-2 categories-list"
             style="height: 20rem"
             v-for="(product, index) in products.firstThree()"
             :key="index"
@@ -44,25 +42,26 @@
       <div class="separation-image w-100 d-inline-flex" style="height: 30rem;">
         <img class="home-images w-100 h-100 d-block" src="/img/22.jpg" />
         <div
-          class="row justify-content-center position-absolute image-discount-desc w-100 mx-0"
+          class="row justify-content-center position-absolute show-birthday-container w-100 mx-0"
           style="height: 30rem;"
         >
-          <div class="my-auto">
-            <p class="h2 mx-5 f-15">For Leo Birthdays</p>
-            <p>Bold & beautiful, flowers are perfect for a Leo.</p>
-            <button class="btn text-white p-2 ml-5 bg-button">
+          <div class="my-auto w-95 show-birthday-container-text">
+            <p class="h2 f-15 text-center">For Leo Birthdays</p>
+            <p class="text-center">
+              Bold & beautiful, flowers are perfect for a Leo.
+            </p>
+            <button class="btn text-white p-2 d-flex mx-auto bg-button">
               SHOP BIRTHDAY FLOWER
             </button>
           </div>
         </div>
       </div>
       <div class="best-shop-categories position-relative mb-0">
-        <div class="py-4 px-0" style="text-align: center">
+        <div class="py-4 px-0 text-center">
           <h3>Most Popular Categories</h3>
         </div>
         <div
-          class="wrapper mb-5 row justify-content-center w-100"
-          style="text-align: center"
+          class="wrapper mb-5 row text-center justify-content-center mx-0 w-100"
         >
           <div
             class="mx-3 my-2"
@@ -76,7 +75,9 @@
       </div>
       <div class="shop-details px-4 position-relative mb-0">
         <div class="py-4 px-0">
-          <h3>Order Flowers Online – Delivered to Your Door</h3>
+          <h3 class="shop-details-header">
+            Order Flowers Online – Delivered to Your Door
+          </h3>
         </div>
         <div class="wrapper mb-5  w-100" v-if="showAll">
           <div class="first-phase">
@@ -187,8 +188,7 @@ export default {
       products: products.products
     };
   },
-  mounted() {
-  }
+  mounted() {}
 };
 </script>
 <style lang="scss" scoped>
@@ -206,6 +206,105 @@ export default {
       &:hover {
         color: white;
         background: rgb(0, 124, 173);
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .home-component {
+    .flower-product-container .shop-sale-button {
+      width: 35%;
+    }
+  }
+}
+@media (min-width: 375px) and (max-width: 425px) {
+  .home-component {
+    .images {
+      height: 15rem !important;
+    }
+    .image-discount-desc {
+      .discount-container {
+        padding-top: 0 !important;
+      }
+    }
+    .shop-details {
+      font-size: 76%;
+      line-height: 1.5rem;
+      .shop-details-header {
+        font-size: 1.55rem;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+    }
+    .separation-image {
+      height: 12rem !important;
+    }
+    .show-birthday-container {
+      height: 12rem !important;
+      font-size: 66% !important;
+      p:nth-child(1) {
+        font-size: 1.75rem !important;
+      }
+      button {
+        font-size: 100% !important;
+      }
+    }
+  }
+}
+@media screen and( max-width: 320px) {
+  .home-component {
+    .images {
+      height: 15rem !important;
+    }
+    .image-discount-desc {
+      .discount-container {
+        padding-top: 0 !important;
+        p:nth-child(1) {
+          font-size: 1.75rem !important;
+          margin-bottom: 0.5rem !important;
+          font-weight: 500 !important;
+          line-height: 1.2 !important;
+        }
+        p:nth-child(2) {
+          font-size: 72% !important;
+        }
+        button {
+          font-size: 78% !important;
+        }
+      }
+    }
+    .separation-image {
+      height: 10rem !important;
+    }
+    .show-birthday-container {
+      height: 10rem !important;
+      .show-birthday-container-text {
+        p:nth-child(1) {
+          font-size: 1.75rem !important;
+          margin-bottom: 0.5rem !important;
+          font-weight: 500 !important;
+          line-height: 1.2 !important;
+        }
+        p:nth-child(2) {
+          font-size: 56% !important;
+        }
+        button {
+          font-size: 65% !important;
+        }
+      }
+    }
+    .flower-product-container .shop-sale-button {
+      width: 50% !important;
+    }
+    .shop-details {
+      font-size: 65% !important;
+      line-height: 1.3rem;
+      .shop-details-header {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
+        font-weight: 500;
+        line-height: 1.2;
       }
     }
   }

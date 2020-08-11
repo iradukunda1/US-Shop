@@ -4,14 +4,17 @@
       <images-container />
       <delivery-timer />
       <div
-        class="header-options row mx-0 w-100 justify-content-between py-3 px-5 border-bottom"
+        class="header-options row mx-0 w-100 justify-content-between py-3 px-4 border-bottom"
       >
-        <p class="mb-0 fa-14 cursor-pointer" @click="showFilter = !showFilter">
+        <p
+          class="mb-0 fa-14 cursor-pointer showFilter"
+          @click="showFilter = !showFilter"
+        >
           <i class="fas fa-list pr-2"></i
           ><span v-if="!showFilter">Show Filters</span
           ><span v-if="showFilter">Hide Filters</span>
         </p>
-        <p class="mb-0 fa-14 font-weight-bold">{{ result }} Results</p>
+        <p class="mb-0 fa-14 font-weight-bold result">{{ result }} Results</p>
         <div class="sort-container d-flex fa-14">
           <span>Sort By: </span>
           <p class="mb-0 ml-1 cursor-pointer">
@@ -37,11 +40,13 @@
                 </p>
                 <div class="prices-filter w-100 my-3" v-if="filterPrice">
                   <div
-                    class="prices-lists w-100 mb-2"
+                    class="w-100 mb-2"
                     v-for="(price, index) in prices"
                     :key="index"
                   >
-                    <div class="row mx-0 w-100 justify-content-start">
+                    <div
+                      class="row prices-lists mx-0 w-100 justify-content-start"
+                    >
                       <b-form-checkbox></b-form-checkbox>
                       <span class="fa-12 font-weight-bold text-black-50 pt-1">{{
                         price
@@ -67,11 +72,13 @@
                 </p>
                 <div class="occasion-filter w-100 my-3" v-if="filterOccasion">
                   <div
-                    class="prices-lists w-100 mb-2"
+                    class=" w-100 mb-2"
                     v-for="(occasion, index) in occasions"
                     :key="index"
                   >
-                    <div class="row mx-0 w-100 justify-content-start">
+                    <div
+                      class="row occasions-lists mx-0 w-100 justify-content-start"
+                    >
                       <b-form-checkbox></b-form-checkbox>
                       <span class="fa-12 font-weight-bold text-black-50 pt-1">{{
                         occasion
@@ -100,11 +107,13 @@
                   v-if="filterFlowerType"
                 >
                   <div
-                    class="prices-lists w-100 mb-2"
+                    class=" w-100 mb-2"
                     v-for="(flower, index) in flowerTypes"
                     :key="index"
                   >
-                    <div class="row mx-0 w-100 justify-content-start">
+                    <div
+                      class="row mx-0 flowerTypes-lists w-100 justify-content-start"
+                    >
                       <b-form-checkbox></b-form-checkbox>
                       <span class="fa-12 font-weight-bold text-black-50 pt-1">{{
                         flower
@@ -127,7 +136,7 @@
                   v-if="filterColor"
                 >
                   <div
-                    class="prices-lists m-2 cursor-pointer"
+                    class="colors-lists m-2 cursor-pointer"
                     v-for="(color, index) in colors"
                     :key="index"
                   >
@@ -155,11 +164,13 @@
                 </p>
                 <div class="gift-type-filter w-100 my-3" v-if="filterGiftType">
                   <div
-                    class="prices-lists w-100 mb-2"
+                    class=" w-100 mb-2"
                     v-for="(gift, index) in giftTypes"
                     :key="index"
                   >
-                    <div class="row mx-0 w-100 justify-content-start">
+                    <div
+                      class="row mx-0 giftTypes-lists w-100 justify-content-start"
+                    >
                       <b-form-checkbox></b-form-checkbox>
                       <span class="fa-12 font-weight-bold text-black-50 pt-1">{{
                         gift
@@ -188,11 +199,13 @@
                   v-if="filterPlantType"
                 >
                   <div
-                    class="prices-lists w-100 mb-2"
+                    class=" w-100 mb-2"
                     v-for="(plant, index) in plantTypes"
                     :key="index"
                   >
-                    <div class="row mx-0 w-100 justify-content-start">
+                    <div
+                      class="row mx-0 plantTypes-lists w-100 justify-content-start"
+                    >
                       <b-form-checkbox></b-form-checkbox>
                       <span class="fa-12 font-weight-bold text-black-50 pt-1">{{
                         plant
@@ -212,9 +225,7 @@
           </div>
         </transition>
         <div class="body-components" :class="showFilter ? 'w-75' : 'w-100'">
-          <tabs-components
-              @itemsLength="resultLength"
-          />
+          <tabs-components @itemsLength="resultLength" />
         </div>
       </div>
     </div>
@@ -228,7 +239,7 @@ import ImagesContainer from "@/components/shared/images-container";
 export default {
   name: "Shop the SU-Flower",
   props: ["products_list", "loading"],
-  components:{
+  components: {
     deliveryTimer,
     TabsComponents,
     ImagesContainer
@@ -296,7 +307,6 @@ export default {
         "Bonsai & Bamboo",
         "Airplants",
         "Orchids & Exotics",
-        "Planter Gardens & Bulbs"
       ]
     };
   },
@@ -342,6 +352,202 @@ export default {
       &:hover {
         transform: rotate(360deg);
       }
+    }
+  }
+}
+@media screen and( max-width: 768px) {
+  .products-list {
+    .slide-filter {
+      ul {
+        padding-left: 0!important;
+        padding-right: 0!important;
+        li {
+          margin: 0 0.6rem !important;
+          p {
+            font-size: 85% !important;
+            span {
+              font-size: 85% !important;
+            }
+          }
+        }
+      }
+      .reset-filter-action {
+        padding-left: 0!important;
+        padding-right: 0!important;
+      }
+    }
+    .prices-lists {
+      span {
+        font-size: 80% !important;
+      }
+    }
+    .flowerTypes-lists {
+      span {
+        font-size: 80% !important;
+      }
+    }
+    .giftTypes-lists {
+      span {
+        font-size: 80% !important;
+      }
+    }
+    .plantTypes-lists {
+      span {
+        font-size: 80% !important;
+      }
+    }
+    .color-profile {
+      width: 25px ;
+      height: 25px ;
+    }
+  }
+}
+@media screen and( max-width: 425px) {
+  .products-list {
+    .slide-filter {
+      ul {
+        padding: 0 !important;
+        li {
+          &:nth-child(2){
+            display: none;
+          }
+          margin: 0 0.3rem !important;
+          p {
+            font-size: 70% !important;
+            span {
+              font-size: 85% !important;
+            }
+          }
+        }
+      }
+      .reset-filter-action {
+        margin-top: 2rem;
+        padding: 0 !important;
+        p {
+          font-size: 70% !important;
+        }
+      }
+    }
+    .prices-lists {
+      span {
+        font-size: 60% !important;
+      }
+    }
+    .flowerTypes-lists {
+      span {
+        font-size: 60% !important;
+      }
+    }
+    .giftTypes-lists {
+      span {
+        font-size: 43% !important;
+      }
+    }
+    .plantTypes-lists {
+      span {
+        font-size: 52% !important;
+      }
+    }
+    .color-profile {
+      width: 25px ;
+      height: 25px ;
+    }
+  }
+}
+@media screen and( max-width: 375px) {
+  .products-list {
+    .header-options {
+      padding: 1rem !important;
+      .showFilter {
+        font-size: 75% !important;
+      }
+      .result {
+        font-size: 75% !important;
+      }
+      .sort-container {
+        font-size: 75% !important;
+      }
+    }
+    .slide-filter {
+      ul {
+        padding: 0 !important;
+        li {
+          &:nth-child(2){
+            display: none;
+          }
+          &:nth-child(5){
+            display: none;
+          }
+          &:nth-child(6){
+            display: none;
+          }
+          margin: 0 0.5rem !important;
+          p {
+            font-size: 70% !important;
+            span {
+              font-size: 75% !important;
+            }
+          }
+        }
+      }
+      .reset-filter-action {
+        margin-top: 2rem;
+        padding: 0 !important;
+        p {
+          font-size: 70% !important;
+        }
+      }
+    }
+    .prices-lists {
+      span {
+        font-size: 60% !important;
+      }
+    }
+    .occasions-lists {
+      span {
+        font-size: 60% !important;
+      }
+    }
+    .flowerTypes-lists {
+      span {
+        font-size: 60% !important;
+      }
+    }
+    .giftTypes-lists {
+      span {
+        font-size: 60% !important;
+      }
+    }
+    .plantTypes-lists {
+      span {
+        font-size: 60% !important;
+      }
+    }
+     .color-profile {
+      width: 20px ;
+      height: 20px ;
+    }
+  }
+}
+@media screen and( max-width: 320px) {
+  .products-list {
+    .header-options {
+      padding: 1rem !important;
+      .showFilter {
+        font-size: 70% !important;
+      }
+      .result {
+        font-size: 72% !important;
+      }
+      .sort-container {
+        font-size: 70% !important;
+      }
+    }
+    .slide-filter {
+      display: none !important;
+    }
+    .body-components {
+      width: 100% !important;
     }
   }
 }

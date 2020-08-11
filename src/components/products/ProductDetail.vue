@@ -3,26 +3,16 @@
     <discount-ads />
     <div class="product-detail-container" v-if="product.id && !processing">
       <div class="images-views">
-        <div class="images-container d-inline-flex w-75" style="height: 35rem;">
-          <img
-            class="profile-image w-100 h-100 d-block"
-            :src="product.images_urls[clickedIndex]"
-          />
-          <div class="image-discount-desc  position-absolute d-flex w-100">
-            <div class="d-block ml-5 mt-5">
-              <div
-                class="back-button text-white p-2 fa-13 m-2"
-                @click="$router.go(-1)"
-              >
+        <div class="images-container d-inline-flex w-75" style="height: 40rem;">
+          <img class="profile-image w-100 h-100 d-block" :src="product.images_urls[clickedIndex]" />
+          <div class="image-discount-desc position-absolute d-flex w-100">
+            <div class="d-block ml-5 mt-5 images-list-back-button">
+              <div class="back-button text-white p-2 fa-13 m-2" @click="$router.go(-1)">
                 <i class="fa fa-angle-left"></i> BACK
               </div>
               <div class="images-list-container mt-5 pt-5">
                 <ul class="images-list pl-0">
-                  <li
-                    v-for="(image, index) in product.images_urls"
-                    :key="index"
-                    class="image-list "
-                  >
+                  <li v-for="(image, index) in product.images_urls" :key="index" class="image-list">
                     <span
                       class="profile d-block m-2"
                       :class="{ 'visited-profile': clickedIndex == index }"
@@ -35,206 +25,175 @@
                 </ul>
               </div>
             </div>
-            <div class="cart-container ml-auto">
-              <div
-                class="cart-card-container mt-3 bg-white border-left border-top border-bottom"
-              >
-                <div class="cart-content my-4">
-                  <div v-if="!deliveryForm" class="px-4 py-3">
-                    <p class="h3">{{ product.name }}</p>
-                    <p class="d-flex pt-2">
-                      <span class="fa-12 pr-2">price</span>
-                      {{ product.price + product.currency }}
+          </div>
+        </div>
+        <div class="cart-container">
+          <div class="cart-card-container mt-3 bg-white border-left border-top border-bottom">
+            <div class="cart-content my-4">
+              <div v-if="!deliveryForm" class="px-4 py-3">
+                <p class="h3">{{ product.name }}</p>
+                <p class="d-flex pt-2">
+                  <span class="fa-12 pr-2">price</span>
+                  {{ product.price + product.currency }}
+                  <span
+                    class="pl-2 text-danger fa-14"
+                    style="text-decoration: line-through"
+                  >{{ product.price + 4 }}FRW</span>
+                </p>
+                <p class="fa-14 d-flex">
+                  Or 4 payments of
+                  <span class="font-weight-bold px-2">$13.20</span> by after
+                  <span class="font-weight-bold pl-1">
+                    pay
+                    <i class="fa text-info fa-chain-broken"></i>
+                  </span>
+                </p>
+                <p class="h4 g-text py-2 fa">AFTER DISCOUNT</p>
+                <div class="option-price">
+                  <p class="font-weight-bold fa-13">SELECT AN OPTION</p>
+                  <div class="option-lists" v-for="(product, index) in products" :key="index">
+                    <div class="d-flex rounded option-list my-2">
                       <span
-                        class="pl-2 text-danger fa-14"
-                        style="text-decoration: line-through"
-                        >{{ product.price + 4 }}FRW</span
-                      >
-                    </p>
-                    <p class="fa-14 d-flex">
-                      Or 4 payments of
-                      <span class="font-weight-bold px-2">$13.20</span> by after
-                      <span class="font-weight-bold pl-1"
-                        >pay <i class="fa text-info fa-chain-broken"></i
+                        class="cart-profile d-block"
+                        :style="{
+                          backgroundImage: 'url(' + product.images_urls[2] + ')'
+                        }"
                       ></span>
-                    </p>
-                    <p class="h4 g-text py-2 fa">AFTER DISCOUNT</p>
-                    <div class="option-price">
-                      <p class="font-weight-bold fa-13">SELECT AN OPTION</p>
-                      <div
-                        class="option-lists"
-                        v-for="(product, index) in products"
-                        :key="index"
-                      >
-                        <div class="d-flex rounded option-list my-2">
+                      <div class="option-list-desc ml-3">
+                        <p class="font-weight-bold fa-13 mb-0">{{ product.quality }}</p>
+                        <p class="fa-14 mb-0">{{ product.option }}</p>
+                        <p class="mb-0">
+                          <span class="font-weight-bold fa-14">
+                            {{
+                            product.price + product.currency
+                            }}
+                          </span>
                           <span
-                            class="cart-profile d-block"
-                            :style="{
-                              backgroundImage:
-                                'url(' + product.images_urls[2] + ')'
-                            }"
-                          ></span>
-                          <div class="option-list-desc ml-3">
-                            <p class="font-weight-bold fa-13 mb-0">
-                              {{ product.quality }}
-                            </p>
-                            <p class="fa-14 mb-0">{{ product.option }}</p>
-                            <p class="mb-0">
-                              <span class="font-weight-bold fa-14">{{
-                                product.price + product.currency
-                              }}</span
-                              ><span
-                                class="text-muted fa-13 ml-2"
-                                style="text-decoration: line-through"
-                                >{{ product.price + 10 + product.currency }}
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="submit-cart">
-                      <div
-                        class="bg-button text-white fa fa-14 mt-4 rounded-0 w-100 btn p-2"
-                        @click="addToCart"
-                      >
-                        ADD TO CART
-                      </div>
-                      <p class="d-block pt-4">
-                        <span class="fa">Delivering to:</span><br />
-                        12345 on Sunday, July 26
-                        <span
-                          class="text-info cursor-pointer pl-2"
-                          @click="deliveryForm = !deliveryForm"
-                          >Edit</span
-                        >
-                      </p>
-                      <p class="mb-0 py-2">
-                        <i class="fa fa-star text-info pr-1"></i>Arranged &
-                        Delivered By Florist
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="delivery-location px-4 py-4"
-                    v-if="deliveryForm && !deliveryDate"
-                  >
-                    <div class="delivery-header d-flex px-3">
-                      <div class="header-content">
-                        <p class="mb-0">Enter Location to</p>
-                        <p>Estimate Delivery</p>
-                      </div>
-                      <i
-                        class="fa fa-times cursor-pointer ml-auto fa-15"
-                        @click="deliveryForm = !deliveryForm"
-                      ></i>
-                    </div>
-                    <form @submit.prevent>
-                      <div class="mt-3 d-block">
-                        <label for="deliveryZip" class="col-md fa fa-12"
-                          >DELIVERY ZIP</label
-                        >
-                        <div class="col-md-12">
-                          <input
-                            id="deliveryZip"
-                            v-model="location.zip"
-                            class="form-control rounded-0  fa-12 py-4"
-                            placeholder="delivery zip ie:.097456"
-                            required
-                            autocomplete="off"
-                          />
-                        </div>
-                      </div>
-                      <div class="w-100 mt-2">
-                        <label class="col-md fa-12 fa">LOCATION TYPE</label>
-                        <div class="col-md-12" style="height: 50px">
-                          <b-form-select
-                            id="locationType"
-                            v-model="location.location"
-                            class="form-control cursor-pointer rounded-0  h-100"
-                            :options="locations"
-                          >
-                          </b-form-select>
-                        </div>
-                      </div>
-                      <div
-                        class="bg-button text-white fa-14 mt-5 fa rounded-0 col-md-12 btn py-2 px-4"
-                        @click="deliveryDate = !deliveryDate"
-                      >
-                        CONTINUE TO DELIVERY DATE
-                      </div>
-                    </form>
-                  </div>
-                  <div class="delivery-date px-4 my-3" v-if="deliveryDate">
-                    <div class="delivery-header-date px-2 border-bottom">
-                      <div class="d-flex">
-                        <p
-                          class="mb-0 fa-12 cursor-pointer"
-                          @click="deliveryDate = !deliveryDate"
-                        >
-                          <i class="fa fa-angle-left pr-2"></i
-                          ><span class="font-weight-bold">BACK</span>
-                        </p>
-                        <i
-                          class="fa fa-times cursor-pointer ml-auto fa-15"
-                          @click="
-                            (deliveryDate = !deliveryDate),
-                              (deliveryForm = !deliveryForm)
-                          "
-                        ></i>
-                      </div>
-                      <div class="header-content px-4  mx-auto ">
-                        <p class="px-4 fa-15" style="text-align: center">
-                          Select a delivery date
-                        </p>
-                        <p class="justify-content-between  row">
-                          <span class="cursor-pointer text-info">
-                            <i class="fa fa-angle-left pr-1"></i> May
-                          </span>
-                          <span class="mx-5s px-2">
-                            July
-                          </span>
-                          <span class="cursor-pointer text-info">
-                            August <i class="fa fa-angle-right pl-1"></i>
-                          </span>
+                            class="text-muted fa-13 ml-2"
+                            style="text-decoration: line-through"
+                          >{{ product.price + 10 + product.currency }}</span>
                         </p>
                       </div>
-                    </div>
-                    <div
-                      class="delivery-dates-lists mt-4 mb-3"
-                      v-for="(date, index) in deliveryMonths"
-                      :key="index"
-                    >
-                      <delivery-dates :date="date" />
-                    </div>
-                    <p
-                      class="mx-4 my-3 fa-13 text-info cursor-pointer mb-0"
-                      style="text-align: right"
-                    >
-                      NEXT MONTH <i class="fa fa-angle-right"></i>
-                    </p>
-                    <div
-                      class="bg-button text-white fa-14  font-weight-bold rounded-0 col-md-12 btn py-2 px-4"
-                      @click="checkout"
-                    >
-                      CONFIRM DATE & CONTINUE
                     </div>
                   </div>
                 </div>
+                <div class="submit-cart">
+                  <div
+                    class="bg-button text-white fa fa-14 mt-4 rounded-0 w-100 btn p-2"
+                    @click="addToCart"
+                  >ADD TO CART</div>
+                  <p class="d-block pt-4">
+                    <span class="fa">Delivering to:</span>
+                    <br />12345 on Sunday, July 26
+                    <span
+                      class="text-info cursor-pointer pl-2"
+                      @click="deliveryForm = !deliveryForm"
+                    >Edit</span>
+                  </p>
+                  <p class="mb-0 py-2">
+                    <i class="fa fa-star text-info pr-1"></i>Arranged &
+                    Delivered By Florist
+                  </p>
+                </div>
+              </div>
+              <div class="delivery-location px-4 py-4" v-if="deliveryForm && !deliveryDate">
+                <div class="delivery-header d-flex px-3">
+                  <div class="header-content">
+                    <p class="mb-0">Enter Location to</p>
+                    <p>Estimate Delivery</p>
+                  </div>
+                  <i
+                    class="fa fa-times cursor-pointer ml-auto fa-15"
+                    @click="deliveryForm = !deliveryForm"
+                  ></i>
+                </div>
+                <form @submit.prevent>
+                  <div class="mt-3 d-block">
+                    <label for="deliveryZip" class="col-md fa fa-12">DELIVERY ZIP</label>
+                    <div class="col-md-12">
+                      <input
+                        id="deliveryZip"
+                        v-model="location.zip"
+                        class="form-control rounded-0 fa-12 py-4"
+                        placeholder="delivery zip ie:.097456"
+                        required
+                        autocomplete="off"
+                      />
+                    </div>
+                  </div>
+                  <div class="w-100 mt-2">
+                    <label class="col-md fa-12 fa">LOCATION TYPE</label>
+                    <div class="col-md-12" style="height: 50px">
+                      <b-form-select
+                        id="locationType"
+                        v-model="location.location"
+                        class="form-control cursor-pointer rounded-0 h-100"
+                        :options="locations"
+                      ></b-form-select>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-button text-white fa-14 mt-5 fa rounded-0 col-md-12 btn py-2 px-4"
+                    @click="deliveryDate = !deliveryDate"
+                  >CONTINUE TO DELIVERY DATE</div>
+                </form>
+              </div>
+              <div class="delivery-date px-4 my-3" v-if="deliveryDate">
+                <div class="delivery-header-date px-2 border-bottom">
+                  <div class="d-flex">
+                    <p class="mb-0 fa-12 cursor-pointer" @click="deliveryDate = !deliveryDate">
+                      <i class="fa fa-angle-left pr-2"></i>
+                      <span class="font-weight-bold">BACK</span>
+                    </p>
+                    <i
+                      class="fa fa-times cursor-pointer ml-auto fa-15"
+                      @click="
+                        (deliveryDate = !deliveryDate),
+                          (deliveryForm = !deliveryForm)
+                      "
+                    ></i>
+                  </div>
+                  <div class="header-content px-4 mx-auto">
+                    <p class="px-4 fa-15" style="text-align: center">Select a delivery date</p>
+                    <p class="justify-content-between row">
+                      <span class="cursor-pointer text-info">
+                        <i class="fa fa-angle-left pr-1"></i> May
+                      </span>
+                      <span class="mx-5s px-2">July</span>
+                      <span class="cursor-pointer text-info">
+                        August
+                        <i class="fa fa-angle-right pl-1"></i>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="delivery-dates-lists mt-4 mb-3"
+                  v-for="(date, index) in deliveryMonths"
+                  :key="index"
+                >
+                  <delivery-dates :date="date" />
+                </div>
+                <p class="mx-4 my-3 fa-13 text-info cursor-pointer mb-0" style="text-align: right">
+                  NEXT MONTH
+                  <i class="fa fa-angle-right"></i>
+                </p>
+                <div
+                  class="bg-button text-white fa-14 font-weight-bold rounded-0 col-md-12 btn py-2 px-4"
+                  @click="checkout"
+                >CONFIRM DATE & CONTINUE</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="product-description d-flex mx-0 mt-5">
+      <div class="product-description row mx-0 mt-5">
         <div class="col-md-5">
           <p class="description text-justify pb-4">{{ product.description }}</p>
           <div class="d-flex justify-content-between">
             <ul class="pl-3">
               <p class="font-weight-bold f-12">DETAILS</p>
-              <li class="fa-12 pb-2">
-                Better bouquet is approximately 11"H x 14"W
-              </li>
+              <li class="fa-12 pb-2">Better bouquet is approximately 11"H x 14"W</li>
               <li class="fa-12 pb-2">
                 The vase shown may be substituted with an available one of a
                 similar look, feel and value.
@@ -247,7 +206,7 @@
               <li class="fa-12 pb-2">Sunflower</li>
             </ul>
           </div>
-          <p class="fa-13">ITEM {{ "   " + product.code }}</p>
+          <p class="fa-13">ITEM {{ " " + product.code }}</p>
         </div>
         <div class="col-md-7 px-0">
           <div class="d-flex pb-4">
@@ -478,6 +437,9 @@ export default {
     }
   }
   .cart-container {
+    position: absolute;
+    top: 4.5%;
+    right: 0;
     width: 35%;
     .cart-card-container {
       min-height: 40rem;
@@ -542,6 +504,73 @@ export default {
     text-align: center;
     i {
       font-size: 46px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product-details {
+    .cart-container {
+      width: 41% !important;
+      .cart-card-container {
+        min-height: 38.8rem !important;
+        .cart-content {
+          height: calc(100vh - 100px) !important;
+        }
+      }
+    }
+    .image-discount-desc {
+      .images-list-back-button {
+        margin-left: 1.5rem !important;
+      }
+    }
+    .product-description {
+      width: 100% !important;
+      padding: 1rem !important;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .product-details {
+    .images-container {
+      width: 100% !important;
+      height: 30rem !important;
+    }
+    .image-discount-desc {
+      .images-list-back-button {
+        margin-left: 0.5rem !important;
+      }
+      .back-button {
+        font-size: 65% !important;
+      }
+    }
+    .images-list-container li .profile {
+      width: 50px;
+      height: 50px;
+    }
+    .cart-container {
+      position: relative !important;
+      width: 80% !important;
+      margin: 2rem auto;
+      .cart-card-container .cart-content {
+        margin: 0 !important;
+        height: calc(100vh - 40px) !important;
+      }
+    }
+    .product-description {
+      width: 90% !important;
+      padding: 0 !important;
+      margin: 5rem auto !important;
+    }
+  }
+}
+@media screen and( max-width: 320px) {
+  .product-details {
+    .images-container {
+      height: 25rem !important;
+    }
+    .image-discount-desc .images-list-back-button {
+      margin-top: 0.5rem !important;
     }
   }
 }

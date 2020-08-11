@@ -20,7 +20,7 @@
       </div>
     </div>
     <empty-results v-if="!products.length" />
-    <div class="row mx-0 w-100 button-collection ">
+    <div class="row mx-0 w-100 button-collection justify-content-center">
       <a
         class="fa-14 my-4 text-center font-weight-bold rounded-0 mx-2 btn py-2 px-4"
         href="javascript:;;"

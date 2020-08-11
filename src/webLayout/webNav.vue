@@ -1,9 +1,9 @@
 <template>
-  <main class="main web-nav-layout border-bottom d-block w-100">
-    <div class="navbar-header d-flex position-relative mb-0 px-3 w-100">
+  <main class="main web-nav-layout position-relative border-bottom d-block h-100 w-100">
+    <div class="navbar-header row mb-0 px-3 mx-0 w-100">
       <div
         class="header-log d-block mt-3"
-        @click="$router.push('/')"
+        @click="$router.push({ name: 'Home' })"
         @mouseover="
           (showHelp = false),
             (showSympathy = false),
@@ -13,19 +13,19 @@
             (showGift = false)
         "
       >
-        <div class="mb-0">
-          <span class="c-default mr-2 h3">S.U</span>
-          <span class="text-info h4 mt-1">BOUQUETS</span>
+        <div class="mb-0 su-header-logo">
+          <span class="c-default mr-2">S.U</span>
+          <span class="text-info mt-1">BOUQUETS</span>
         </div>
-        <span class="small ml-5">an FTD company</span>
+        <p class="small text-center mb-0 ftd-company">an FTD company</p>
       </div>
       <div
+        class="header-content row mx-0 mt-3 justify-content-around px-4"
         v-if="$route.name !== 'Purchase'"
-        class="header-content d-flex ml-auto mt-3 "
       >
         <div class="nav-item BIRTH-DAY">
           <p
-            class="p-3 cursor-pointer mb-0"
+            class="py-3 cursor-pointer mb-0"
             @mouseover="
               (showBirthDay = !showBirthDay),
                 (showSympathy = false),
@@ -35,13 +35,11 @@
                 (showHelp = false)
             "
             :class="{ 'bottom-line': showBirthDay }"
-          >
-            BIRTH-DAY
-          </p>
+          >BIRTH-DAY</p>
         </div>
         <div class="nav-item">
           <p
-            class="p-3 cursor-pointer mb-0"
+            class="py-3 cursor-pointer mb-0"
             :class="{ 'bottom-line': showSympathy }"
             @mouseover="
               (showSympathy = !showSympathy),
@@ -51,13 +49,11 @@
                 (showGift = false),
                 (showHelp = false)
             "
-          >
-            SYMPATHY
-          </p>
+          >SYMPATHY</p>
         </div>
-        <div class="nav-item ">
+        <div class="nav-item">
           <p
-            class="p-3 cursor-pointer mb-0"
+            class="py-3 cursor-pointer mb-0"
             :class="{ 'bottom-line': showOccasion }"
             @mouseover="
               (showOccasion = !showOccasion),
@@ -67,13 +63,11 @@
                 (showGift = false),
                 (showHelp = false)
             "
-          >
-            ALL OCCASION
-          </p>
+          >ALL OCCASION</p>
         </div>
-        <div class="nav-item ">
+        <div class="nav-item">
           <p
-            class="p-3 cursor-pointer mb-0"
+            class="py-3 cursor-pointer mb-0"
             :class="{ 'bottom-line': showFlower }"
             @mouseover="
               (showFlower = !showFlower),
@@ -83,13 +77,11 @@
                 (showGift = false),
                 (showHelp = false)
             "
-          >
-            FLOWER
-          </p>
+          >FLOWER</p>
         </div>
         <div class="nav-item">
           <p
-            class="p-3 cursor-pointer mb-0"
+            class="py-3 cursor-pointer mb-0"
             :class="{ 'bottom-line': showGift }"
             @mouseover="
               (showGift = !showGift),
@@ -99,27 +91,22 @@
                 (showOccasion = false),
                 (showHelp = false)
             "
-          >
-            PLANTS & GIFTS
-          </p>
+          >PLANTS & GIFTS</p>
         </div>
       </div>
       <div
+        class="purchase-navbar row mx-0 mt-4 pt-2 justify-content-between px-4"
         v-if="$route.name == 'Purchase'"
-        class="purchase-navbar row mx-0 w-100 justify-content-between mt-2 pt-4 px-5"
       >
-        <div class="back-button-container  fa-12 font-weight-bold">
-          <p
-            class="mb-0 mt-3 cursor-pointer"
-            @click="$router.push({ name: 'Cart' })"
-          >
+        <div class="back-button-container fa-12 font-weight-bold">
+          <p class="mb-0 mt-3 cursor-pointer" @click="$router.push({ name: 'Cart' })">
             <i class="fa fa-angle-left"></i> BACK TO CART
           </p>
         </div>
         <div class="row mx-0 fa-14 purchase-tab mt-1 mb-1">
-          <div class="nav-item ">
+          <div class="nav-item">
             <p
-              class="p-3  mb-0"
+              class="py-3 mb-0"
               :class="{
                 'bottom-line': this.$route.params.params == 'delivery'
               }"
@@ -135,24 +122,16 @@
             </p>
           </div>
           <div class="nav-item mx-5">
-            <p
-              class="p-3  mb-0"
-              :class="{ 'bottom-line': this.$route.params.params == 'payment' }"
-            >
-              <i
-                class="fa-check mr-2 fa"
-                v-if="$route.params.params == 'review'"
-              ></i>
+            <p class="py-3 mb-0" :class="{ 'bottom-line': this.$route.params.params == 'payment' }">
+              <i class="fa-check mr-2 fa" v-if="$route.params.params == 'review'"></i>
               PAYMENT
             </p>
           </div>
-          <div class="nav-item ">
+          <div class="nav-item">
             <p
-              class="p-3  mb-0"
+              class="py-3 mb-0"
               :class="{ 'bottom-line': this.$route.params.params == 'review' }"
-            >
-              REVIEW
-            </p>
+            >REVIEW</p>
           </div>
         </div>
         <div class="secure-tab">
@@ -163,8 +142,8 @@
         </div>
       </div>
       <div
+        class="header-options px-4 mt-3"
         v-if="$route.name !== 'Purchase'"
-        class="header-options ml-auto mt-3"
         @mouseover="
           (showSympathy = false),
             (showFlower = false),
@@ -174,9 +153,9 @@
             (showHelp = showHelp == true ? true : false)
         "
       >
-        <ul class="d-flex mb-0 pt-1">
+        <ul class="row w-100 justify-content-between mx-0 mb-0 pt-1 px-0">
           <li
-            class="web-navbar-help d-block mr-4"
+            class="web-navbar-help d-block mr-0"
             @mouseover="
               (showHelp = !showHelp),
                 (showSympathy = false),
@@ -186,26 +165,19 @@
                 (showGift = false)
             "
           >
-            <i class="fas px-1 fa-question-circle  fa-15"></i>&nbsp;
-            <p class="mb-0 fa-12" :class="{ 'border-bottom': showHelp }">
-              HELP
-            </p>
+            <i class="fas px-1 fa-question-circle fa-15"></i>&nbsp;
+            <p class="mb-0 fa-12" :class="{ 'border-bottom': showHelp }">HELP</p>
           </li>
           <li class="web-navbar-search d-block mr-0">
-            <i class="fas fa-search fa-15 ml-3"></i>&nbsp;
+            <i class="fas fa-search fa-15 mx-2"></i>&nbsp;
             <p class="mb-0 fa-12">SEARCH</p>
           </li>
-          <li class="web-navbar-cart d-block  mx-4" id="popover-container">
-            <div
-              class="mb-0  cart-container"
-              id="cart-popover"
-              @click="$router.push('/cart')"
-            >
+          <li class="web-navbar-cart d-block mr-0" id="popover-container">
+            <div class="mb-0 cart-container" id="cart-popover" @click="$router.push('/cart')">
               <i class="fas fa-cart-plus fa-15"></i>
               <span
                 class="badge badge-primary position-absolute cart-length-badge"
-                >{{ cartProducts.length }}</span
-              >&nbsp;
+              >{{ cartProducts.length }}</span>&nbsp;
               <p class="mb-0 fa-12">CART</p>
             </div>
           </li>
@@ -234,15 +206,15 @@
         </ul>
       </div>
     </div>
-    <div>
+    <div class="tabs-component-container">
       <div
-        class=" bg-white  position-relative sympathy-tab rounded-0 jumbotron border-top w-100"
+        class="bg-white position-relative sympathy-tab rounded-0 jumbotron border-top w-100"
         @mouseleave="showSympathy = !showSympathy"
         v-if="showSympathy"
       >
         <div class="row mx-0 w-100 justify-content-center">
           <ul>
-            <p class="font-weight-bold fa-14 ">Sympathy Flowers</p>
+            <p class="font-weight-bold fa-14">Sympathy Flowers</p>
             <li
               @click="
                 $router.push({
@@ -251,9 +223,7 @@
                 }),
                   (showSympathy = !showSympathy)
               "
-            >
-              All Sympathy Flowers
-            </li>
+            >All Sympathy Flowers</li>
             <li
               @click="
                 $router.push({
@@ -262,12 +232,10 @@
                 }),
                   (showSympathy = !showSympathy)
               "
-            >
-              Same Day Sympathy Flower Delivery
-            </li>
+            >Same Day Sympathy Flower Delivery</li>
           </ul>
           <ul class="mr-5">
-            <p class="font-weight-bold fa-14 ">Sympathy Plants & Gifts</p>
+            <p class="font-weight-bold fa-14">Sympathy Plants & Gifts</p>
             <li
               @click="
                 $router.push({
@@ -276,9 +244,7 @@
                 }),
                   (showSympathy = !showSympathy)
               "
-            >
-              Sympathy Plants
-            </li>
+            >Sympathy Plants</li>
             <li
               @click="
                 $router.push({
@@ -287,19 +253,17 @@
                 }),
                   (showSympathy = !showSympathy)
               "
-            >
-              Sympathy Gifts
-            </li>
+            >Sympathy Gifts</li>
           </ul>
           <ul class="border-left">
-            <p class="font-weight-bold fa-14 ">Funeral Flowers & Sprays</p>
+            <p class="font-weight-bold fa-14">Funeral Flowers & Sprays</p>
             <li>Funeral Flowers</li>
             <li>Funeral Sprays</li>
           </ul>
         </div>
       </div>
       <div
-        class=" bg-white  position-relative flower-tab rounded-0 px-2 pt-5 border-top"
+        class="bg-white position-relative flower-tab rounded-0 px-2 pt-5 border-top"
         @mouseleave="showFlower = !showFlower"
         v-if="showFlower"
       >
@@ -316,13 +280,9 @@
                 }),
                   (showFlower = !showFlower)
               "
-            >
-              {{ featFlo }}
-            </li>
+            >{{ featFlo }}</li>
             <p class="font-weight-bold fa-14">Flowers by Delivery Type</p>
-            <li v-for="deliType in Flowers_by_Delivery" :key="deliType">
-              {{ deliType }}
-            </li>
+            <li v-for="deliType in Flowers_by_Delivery" :key="deliType">{{ deliType }}</li>
           </ul>
           <ul>
             <p class="font-weight-bold fa-14">Shop by Flower Type</p>
@@ -330,20 +290,16 @@
           </ul>
           <ul>
             <p class="font-weight-bold fa-14">Shop Flowers by Color</p>
-            <li v-for="color in shop_by_color" :key="color">
-              {{ color }}
-            </li>
+            <li v-for="color in shop_by_color" :key="color">{{ color }}</li>
           </ul>
           <ul class="border-left">
             <p class="font-weight-bold fa-14">Shop Roses by Color</p>
-            <li v-for="rose in shop_by_roses" :key="rose">
-              {{ rose }}
-            </li>
+            <li v-for="rose in shop_by_roses" :key="rose">{{ rose }}</li>
           </ul>
         </div>
       </div>
       <div
-        class=" bg-white  position-relative birthday-tab rounded-0 jumbotron border-top"
+        class="bg-white position-relative birthday-tab rounded-0 jumbotron border-top"
         v-if="showBirthDay"
         @mouseleave="showBirthDay = !showBirthDay"
       >
@@ -358,9 +314,7 @@
                 }),
                   (showBirthDay = !showBirthDay)
               "
-            >
-              All Birthday
-            </li>
+            >All Birthday</li>
             <li
               @click="
                 $router.push({
@@ -369,9 +323,7 @@
                 }),
                   (showBirthDay = !showBirthDay)
               "
-            >
-              Same Day Birthday Flower Delivery
-            </li>
+            >Same Day Birthday Flower Delivery</li>
           </ul>
           <ul>
             <p class="font-weight-bold fa-14">Birthday Flowers</p>
@@ -383,9 +335,7 @@
                 }),
                   (showBirthDay = !showBirthDay)
               "
-            >
-              All Birthday Flowers
-            </li>
+            >All Birthday Flowers</li>
             <li
               @click="
                 $router.push({
@@ -394,9 +344,7 @@
                 }),
                   (showBirthDay = !showBirthDay)
               "
-            >
-              Birthday Roses
-            </li>
+            >Birthday Roses</li>
           </ul>
           <ul>
             <p class="font-weight-bold fa-14">Birthday Plants & Gifts</p>
@@ -408,9 +356,7 @@
                 }),
                   (showBirthDay = !showBirthDay)
               "
-            >
-              Birthday Plants
-            </li>
+            >Birthday Plants</li>
             <li
               @click="
                 $router.push({
@@ -419,20 +365,16 @@
                 }),
                   (showBirthDay = !showBirthDay)
               "
-            >
-              Birthday Gifts
-            </li>
+            >Birthday Gifts</li>
           </ul>
           <ul class="border-left">
             <p class="font-weight-bold fa-14">Shop Birthday by Recipient</p>
-            <li v-for="birthday in shop_by_birthday" :key="birthday">
-              {{ birthday }}
-            </li>
+            <li v-for="birthday in shop_by_birthday" :key="birthday">{{ birthday }}</li>
           </ul>
         </div>
       </div>
       <div
-        class=" bg-white occasion-tab position-relative rounded-0 jumbotron border-top"
+        class="bg-white occasion-tab position-relative rounded-0 jumbotron border-top"
         v-if="showOccasion"
         @mouseleave="showOccasion = !showOccasion"
       >
@@ -447,9 +389,7 @@
                 }),
                   (showOccasion = !showOccasion)
               "
-            >
-              Anniversary
-            </li>
+            >Anniversary</li>
             <li
               @click="
                 $router.push({
@@ -458,9 +398,7 @@
                 }),
                   (showOccasion = !showOccasion)
               "
-            >
-              Baby
-            </li>
+            >Baby</li>
             <li
               @click="
                 $router.push({
@@ -469,9 +407,7 @@
                 }),
                   (showOccasion = !showOccasion)
               "
-            >
-              Just Because
-            </li>
+            >Just Because</li>
             <li
               @click="
                 $router.push({
@@ -480,9 +416,7 @@
                 }),
                   (showOccasion = !showOccasion)
               "
-            >
-              Get Well
-            </li>
+            >Get Well</li>
             <li
               @click="
                 $router.push({
@@ -491,9 +425,7 @@
                 }),
                   (showOccasion = !showOccasion)
               "
-            >
-              Love & Romance
-            </li>
+            >Love & Romance</li>
           </ul>
           <ul>
             <li>Thinking of You</li>
@@ -518,7 +450,7 @@
         </div>
       </div>
       <div
-        class=" bg-white  plants-gifts-tab position-relative rounded-0 jumbotron border-top"
+        class="bg-white plants-gifts-tab position-relative rounded-0 jumbotron border-top"
         @mouseleave="showGift = !showGift"
         v-if="showGift"
       >
@@ -537,71 +469,57 @@
                 }),
                   (showGift = !showGift)
               "
-            >
-              {{ featPlant }}
-            </li>
+            >{{ featPlant }}</li>
             <p class="font-weight-bold fa-14">Shop Plants</p>
-            <li v-for="shopPlant in shop_plants" :key="shopPlant">
-              {{ shopPlant }}
-            </li>
+            <li v-for="shopPlant in shop_plants" :key="shopPlant">{{ shopPlant }}</li>
           </ul>
           <ul>
             <p class="font-weight-bold fa-14">Flowering Plants</p>
-            <li v-for="floPlant in flowering_plants" :key="floPlant">
-              {{ floPlant }}
-            </li>
+            <li v-for="floPlant in flowering_plants" :key="floPlant">{{ floPlant }}</li>
           </ul>
           <ul class="mr-5">
             <p class="font-weight-bold fa-14">Shop Gifts</p>
             <li>Best Selling Gifts</li>
             <li>Flowers & Gifts Bundles</li>
             <p class="font-weight-bold fa-14">Gift Baskets</p>
-            <li v-for="giftBasket in gift_baskets" :key="giftBasket">
-              {{ giftBasket }}
-            </li>
+            <li v-for="giftBasket in gift_baskets" :key="giftBasket">{{ giftBasket }}</li>
           </ul>
           <ul class="border-left">
             <p class="font-weight-bold fa-14">Gourmet Food Gifts</p>
-            <li v-for="gourmetFood in gourmet_foods" :key="gourmetFood">
-              {{ gourmetFood }}
-            </li>
+            <li v-for="gourmetFood in gourmet_foods" :key="gourmetFood">{{ gourmetFood }}</li>
           </ul>
         </div>
       </div>
       <div
-        class=" bg-white  help-tab position-relative rounded-0 jumbotron border-top"
+        class="bg-white help-tab position-relative rounded-0 jumbotron border-top"
         @mouseleave="showHelp = !showHelp"
         v-if="showHelp"
       >
         <div class="row mx-0 w-100 justify-content-center">
           <ul>
             <p class="font-weight-bold fa-14 menu-option">Customer service</p>
-            <p class="font-weight-bold fa-14  menu-option">About Us</p>
+            <p class="font-weight-bold fa-14 menu-option">About Us</p>
             <p class="font-weight-bold fa-14 menu-option">Flower Guides</p>
             <p class="font-weight-bold fa-14 menu-option">Plant Guides</p>
           </ul>
           <ul class="contact-container">
             <p class="font-weight-bold fa-14 fa">CONTACT US</p>
-            <p class="fa-12">
-              We're here for you 24 hours a day, 7 days a week.
-            </p>
+            <p class="fa-12">We're here for you 24 hours a day, 7 days a week.</p>
             <li>
-              <i class="fas fa-plane-departure"></i
-              ><a href="javascript;;" class="font-weight-bold"
-                >Track Your Order</a
-              >
+              <i class="fas fa-plane-departure"></i>
+              <a href="javascript:;;" class="font-weight-bold">Track Your Order</a>
             </li>
             <li>
-              <i class="fas fa-phone"></i
-              ><a href="javascript;;" class="font-weight-bold">0789334672321</a>
+              <i class="fas fa-phone"></i>
+              <a href="javascript:;;" class="font-weight-bold">0789334672321</a>
             </li>
             <li>
-              <i class="fas fa-envelope"></i
-              ><a href="javascript;;" class="font-weight-bold">Email Us</a>
+              <i class="fas fa-envelope"></i>
+              <a href="javascript:;;" class="font-weight-bold">Email Us</a>
             </li>
             <li>
-              <i class="fas fa-comment-dots"></i
-              ><a href="javascript;;" class="font-weight-bold">Chat</a>
+              <i class="fas fa-comment-dots"></i>
+              <a href="javascript:;;" class="font-weight-bold">Chat</a>
             </li>
           </ul>
         </div>
@@ -805,4 +723,544 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "../assets/style/webNav";
+@media screen and (max-width: 768px) {
+  .web-nav-layout {
+    .su-header-logo {
+      font-size: 1.3rem;
+    }
+    .header-content .nav-item p {
+      font-size: 60%;
+    }
+    .purchase-navbar {
+      width: 70%;
+      .back-button-container {
+        font-size: 10px !important;
+      }
+      .nav-item p {
+        font-size: 10px !important;
+      }
+    }
+    .header-options {
+      padding: 0 !important;
+      li {
+        font-size: 13px !important;
+        i {
+          font-size: 16px !important;
+        }
+        p {
+          font-size: 10px !important;
+        }
+      }
+    }
+    .birthday-tab {
+      div {
+        padding: 0 !important;
+      }
+      ul {
+        padding: 0 !important;
+        &:nth-child(4) {
+          padding-left: 1.5rem !important;
+        }
+        p {
+          font-size: 13px !important;
+        }
+        li {
+          font-size: 12px !important;
+        }
+      }
+    }
+    .sympathy-tab {
+      ul {
+        p {
+          font-size: 13px !important;
+        }
+        li {
+          font-size: 12px !important;
+        }
+      }
+    }
+    .occasion-tab {
+      ul {
+        padding: 0 1.5rem 0 0 !important;
+        &:nth-child(4) {
+          padding-left: 1.5rem !important;
+        }
+        p {
+          font-size: 13px !important;
+        }
+        li {
+          font-size: 12px !important;
+        }
+      }
+    }
+    .flower-tab {
+      ul {
+        margin: 0 !important;
+        padding: 0 1.5rem 0 0 !important;
+        &:nth-child(4) {
+          padding-left: 1.5rem !important;
+        }
+        p {
+          font-size: 13px !important;
+        }
+        li {
+          font-size: 12px !important;
+        }
+      }
+    }
+    .plants-gifts-tab {
+      ul {
+        padding: 0 1.5rem 0 0 !important;
+        &:nth-child(3) {
+          padding-right: 0 !important;
+        }
+        &:nth-child(4) {
+          padding-left: 1.5rem !important;
+        }
+        p {
+          font-size: 13px !important;
+        }
+        li {
+          font-size: 12px !important;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 375px) and (max-width: 425px) {
+  .web-nav-layout {
+    .navbar-header {
+      padding: 0 5px !important;
+    }
+    .header-log {
+      padding-top: 0.5rem !important;
+    }
+    .ftd-company {
+      font-size: 55% !important;
+    }
+    .su-header-logo {
+      font-size: 65%;
+    }
+    .header-content {
+      padding: 0 !important ;
+      .nav-item p {
+        font-size: 43% !important;
+      }
+    }
+    .purchase-navbar {
+      width: 76% !important;
+      padding: 1rem 0 0 0 !important;
+      .back-button-container {
+        font-size: 9px !important;
+        padding-top: 0.25rem !important;
+      }
+      .purchase-tab {
+        div:nth-child(2) {
+          margin: 0 !important;
+        }
+      }
+      .nav-item p {
+        font-size: 70% !important;
+        margin: 0 0.8rem 0 0 !important;
+      }
+      .secure-tab {
+        display: none !important;
+      }
+    }
+    .header-options {
+      padding: 0 !important;
+      ul {
+        margin-top: 0.5rem !important;
+        justify-content: center !important;
+      }
+      li {
+        font-size: 14px !important;
+        i {
+          font-size: 85% !important;
+        }
+        p {
+          display: none;
+        }
+      }
+    }
+    .birthday-tab {
+      div {
+        justify-content: space-around !important;
+        padding: 0 !important;
+      }
+      ul {
+        padding: 0 !important;
+        &:nth-child(4) {
+          border-left: 0 !important;
+          padding-left: 1.5rem !important;
+        }
+        p {
+          font-size: 55% !important;
+        }
+        li {
+          font-size: 50% !important;
+        }
+      }
+    }
+    .sympathy-tab {
+      div {
+        justify-content: space-around !important;
+        padding: 0 !important;
+      }
+      ul {
+        padding: 0 !important;
+        &:nth-child(2) {
+          margin: 0 1rem !important;
+        }
+        &:nth-child(3) {
+          padding-left: 0.5rem !important;
+        }
+        p {
+          font-size: 55% !important;
+        }
+        li {
+          font-size: 50% !important;
+        }
+      }
+    }
+    .occasion-tab {
+      div {
+        justify-content: space-around !important;
+        padding: 0 !important;
+      }
+      ul {
+        padding: 0 !important;
+        p {
+          font-size: 55% !important;
+        }
+        li {
+          font-size: 50% !important;
+        }
+      }
+    }
+    .flower-tab {
+      div {
+        justify-content: space-around !important;
+        padding: 0 !important;
+      }
+      ul {
+        padding: 0 0.1rem !important;
+        &:nth-child(4) {
+          border-left: 0 !important;
+          padding-left: 0 !important;
+        }
+        p {
+          font-size: 55% !important;
+        }
+        li {
+          font-size: 50% !important;
+        }
+      }
+    }
+    .plants-gifts-tab {
+      div {
+        justify-content: space-around !important;
+        padding: 0 !important;
+      }
+      ul {
+        padding: 0 0.5rem !important;
+        &:nth-child(3) {
+          margin: 0 !important;
+        }
+        &:nth-child(4) {
+          border-left: 0 !important;
+          padding-left: 0.5rem !important;
+        }
+        p {
+          font-size: 55% !important;
+        }
+        li {
+          font-size: 50% !important;
+        }
+      }
+    }
+    .help-tab {
+      div:nth-child(1) {
+        justify-content: space-around !important;
+        padding: 0 !important;
+      }
+      ul {
+        &:nth-child(1) {
+          p {
+            font-size: 70% !important;
+          }
+        }
+        padding: 0 !important;
+      }
+      .contact-container {
+        padding-left: 1.5rem !important;
+        p:nth-child(1) {
+          font-size: 85% !important;
+          margin-bottom: 0 !important;
+        }
+        p:nth-child(2) {
+          font-size: 60% !important;
+        }
+        li {
+          font-size: 65% !important;
+          padding-bottom: 1rem !important;
+          i {
+            padding-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and(max-width: 375px) {
+  .web-nav-layout {
+    .header-log {
+      width: 24% !important;
+    }
+    .header-content {
+      width: 63% !important;
+      padding: 0 !important ;
+      .nav-item p {
+        font-size: 42% !important;
+      }
+    }
+    .purchase-navbar {
+      .nav-item p {
+        margin: 0 0.5rem 0 0 !important;
+        i {
+          margin: 0 !important;
+        }
+      }
+    }
+
+    .header-options {
+      width: 12% !important;
+      li {
+        &:nth-child(2),
+        &:nth-child(4) {
+          display: none !important;
+        }
+        &:nth-child(1) {
+          i {
+            padding: 0 !important;
+            margin-right: 0.25rem !important;
+          }
+        }
+      }
+    }
+    .sympathy-tab {
+      div {
+        justify-content: space-around !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-wrap: nowrap;
+      }
+      ul {
+        padding: 0 !important;
+        &:nth-child(2) {
+          margin: 0 !important;
+        }
+        &:nth-child(3) {
+          padding-left: 0.5rem !important;
+        }
+        p {
+          font-size: 55% !important;
+        }
+        li {
+          font-size: 50% !important;
+        }
+      }
+    }
+  }
+}
+@media screen and( max-width: 320px) {
+  .web-nav-layout {
+    .navbar-header {
+      padding: 0 5px !important;
+    }
+    .header-log {
+      width: 24% !important;
+      padding-top: 0.5rem !important;
+    }
+    .ftd-company {
+      font-size: 55% !important;
+    }
+    .su-header-logo {
+      font-size: 65%;
+    }
+    .header-content {
+      width: 63% !important;
+      padding: 0 !important ;
+      .nav-item p {
+        font-size: 45% !important;
+      }
+    }
+    .purchase-navbar {
+      width: 76% !important;
+      padding: 1rem 0 0 0 !important;
+      .back-button-container {
+        font-size: 58% !important;
+        padding-top: 0.25rem !important;
+      }
+      .purchase-tab {
+        div:nth-child(2) {
+          margin: 0 !important;
+        }
+      }
+      .nav-item p {
+        font-size: 60% !important;
+        margin: 0 0.25rem 0 0 !important;
+        i {
+          margin: 0 !important;
+        }
+      }
+      .secure-tab {
+        display: none !important;
+      }
+    }
+    .header-options {
+      padding: 0 !important;
+      ul {
+        margin-top: 0.5rem !important;
+        justify-content: center !important;
+      }
+      li {
+        font-size: 14px !important;
+        i {
+          font-size: 85% !important;
+        }
+        p {
+          display: none;
+        }
+      }
+    }
+    .birthday-tab {
+      div {
+        justify-content: space-around !important;
+        padding: 0 !important;
+      }
+      ul {
+        padding: 0 !important;
+        &:nth-child(4) {
+          border-left: 0 !important;
+          padding-left: 1.5rem !important;
+        }
+        p {
+          font-size: 55% !important;
+        }
+        li {
+          font-size: 50% !important;
+        }
+      }
+    }
+    .sympathy-tab {
+      div {
+        justify-content: space-around !important;
+        padding: 0 !important;
+      }
+      ul {
+        padding: 0 !important;
+        &:nth-child(2) {
+          margin: 0 1rem !important;
+        }
+        &:nth-child(3) {
+          padding-left: 0.5rem !important;
+        }
+        p {
+          font-size: 55% !important;
+        }
+        li {
+          font-size: 50% !important;
+        }
+      }
+    }
+    .occasion-tab {
+      div {
+        justify-content: space-around !important;
+        padding: 0 !important;
+      }
+      ul {
+        padding: 0 !important;
+        p {
+          font-size: 55% !important;
+        }
+        li {
+          font-size: 50% !important;
+        }
+      }
+    }
+    .flower-tab {
+      div {
+        justify-content: space-around !important;
+        padding: 0 !important;
+      }
+      ul {
+        padding: 0 0.1rem !important;
+        &:nth-child(4) {
+          border-left: 0 !important;
+          padding-left: 0 !important;
+        }
+        p {
+          font-size: 55% !important;
+        }
+        li {
+          font-size: 50% !important;
+        }
+      }
+    }
+    .plants-gifts-tab {
+      div {
+        justify-content: space-around !important;
+        padding: 0 !important;
+      }
+      ul {
+        padding: 0 0.5rem !important;
+        &:nth-child(3) {
+          margin: 0 !important;
+        }
+        &:nth-child(4) {
+          border-left: 0 !important;
+          padding-left: 0.5rem !important;
+        }
+        p {
+          font-size: 55% !important;
+        }
+        li {
+          font-size: 50% !important;
+        }
+      }
+    }
+    .help-tab {
+      div:nth-child(1) {
+        justify-content: space-around !important;
+        padding: 0 !important;
+      }
+      ul {
+        &:nth-child(1) {
+          p {
+            font-size: 70% !important;
+          }
+        }
+        padding: 0 !important;
+      }
+      .contact-container {
+        padding-left: 1.5rem !important;
+        p:nth-child(1) {
+          font-size: 85% !important;
+          margin-bottom: 0 !important;
+        }
+        p:nth-child(2) {
+          font-size: 60% !important;
+        }
+        li {
+          font-size: 65% !important;
+          padding-bottom: 1rem !important;
+          i {
+            padding-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
 </style>

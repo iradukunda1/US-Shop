@@ -35,14 +35,14 @@
               :type="passwordVisible ? 'text' : 'password'"
             />
             <div
-              style="width:15%; cursor:pointer"
-              class="form-control bg-light h-100 rounded-0"
+              style="width:15%"
+              class="form-control bg-light h-100 rounded-0 cursor-pointer"
               @click="togglePasswordVisibility"
             >
               <i
                 :class="{
-                  'fa fa-eye-slash': !passwordVisible,
-                  'fa fa-eye': passwordVisible,
+                  'fa fa-eye-slash fa-12': !passwordVisible,
+                  'fa fa-eye fa-12': passwordVisible,
                 }"
               ></i>
             </div>
@@ -62,11 +62,11 @@
           </button>
         </form>
         <p class="mt-3 text-muted">
-          <span v-if="isSignUp" class="px-4">
+          <span v-if="isSignUp" >
             Already a member?
             <a href="javascript:;;" @click="toggleForm">Sign in</a>
           </span>
-          <span v-if="!isSignUp" class="px-4">
+          <span v-if="!isSignUp" class="">
             New to US-Bouquets?
             <a href="javascript:;;" @click="toggleForm">Create an Account</a>
           </span>
