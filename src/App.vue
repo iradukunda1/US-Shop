@@ -20,8 +20,8 @@ export default {
   computed: {
     ...mapGetters({
       context: "loading",
-      modal: "alertModal"
-    })
+      modal: "alertModal",
+    }),
   },
   created() {
     Array.prototype.firstThree = function() {
@@ -43,10 +43,10 @@ export default {
       return firstName + secondName;
     };
     this.$axios.interceptors.response.use(
-      response => {
+      (response) => {
         return response;
       },
-      error => {
+      (error) => {
         if (error.response) {
           switch (error.response.status) {
             case 401:
@@ -68,11 +68,10 @@ export default {
     //     throw err;
     //   });
     // });
-  }
+  },
 };
 </script>
-<style>
-</style>
+<style></style>
 <style lang="scss">
 .cursor-pointer {
   cursor: pointer !important;
@@ -83,29 +82,38 @@ export default {
 .c-default {
   color: rgba(192, 0, 139, 0.93) !important;
 }
-.w-95{
+.w-95 {
   width: 95% !important;
 }
-.w-90{
+.w-90 {
   width: 90% !important;
 }
-.w-80{
+.w-80 {
   width: 80% !important;
 }
-.w-70{
+.w-70 {
   width: 70% !important;
 }
 .w-60 {
   width: 60% !important;
 }
-.w-30{
+.w-45 {
+  width: 45% !important;
+}
+.w-40 {
+  width: 40% !important;
+}
+.w-30 {
   width: 30% !important;
 }
-.w-20{
+.w-20 {
   width: 20% !important;
 }
 .h-50px {
   height: 50px !important;
+}
+.h-90px{
+  height: 90px !important;
 }
 .g-text {
   color: #ced847 !important;
@@ -124,5 +132,18 @@ export default {
 }
 .fa-16 {
   font-size: 16px !important;
+}
+.border-2px {
+  border: 2px solid rgb(0, 124, 173) !important;
+}
+.hover-button {
+  &:hover {
+    background-color: rgb(0, 124, 173) !important;
+    color: white !important;
+  }
+}
+.pointer-events{
+  pointer-events:none !important;
+  opacity: 0.4 !important;
 }
 </style>

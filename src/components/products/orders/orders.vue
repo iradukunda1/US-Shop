@@ -12,7 +12,7 @@
                 <thead>
                   <tr>
                     <th scope="col" class="border-0 bg-light">
-                      <div class="p-2 px-3 text-uppercase">Product</div>
+                      <div class="p-2 px-3 text-uppercase">Item</div>
                     </th>
                     <th scope="col" class="border-0 bg-light">
                       <div class="py-2 text-uppercase">Quantity</div>
@@ -92,14 +92,14 @@
               </table>
             </div>
           </div>
-          <div class="error-template container my-3" v-else>
-            <h1>Oops!</h1>
-            <h2>No Orders Found</h2>
+          <div class="error-template container bg-grey my-3" v-else>
+            <h2>You don't have any recent</h2>
+            <h3>orders in your account</h3>
             <div class="error-actions">
               <a class="btn text-white">
                 <span class="glyphicon glyphicon-envelope"></span>
-                <router-link to="/products"
-                  >Take me to Products Page</router-link
+                <router-link :to="{name:'Home'}"
+                  >Take me to Shopping</router-link
                 >
               </a>
             </div>
