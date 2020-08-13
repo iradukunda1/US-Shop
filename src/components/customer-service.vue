@@ -17,6 +17,7 @@
           </p>
           <button
             class="btn order-status-button rounded-0 py-3 px-4 fa-14 mx-auto font-weight-bold d-flex"
+            @click="$router.push({ name: 'Track-Order' })"
           >
             TRACK YOUR ORDER
           </button>
@@ -26,15 +27,17 @@
     <div
       class="account-orders-cards row mx-0 w-100 px-4 justify-content-around py-4"
     >
-      <div
-        class="my-order-card  border roundend-0 px-4 py-4 bg-white row mx-0"
-      >
+      <div class="my-order-card  border roundend-0 px-4 py-4 bg-white row mx-0">
         <div class="order-links-container">
           <div class="font-weight-bold fa-15 pb-3 mb-3">Your Order</div>
-          <p class="text-info mb-0 pb-3 cursor-pointer font-weight-bold">
+          <p class="text-info mb-0 pb-3 cursor-pointer font-weight-bold"
+            @click="$router.push({ name: 'Track-Order' })">
             Check your order status
           </p>
-          <p class="text-info cursor-pointer font-weight-bold">
+          <p
+            class="text-info cursor-pointer font-weight-bold"
+            @click="$router.push({ name: 'Track-Order' })"
+          >
             Contact Us: Issue with my order
           </p>
         </div>
@@ -61,7 +64,10 @@
           >
             Open a new account
           </p>
-          <p class="text-info cursor-pointer font-weight-bold">
+          <p
+            class="text-info cursor-pointer font-weight-bold"
+            @click="$store.dispatch('setView', 'Forgot Password')"
+          >
             I forgot my password
           </p>
         </div>

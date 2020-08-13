@@ -8,13 +8,14 @@
       >
         <div>
           <i class="mr-2"></i>
-          <span class="font-weight-bold">{{ title }}</span>
+          <span class="font-weight-bold">{{ title.toUpperCase() }}</span>
         </div>
         <span class="fa fa-times back-btn" @click="close"></span>
       </div>
       <div class="different-content">
-        <login v-if="title == 'Login'" />
-        <checkout v-if="title == 'checkout'" />
+        <login v-if="title.toLowerCase() == 'login'" />
+        <checkout v-if="title.toLowerCase() == 'checkout'" />
+        <forget-password v-if="title.toLowerCase() == 'forgot password'" />
       </div>
     </div>
   </div>
@@ -24,16 +25,17 @@
 /* eslint-disable */
 import checkout from "./checkout-form";
 import login from "../../views/login";
+import forgetPassword from "@/components/forms/forget-password";
 export default {
   props: ["title"],
-  components: { login, checkout },
+  components: { login, checkout, forgetPassword },
   name: "extra-list-view",
   methods: {
     close() {
       this.$store.dispatch("setView");
-    }
+    },
   },
-  mounted() {}
+  mounted() {},
 };
 </script>
 <style scoped lang="scss">

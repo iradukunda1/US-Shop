@@ -211,7 +211,10 @@
               <p class="mb-0 fa-12">CART</p>
             </div>
           </li>
-          <li class="web-navbar-account d-block mr-0" @click="$router.push({name:'Account'})">
+          <li
+            class="web-navbar-account d-block mr-0"
+            @click="$router.push({ name: 'Account' })"
+          >
             <i class="fas fa-user-circle fa-15 ml-3"></i>&nbsp;
             <p class="mb-0 fa-12">ACCOUNT</p>
           </li>
@@ -575,7 +578,10 @@
           <ul>
             <p
               class="font-weight-bold fa-14 menu-option"
-              @click="$router.push({name:'Account'}), (showHelp = !showHelp)"
+              @click="
+                $router.push({ name: 'Customer-Service' }),
+                  (showHelp = !showHelp)
+              "
             >
               Customer service
             </p>
@@ -590,7 +596,12 @@
             </p>
             <li>
               <i class="fas fa-plane-departure"></i>
-              <a href="javascript:;;" class="font-weight-bold"
+              <a
+                href="javascript:;;"
+                class="font-weight-bold"
+                @click="
+                  $router.push({ name: 'Track-Order' }), (showHelp = !showHelp)
+                "
                 >Track Your Order</a
               >
             </li>

@@ -37,7 +37,7 @@
             :class="{'pointer-events':addNewAddress}"
           >
             <span class="cursor-pointer">Remove</span
-            ><span class="px-2 cursor-pointer" @click="editAddress(address)"
+            ><span class="mx-3 cursor-pointer" @click="editAddress(address)"
               >Edit</span
             >
           </p>

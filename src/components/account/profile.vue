@@ -135,7 +135,7 @@
             </div>
             <div
               class="fa-14 border action-button hover-button rounded-0 text-center text-primary font-weight-bold rounded-0  btn py-2 px-4"
-              @click="editContact = !editContact"
+              @click="editPassword = !editPassword"
             >
               CANCEL
             </div>
