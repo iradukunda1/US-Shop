@@ -101,14 +101,19 @@ const router = new vueRouter({
           component: () => import("@/components/account/my-account")
         },
         {
-          path:"/account/profile",
-          name:"My-Profile",
+          path: "/account/profile",
+          name: "My-Profile",
           component: () => import("@/components/profile-components")
         },
         {
           path: "/customer-service",
           name: "Customer-Service",
           component: () => import("@/components/customer-service")
+        },
+        {
+          path: "/order-status",
+          name: "Track-Order",
+          component: () => import('@/components/products/orders/order-status')
         },
         {
           path: "/payments",
