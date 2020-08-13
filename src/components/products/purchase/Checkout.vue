@@ -13,7 +13,6 @@
                         </button>
                     </div>
                     <address-form v-if="createAddress"/>
-                    <address-table v-else @openAddressForm="openAddress" @createBtn="createBtnFunc"/>
                 </div>
             </div>
             <div class="col-sm-4">
@@ -35,12 +34,11 @@
 <script>
     /* eslint-disable */
 import CartCalculator from './CartCalculator'
-import addressTable from '../address/table.vue'
 import addressForm from '../address/delivery-address-form.vue'
 
 export default {
   name: 'Checkout',
-  components: { CartCalculator, addressTable, addressForm },
+  components: { CartCalculator, addressForm },
   data () {
     return {
       shippingDetail: {

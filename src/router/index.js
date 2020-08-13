@@ -42,31 +42,31 @@ const router = new vueRouter({
           component: () => import("../components/products/ProductDetail.vue")
         },
         {
-          path:"/shop/:params",
-          name:"Shop the SU-Flower",
+          path: "/shop/:params",
+          name: "Shop the SU-Flower",
           component: () => import('../components/products/ProductsList')
         },
-        {
-          path: "/Me",
-          name: "MyAccount",
-          component: () => import("../views/User-Profile.vue"),
-          meta: {
-            requiresAuth: true
-          },
-          beforeEnter: (_to, _from, next) => {
-            if (
-              store.getters.auth.user.roles &&
-              !!store.state.auth.token &&
-              store.getters.auth.user.roles.includes("User")
-            ) {
-              return next();
-            } else {
-              next({
-                name: "Login"
-              });
-            }
-          }
-        },
+        // {
+        //   path: "/Me",
+        //   name: "MyAccount",
+        //   component: () => import("../views/User-Profile.vue"),
+        //   meta: {
+        //     requiresAuth: true
+        //   },
+        //   beforeEnter: (_to, _from, next) => {
+        //     if (
+        //       store.getters.auth.user.roles &&
+        //       !!store.state.auth.token &&
+        //       store.getters.auth.user.roles.includes("User")
+        //     ) {
+        //       return next();
+        //     } else {
+        //       next({
+        //         name: "Login"
+        //       });
+        //     }
+        //   }
+        // },
         {
           path: "/ContactUsEWS",
           name: "Contact Us",
@@ -94,6 +94,21 @@ const router = new vueRouter({
           path: "/cart",
           name: "Cart",
           component: () => import("../components/products/carts/cart")
+        },
+        {
+          path: "/account",
+          name: "Account",
+          component: () => import("@/components/account/my-account")
+        },
+        {
+          path:"/account/profile",
+          name:"My-Profile",
+          component: () => import("@/components/profile-components")
+        },
+        {
+          path: "/customer-service",
+          name: "Customer-Service",
+          component: () => import("@/components/customer-service")
         },
         {
           path: "/payments",
@@ -225,11 +240,11 @@ const router = new vueRouter({
           component: () =>
             import("../components/dashboardLayout/pages/product/product-list")
         },
-        {
-          name: "admin profile",
-          path: "profile",
-          component: () => import("../components/dashboardLayout/pages/profile")
-        },
+        // {
+        //   name: "admin profile",
+        //   path: "profile",
+        //   component: () => import("../components/dashboardLayout/pages/profile")
+        // },
         {
           name: "Create Category",
           path: "category",

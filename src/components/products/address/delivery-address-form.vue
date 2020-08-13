@@ -249,10 +249,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@media screen and (max-width: 768px) {
-  .delivery-address-form {
-  }
-}
 @media screen and (max-width: 425px) {
   .delivery-address-form {
     .continue-payment-button {

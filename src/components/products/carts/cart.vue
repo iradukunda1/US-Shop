@@ -125,7 +125,7 @@ export default {
     }
   }
 }
-@media screen and(max-width: 375px) {
+@media ( min-width: 320px)  and (max-width: 375px) {
   .cart-products {
     .delivery-items {
       width: 90% !important;
