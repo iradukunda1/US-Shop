@@ -123,7 +123,7 @@
             <p
               class="py-3 mb-0"
               :class="{
-                'bottom-line': this.$route.params.params == 'delivery',
+                'bottom-line': this.$route.params.params == 'delivery'
               }"
             >
               <i
@@ -252,7 +252,7 @@
               @click="
                 $router.push({
                   name: 'Shop the SU-Flower',
-                  params: { params: 'sympathy-flowers' },
+                  params: { params: 'sympathy-flowers' }
                 }),
                   (showSympathy = !showSympathy)
               "
@@ -263,7 +263,7 @@
               @click="
                 $router.push({
                   name: 'Shop the SU-Flower',
-                  params: { params: 'same-day-sympathy-flowers' },
+                  params: { params: 'same-day-sympathy-flowers' }
                 }),
                   (showSympathy = !showSympathy)
               "
@@ -277,7 +277,7 @@
               @click="
                 $router.push({
                   name: 'Shop the SU-Flower',
-                  params: { params: 'sympathy-plants' },
+                  params: { params: 'sympathy-plants' }
                 }),
                   (showSympathy = !showSympathy)
               "
@@ -288,7 +288,7 @@
               @click="
                 $router.push({
                   name: 'Shop the SU-Flower',
-                  params: { params: 'sympathy-flowers-gifts' },
+                  params: { params: 'sympathy-flowers-gifts' }
                 }),
                   (showSympathy = !showSympathy)
               "
@@ -298,8 +298,28 @@
           </ul>
           <ul class="border-left">
             <p class="font-weight-bold fa-14">Funeral Flowers & Sprays</p>
-            <li>Funeral Flowers</li>
-            <li>Funeral Sprays</li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'funeral-flowers' }
+                }),
+                  (showSympathy = !showSympathy)
+              "
+            >
+              Funeral Flowers
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'funeral-standing-flowers' }
+                }),
+                  (showSympathy = !showSympathy)
+              "
+            >
+              Funeral Sprays
+            </li>
           </ul>
         </div>
       </div>
@@ -317,7 +337,7 @@
               @click="
                 $router.push({
                   name: 'Shop the SU-Flower',
-                  params: { params: featFlo.replace(/\s/g, '-').toLowerCase() },
+                  params: { params: featFlo.replace(/\s/g, '-').toLowerCase() }
                 }),
                   (showFlower = !showFlower)
               "
@@ -325,8 +345,27 @@
               {{ featFlo }}
             </li>
             <p class="font-weight-bold fa-14">Flowers by Delivery Type</p>
-            <li v-for="deliType in Flowers_by_Delivery" :key="deliType">
-              {{ deliType }}
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'same-day-flowers-gifts' }
+                }),
+                  (showFlower = !showFlower)
+              "
+            >
+              Same Day Flower Delivery
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'flowers-by-mail' }
+                }),
+                  (showFlower = !showFlower)
+              "
+            >
+              Flowers Shipped in Gift Box
             </li>
           </ul>
           <ul>
@@ -355,7 +394,7 @@
               @click="
                 $router.push({
                   name: 'Shop the SU-Flower',
-                  params: { params: 'all-Birthday' },
+                  params: { params: 'all-Birthday' }
                 }),
                   (showBirthDay = !showBirthDay)
               "
@@ -366,7 +405,7 @@
               @click="
                 $router.push({
                   name: 'Shop the SU-Flower',
-                  params: { params: 'same-day-birthday-flower' },
+                  params: { params: 'same-day-birthday-flower' }
                 }),
                   (showBirthDay = !showBirthDay)
               "
@@ -380,7 +419,7 @@
               @click="
                 $router.push({
                   name: 'Shop the SU-Flower',
-                  params: { params: 'birthday-flowers' },
+                  params: { params: 'birthday-flowers' }
                 }),
                   (showBirthDay = !showBirthDay)
               "
@@ -391,7 +430,7 @@
               @click="
                 $router.push({
                   name: 'Shop the SU-Flower',
-                  params: { params: 'birthday-roses' },
+                  params: { params: 'birthday-roses' }
                 }),
                   (showBirthDay = !showBirthDay)
               "
@@ -405,7 +444,7 @@
               @click="
                 $router.push({
                   name: 'Shop the SU-Flower',
-                  params: { params: 'birthday-plants' },
+                  params: { params: 'birthday-plants' }
                 }),
                   (showBirthDay = !showBirthDay)
               "
@@ -416,7 +455,7 @@
               @click="
                 $router.push({
                   name: 'Shop the SU-Flower',
-                  params: { params: 'birthday-delivery' },
+                  params: { params: 'birthday-delivery' }
                 }),
                   (showBirthDay = !showBirthDay)
               "
@@ -426,7 +465,19 @@
           </ul>
           <ul class="border-left">
             <p class="font-weight-bold fa-14">Shop Birthday by Recipient</p>
-            <li v-for="birthday in shop_by_birthday" :key="birthday">
+            <li
+              v-for="birthday in shop_by_birthday"
+              :key="birthday"
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: {
+                    params: birthday.replace(/\s/g, '-').toLowerCase()
+                  }
+                }),
+                  (showBirthDay = !showBirthDay)
+              "
+            >
               {{ birthday }}
             </li>
           </ul>
@@ -444,7 +495,7 @@
               @click="
                 $router.push({
                   name: 'Shop the SU-Flower',
-                  params: { params: 'anniversary-flowers' },
+                  params: { params: 'anniversary-flowers' }
                 }),
                   (showOccasion = !showOccasion)
               "
@@ -455,7 +506,7 @@
               @click="
                 $router.push({
                   name: 'Shop the SU-Flower',
-                  params: { params: 'new-baby-flowers' },
+                  params: { params: 'new-baby-flowers' }
                 }),
                   (showOccasion = !showOccasion)
               "
@@ -466,7 +517,7 @@
               @click="
                 $router.push({
                   name: 'Shop the SU-Flower',
-                  params: { params: 'just-because-gifts' },
+                  params: { params: 'just-because-gifts' }
                 }),
                   (showOccasion = !showOccasion)
               "
@@ -477,7 +528,7 @@
               @click="
                 $router.push({
                   name: 'Shop the SU-Flower',
-                  params: { params: 'get-well-flowers' },
+                  params: { params: 'get-well-flowers' }
                 }),
                   (showOccasion = !showOccasion)
               "
@@ -488,7 +539,7 @@
               @click="
                 $router.push({
                   name: 'Shop the SU-Flower',
-                  params: { params: 'romantic-flowers' },
+                  params: { params: 'romantic-flowers' }
                 }),
                   (showOccasion = !showOccasion)
               "
@@ -497,24 +548,143 @@
             </li>
           </ul>
           <ul>
-            <li>Thinking of You</li>
-            <li>Congratulations</li>
-            <li>Thank You Baby</li>
-            <li>Engagement</li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'thinking-of-you-flowers' }
+                }),
+                  (showOccasion = !showOccasion)
+              "
+            >
+              Thinking of You
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'congratulation-flowers' }
+                }),
+                  (showOccasion = !showOccasion)
+              "
+            >
+              Congratulations
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'thank-you-flowers' }
+                }),
+                  (showOccasion = !showOccasion)
+              "
+            >
+              Thank You
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'engagement-flowers' }
+                }),
+                  (showOccasion = !showOccasion)
+              "
+            >
+              Engagement
+            </li>
           </ul>
           <ul>
-            <li>I'm Sorry</li>
-            <li>Wedding Gifts</li>
-            <li>Retirement</li>
-            <li>Housewarming</li>
-            <li>Corporate Gifting</li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'sorry-flowers' }
+                }),
+                  (showOccasion = !showOccasion)
+              "
+            >
+              I'm Sorry
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'wedding-flowers' }
+                }),
+                  (showOccasion = !showOccasion)
+              "
+            >
+              Wedding Gifts
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'retirement-flowers' }
+                }),
+                  (showOccasion = !showOccasion)
+              "
+            >
+              Retirement
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'housewarning-flowers' }
+                }),
+                  (showOccasion = !showOccasion)
+              "
+            >
+              Housewarming
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'corporate-gift-flowers' }
+                }),
+                  (showOccasion = !showOccasion)
+              "
+            >
+              Corporate Gifting
+            </li>
           </ul>
           <ul class="border-left">
             <p class="font-weight-bold fa-14">Upcoming Occasions</p>
-            <li>Graduation</li>
-            <li>Parents Day</li>
-            <li>Friendship Day</li>
-            <li>Sister's Day</li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'gift-for-parent' }
+                }),
+                  (showOccasion = !showOccasion)
+              "
+            >
+              Parents Day
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'friend-gift-flower' }
+                }),
+                  (showOccasion = !showOccasion)
+              "
+            >
+              Friendship Day
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'sister-flowers' }
+                }),
+                  (showOccasion = !showOccasion)
+              "
+            >
+              Sister's Day
+            </li>
           </ul>
         </div>
       </div>
@@ -533,8 +703,8 @@
                 $router.push({
                   name: 'Shop the SU-Flower',
                   params: {
-                    params: featPlant.replace(/\s/g, '-').toLowerCase(),
-                  },
+                    params: featPlant.replace(/\s/g, '-').toLowerCase()
+                  }
                 }),
                   (showGift = !showGift)
               "
@@ -628,7 +798,7 @@
 import { mapState, mapGetters, mapMutations } from "vuex";
 import {
   getLoggedInUser,
-  isLoggedIn,
+  isLoggedIn
 } from "../components/shared/service/authService";
 
 export default {
@@ -648,13 +818,7 @@ export default {
         "Summer Flowers",
         "Best Selling Flowers",
         "New Flowers",
-        "Limited Edition Collection",
-      ],
-      Flowers_by_Delivery: [
-        "Same Day Flower",
-        " Delivery Flowers",
-        "Shipped in Gift Box",
-        " Florist Delivered",
+        "Limited Edition Collection"
       ],
       shop_by_type: [
         " All Flowers",
@@ -672,7 +836,7 @@ export default {
         " Roses",
         " Snapdragons",
         " Sunflowers ",
-        "Tulips",
+        "Tulips"
       ],
       shop_by_color: [
         " Blue Bouquets",
@@ -683,7 +847,7 @@ export default {
         "Purple Bouquets",
         "Red Bouquets",
         "White Bouquets",
-        "Yellow Bouquets",
+        "Yellow Bouquets"
       ],
       shop_by_roses: [
         " All Roses",
@@ -694,26 +858,26 @@ export default {
         "Purple Roses",
         " Rainbow Roses",
         " Red Roses",
-        " White Roses",
+        " White Roses"
       ],
       shop_by_birthday: [
         "Birthday for Mom",
         "Birthday for Friend",
         "Birthday for Wife",
-        " Birthday for Daughter",
-        "Birthday for Him",
+        "Birthday for Daughter",
+        "Birthday for Him"
       ],
       Featured_plants: [
         "Best Selling Plants",
         "New Plants",
-        "Same Day Plant Delivery",
+        "Same Day Plant Delivery"
       ],
       shop_plants: [
         "All Plants ",
         "Bonsai & Bamboo",
         "Green Plants",
         " Office Plants",
-        "Succulents & Cacti",
+        "Succulents & Cacti"
       ],
       flowering_plants: [
         "All Flowering Plants",
@@ -725,14 +889,14 @@ export default {
         " Orchids",
         " Peace",
         " Lily Plants",
-        " Potted Rose Plants",
+        " Potted Rose Plants"
       ],
       gift_baskets: [
         "All Gift Baskets",
         "Fruit Gift Baskets",
         " Meat & Cheese Baskets",
         " Span Gift Baskets",
-        " Starbucks Gift Baskets",
+        " Starbucks Gift Baskets"
       ],
       gourmet_foods: [
         "All Gourmet",
@@ -743,8 +907,8 @@ export default {
         " Chocolate Gifts",
         "Desserts & Baked Goods",
         " Godiva Chocolates",
-        " Mrs Fields Cookies",
-      ],
+        " Mrs Fields Cookies"
+      ]
     };
   },
   computed: {
@@ -763,18 +927,18 @@ export default {
     },
     products() {
       return [
-        ...new Set(this.cartProducts.map((v) => JSON.stringify(v))),
-      ].map((v) => JSON.parse(v));
-    },
+        ...new Set(this.cartProducts.map(v => JSON.stringify(v)))
+      ].map(v => JSON.parse(v));
+    }
   },
   watch: {
     cartProducts() {
       this.totalValue = 0;
-      this.cartProducts.forEach((product) => {
+      this.cartProducts.forEach(product => {
         this.totalValue += parseFloat(product.price);
       });
       this.$store.state.resources.totalPrice = this.totalValue;
-    },
+    }
   },
   methods: {
     view(data) {
@@ -787,7 +951,7 @@ export default {
     },
     /* Initially loading the purchase products from local storage */
     QtyProduct(product) {
-      return this.cartProducts.filter((v) => v.id === product.id).length;
+      return this.cartProducts.filter(v => v.id === product.id).length;
     },
     ...mapMutations(["SET_CART_PRODUCTS", "ADD_LOGGED_USER"]),
 
@@ -806,7 +970,7 @@ export default {
       // ]).then(() => {
       //   this.$router.replace({ name: "Home" });
       // });
-    },
+    }
   },
   created() {
     this.getLocalProducts();
@@ -814,7 +978,7 @@ export default {
     // const loggedUser = getLoggedInUser();
     //
     // this.ADD_LOGGED_USER(loggedUser);
-  },
+  }
 };
 </script>
 <style lang="scss" scoped>

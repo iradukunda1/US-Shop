@@ -1,5 +1,6 @@
 <template>
   <div class="images-container">
+    <discount-ads />
     <div
       class="w-100 row mx-0 same-day-birthday-image"
       v-if="this.$route.params.params == 'same-day-birthday-flower'"
@@ -134,12 +135,54 @@
         alt="same-day-plant-delivery"
       />
     </div>
+    <div
+      class="w-100 row mx-0 congratulation-flowers"
+      v-if="this.$route.params.params == 'congratulation-flowers'"
+    >
+      <img
+        src="/img/congratulation-flower.png"
+        class="w-100"
+        alt="congratulation-flowers"
+      />
+    </div>
+    <div
+      class="w-100 row mx-0 thank-you-flowers"
+      v-if="this.$route.params.params == 'thank-you-flowers'"
+    >
+      <img
+        src="/img/thank-you-flower.png"
+        class="w-100"
+        alt="thank-you-flowers"
+      />
+    </div>
+    <div
+      class="w-100 row mx-0 'housewarning-flowers-image"
+      v-if="this.$route.params.params == 'housewarning-flowers'"
+    >
+      <img
+        src="/img/housewarning-flowers.png"
+        class="w-100"
+        alt="housewarning-flowers-image"
+      />
+    </div>
+    <div
+      class="w-100 row mx-0 'same-day-flowers-gifts-image"
+      v-if="this.$route.params.params == 'same-day-flowers-gifts'"
+    >
+      <img
+        src="/img/same-day-flowers-gifts.png"
+        class="w-100"
+        alt="same-day-flowers-gifts-image"
+      />
+    </div>
   </div>
 </template>
 
 <script>
+import DiscountAds from "@/components/shared/discount-ads";
 export default {
-  name: "images-container"
+  name: "images-container",
+  components: { DiscountAds }
 };
 </script>
 

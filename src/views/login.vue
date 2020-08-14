@@ -2,7 +2,10 @@
   <div class="login bg-white px-5 w-100 ">
     <div class="row">
       <div class="col">
-        <createAccount v-if="isSignUp" @closeSignUp="toggleForm"></createAccount>
+        <createAccount
+          v-if="isSignUp"
+          @closeSignUp="toggleForm"
+        ></createAccount>
         <form class="form-signin" @submit.prevent="login" v-if="!isSignUp">
           <img
             class="mb-4"
@@ -48,7 +51,11 @@
             </div>
           </div>
           <p class="text-muted mb-0">
-            <a href="javascript:;;">Forget password ?</a>
+            <a
+              href="javascript:;;"
+              @click="$store.dispatch('setView', 'FORGOT PASSWORD')"
+              >Forget password ?</a
+            >
           </p>
           <div class="py-2 d-block" v-if="error">
             <p class="mb-0 text-danger">
@@ -62,7 +69,7 @@
           </button>
         </form>
         <p class="mt-3 text-muted">
-          <span v-if="isSignUp" >
+          <span v-if="isSignUp">
             Already a member?
             <a href="javascript:;;" @click="toggleForm">Sign in</a>
           </span>
@@ -76,7 +83,7 @@
   </div>
 </template>
 <script>
-  /* eslint-disable */
+/* eslint-disable */
 import CreateAccount from "@/components/CreateAccount";
 import { encryptUser } from "../components/shared/service/authService";
 import {

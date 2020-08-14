@@ -146,4 +146,15 @@ export default {
   pointer-events:none !important;
   opacity: 0.4 !important;
 }
+  .button-collection {
+    a {
+      color: black !important;
+      border: 2px solid black !important;
+      &:hover {
+        color: white !important;
+        border: 2px solid rgb(0, 124, 173) !important;
+        background: rgb(0, 124, 173) !important;
+      }
+    }
+  }
 </style>
