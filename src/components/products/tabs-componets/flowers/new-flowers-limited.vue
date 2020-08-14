@@ -142,18 +142,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.new-flowers-limited {
-  .button-collection {
-    a {
-      color: black;
-      border: 2px solid black;
-
-      &:hover {
-        color: white;
-        border: 2px solid rgb(0, 124, 173);
-        background: rgb(0, 124, 173);
-      }
-    }
-  }
-}
 </style>

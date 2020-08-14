@@ -41,6 +41,43 @@
         result.length !== 0 && this.$route.params.params == 'birthday-delivery'
       "
     />
+    <birthday-for-mom
+      class="mb-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'birthday-for-mom'
+      "
+    />
+    <birthday-for-friend
+      class="mb-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'birthday-for-friend'
+      "
+    />
+    <birthday-for-wife
+      class="mb-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'birthday-for-wife'
+      "
+    />
+    <birthday-for-daughter
+      class="mb-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'birthday-for-daughter'
+      "
+    />
+    <birthday-for-him
+      class="mb-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'birthday-for-him'
+      "
+    />
     <anniversary-flowers
       class="mb-4"
       @itemsLength="resultLength"
@@ -77,6 +114,92 @@
         result.length !== 0 && this.$route.params.params == 'romantic-flowers'
       "
     />
+    <thinking-of-you-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'thinking-of-you-flowers'
+      "
+    />
+    <congratulation-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'congratulation-flowers'
+      "
+    />
+    <thank-you-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'thank-you-flowers'
+      "
+    />
+    <engagement-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'engagement-flowers'
+      "
+    />
+    <sorry-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'sorry-flowers'"
+    />
+    <wedding-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'wedding-flowers'
+      "
+    />
+    <retirement-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'retirement-flowers'
+      "
+    />
+    <housewarning-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'housewarning-flowers'
+      "
+    />
+    <corporate-gift-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'corporate-gift-flowers'
+      "
+    />
+    <gift-for-parent
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'gift-for-parent'
+      "
+    />
+    <friend-gift-flower
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'friend-gift-flower'
+      "
+    />
+    <sister-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'sister-flowers'
+      "
+    />
     <sympathy-flowers
       class="my-4"
       @itemsLength="resultLength"
@@ -107,6 +230,21 @@
           this.$route.params.params == 'sympathy-flowers-gifts'
       "
     />
+    <funeral-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'funeral-flowers'
+      "
+    />
+    <funeral-sprays
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'funeral-standing-flowers'
+      "
+    />
     <summer-flowers
       class="my-4"
       @itemsLength="resultLength"
@@ -135,6 +273,21 @@
           this.$route.params.params == 'limited-edition-collection'
       "
     />
+    <same-day-flowers-gifts-delivery
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'same-day-flowers-gifts'
+      "
+    />
+    <flowers-by-mail
+        class="my-4"
+        @itemsLength="resultLength"
+        v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'flowers-by-mail'
+      "/>
     <best-selling-plants
       class="my-4"
       @itemsLength="resultLength"
@@ -166,6 +319,8 @@ import birthdayFlowers from "@/components/products/tabs-componets/birthDays/birt
 import BirthdayRoses from "@/components/products/tabs-componets/birthDays/birthday-roses";
 import BirthdayPlants from "@/components/products/tabs-componets/birthDays/birthday-plants";
 import BirthdayDelivery from "@/components/products/tabs-componets/birthDays/birthday-delivery";
+import BirthdayForMom from "@/components/products/tabs-componets/birthDays/birthday-for-mom";
+import BirthdayForFriend from "@/components/products/tabs-componets/birthDays/birthday-for-friend";
 import AnniversaryFlowers from "@/components/products/tabs-componets/occasions/anniversary-flowers";
 import NewBabyFlowers from "@/components/products/tabs-componets/occasions/new-baby-flowers";
 import JustBecauseGifts from "@/components/products/tabs-componets/occasions/just-because-gifts";
@@ -182,10 +337,48 @@ import LimitedEditionCollection from "@/components/products/tabs-componets/flowe
 import BestSellingPlants from "@/components/products/tabs-componets/gift-plants/best-selling-plants";
 import NewPlants from "@/components/products/tabs-componets/gift-plants/new-plants";
 import SameDayPlantDelivery from "@/components/products/tabs-componets/gift-plants/same-day-plant-delivery";
+import BirthdayForWife from "@/components/products/tabs-componets/birthDays/birthday-for-wife";
+import BirthdayForDaughter from "@/components/products/tabs-componets/birthDays/birthday-for-daughter";
+import BirthdayForHim from "@/components/products/tabs-componets/birthDays/birthday-for-him";
+import FuneralFlowers from "@/components/products/tabs-componets/sympathy/funeral-flowers";
+import FuneralSprays from "@/components/products/tabs-componets/sympathy/funeral-sprays";
+import ThinkingOfYouFlowers from "@/components/products/tabs-componets/occasions/thinking-of-you-flowers";
+import CongratulationFlowers from "@/components/products/tabs-componets/occasions/congratulation-flowers";
+import ThankYouFlowers from "@/components/products/tabs-componets/occasions/thank-you-flowers";
+import EngagementFlowers from "@/components/products/tabs-componets/occasions/engagement-flowers";
+import SorryFlowers from "@/components/products/tabs-componets/occasions/sorry-flowers";
+import WeddingFlowers from "@/components/products/tabs-componets/occasions/wedding-flowers";
+import RetirementFlowers from "@/components/products/tabs-componets/occasions/retirement-flowers";
+import HousewarningFlowers from "@/components/products/tabs-componets/occasions/housewarning-flowers";
+import CorporateGiftFlowers from "@/components/products/tabs-componets/occasions/corporate-gift-flowers";
+import GiftForParent from "@/components/products/tabs-componets/occasions/gift-for-parent";
+import FriendGiftFlower from "@/components/products/tabs-componets/occasions/friend-gift-flower";
+import SisterFlowers from "@/components/products/tabs-componets/occasions/sister-flowers";
+import SameDayFlowersGiftsDelivery from "@/components/products/tabs-componets/flowers/same-day-flowers-gifts-delivery";
+import FlowersByMail from "@/components/products/tabs-componets/flowers/flowers-by-mail";
 
 export default {
   name: "tabs-components",
   components: {
+    FlowersByMail,
+    SameDayFlowersGiftsDelivery,
+    SisterFlowers,
+    FriendGiftFlower,
+    GiftForParent,
+    CorporateGiftFlowers,
+    HousewarningFlowers,
+    RetirementFlowers,
+    WeddingFlowers,
+    SorryFlowers,
+    EngagementFlowers,
+    ThankYouFlowers,
+    CongratulationFlowers,
+    ThinkingOfYouFlowers,
+    FuneralSprays,
+    FuneralFlowers,
+    BirthdayForHim,
+    BirthdayForDaughter,
+    BirthdayForWife,
     SameDayPlantDelivery,
     NewPlants,
     BestSellingPlants,
@@ -203,11 +396,13 @@ export default {
     NewBabyFlowers,
     AnniversaryFlowers,
     BirthdayDelivery,
+    BirthdayForMom,
     BirthdayPlants,
     BirthdayRoses,
     birthDayCollection,
     sameDayBirthDayFlower,
-    birthdayFlowers
+    birthdayFlowers,
+    BirthdayForFriend
   },
   data() {
     return {

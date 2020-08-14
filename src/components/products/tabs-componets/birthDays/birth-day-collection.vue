@@ -1,7 +1,7 @@
 <template>
   <div class="birth-day-collection w-100 position-relative pt-2 pl-5 pr-5">
     <div class="header-content">
-      <p class="font-weight-bold fa-14">Birthday Collection</p>
+      <p class="font-weight-bold h3">Birthday Collection</p>
       <p class="text-justify fa-14">
         Sending birthday flowers is a special way to remind your family and
         friends how happy you are that they are in your life. S.U-Bouquets

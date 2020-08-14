@@ -1,14 +1,16 @@
 <template>
   <div class="gift-cards w-100 h-100 position-relative">
     <div class="gift-lists" v-for="(gift, index) in gifts" :key="index">
-      <div class="row mx-0 w-100 justify-content-around border rounded p-2 gift-list my-2 cursor-pointer">
+      <div
+        class="row mx-0 w-100 justify-content-around border rounded p-2 gift-list my-2 cursor-pointer"
+      >
         <div class="select-gift-box my-auto">
           <b-form-checkbox type="checkbox" />
         </div>
         <span
           class="gift-profile d-block"
           :style="{
-            backgroundImage: 'url(' + gift.images_urls + ')'
+            backgroundImage: 'url(' + gift.images_urls + ')',
           }"
         ></span>
         <div class="gift-desc pt-2">
@@ -40,13 +42,16 @@
         <div class="d-block ">
           <p
             class="cursor-pointer fa-13 fa text-info font-weight-bold"
-            @click="$router.push({name:'Home'}), $store.dispatch('setView')"
+            @click="$router.push({ name: 'Home' }), $store.dispatch('setView')"
           >
             Continue Shopping
           </p>
           <p class="fa-12 small text-muted">Cart ID: 1355197982</p>
         </div>
-        <p class="mb-0 cursor-pointer text-info font-weight-bold fa fa-13">
+        <p
+          class="mb-0 cursor-pointer text-info font-weight-bold fa fa-13"
+          @click="$router.push({ name: 'Cart' }), $store.dispatch('setView')"
+        >
           Edit Cart
         </p>
       </div>
@@ -69,7 +74,7 @@ export default {
           price: "100",
           currency: "FRW",
           code: "DE#-56RT",
-          option: "Simple & sweet"
+          option: "Simple & sweet",
         },
         {
           id: "2ghfg-12324-356tuiyuds-ssssdewe-@klj8i",
@@ -79,7 +84,7 @@ export default {
           name: "Adorable Plush Bear",
           price: "100",
           currency: "FRW",
-          code: "DE#-56RT"
+          code: "DE#-56RT",
         },
         {
           id: "2ghfg-12324-3324-dfghjyiu7-@klj8i",
@@ -89,7 +94,7 @@ export default {
           name: "Festive Mylar Balloon",
           price: "100",
           currency: "FRW",
-          code: "DE#-56RT"
+          code: "DE#-56RT",
         },
         {
           id: "2ghfg-12324-dter23-dfghjyiu7-@klj8i",
@@ -99,17 +104,17 @@ export default {
           name: "Delicious Chocolate",
           price: "100",
           currency: "FRW",
-          code: "DE#-56RT"
-        }
-      ]
+          code: "DE#-56RT",
+        },
+      ],
     };
   },
   methods: {
     checkout() {
       this.$store.dispatch("setView");
       this.$router.push({ name: "Purchase", params: { params: "delivery" } });
-    }
-  }
+    },
+  },
 };
 </script>
 

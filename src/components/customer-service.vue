@@ -27,7 +27,7 @@
     <div
       class="account-orders-cards row mx-0 w-100 px-4 justify-content-around py-4"
     >
-      <div class="my-order-card  border roundend-0 px-4 py-4 bg-white row mx-0">
+      <div class="my-order-card  border roundend-0 px-4 py-4 my-1 bg-white row mx-0">
         <div class="order-links-container">
           <div class="font-weight-bold fa-15 pb-3 mb-3">Your Order</div>
           <p class="text-info mb-0 pb-3 cursor-pointer font-weight-bold"
@@ -48,7 +48,7 @@
         </div>
       </div>
       <div
-        class="my-account-card border roundend-0 px-4 py-4 bg-white mx-0 row"
+        class="my-account-card border roundend-0 px-4 py-4 my-1 bg-white mx-0 row"
       >
         <div class="account-links-container">
           <div class="font-weight-bold fa-15 pb-3 mb-3">Your Account</div>
@@ -71,7 +71,7 @@
             I forgot my password
           </p>
         </div>
-        <div class="account-logo-container ml-5 pl-4 my-auto ">
+        <div class="account-logo-container ml-5 pl-5 my-auto ">
           <p class="logo-background rounded-circle  d-inline-flex">
             <i class="fas fa-user-alt text-white mx-auto mt-4"></i>
           </p>
