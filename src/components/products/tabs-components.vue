@@ -282,12 +282,176 @@
       "
     />
     <flowers-by-mail
-        class="my-4"
-        @itemsLength="resultLength"
-        v-if="
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'flowers-by-mail'
+      "
+    />
+    <all-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'all-flowers'"
+    />
+    <alstroemerias
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'alstroemerias'"
+    />
+    <carnations
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'carnations'"
+    />
+    <daisies
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'daisies'"
+    />
+    <gerbera-daisies
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'gerberas'"
+    />
+    <hydrangeas
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'hydrangeas'"
+    />
+    <irises
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'irises'"
+    />
+    <lilies
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'lilies'"
+    />
+    <mixed-flower-bouquets
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
         result.length !== 0 &&
-          this.$route.params.params == 'flowers-by-mail'
-      "/>
+          this.$route.params.params == 'mixed-flower-bouquets'
+      "
+    />
+    <orchids
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'orchids'"
+    />
+    <roses
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        (result.length !== 0 && this.$route.params.params == 'roses') ||
+          (result.length !== 0 && this.$route.params.params == 'all-roses')
+      "
+    />
+    <snapdragons
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'snapdragons'"
+    />
+    <sunflowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'sunflowers'"
+    />
+    <tulips
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'tulips'"
+    />
+    <blue-bouquets
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'blue-flowers'"
+    />
+    <green-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'green-flowers'"
+    />
+    <lavender-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'lavender-flowers'
+      "
+    />
+    <multi-color-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'multi-color-flowers'
+      "
+    />
+    <orange-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'orange-flowers'
+      "
+    />
+    <pink-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'pink-flowers'"
+    />
+    <purple-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'purple-flowers'
+      "
+    />
+    <red-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'red-flowers'"
+    />
+    <white-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'white-flowers'"
+    />
+    <yellow-flowers
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'yellow-flowers'
+      "
+    />
+    <blue-roses
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'blue-roses'"
+    />
+    <multi-color-roses
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'multi-color-roses'
+      "
+    />
+    <orange-roses
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'orange-roses'"
+    />
+    <pink-roses
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'pink-roses'"
+    />
+    <rainbow-roses
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'rainbow-roses'"
+    />
     <best-selling-plants
       class="my-4"
       @itemsLength="resultLength"
@@ -307,6 +471,174 @@
       v-if="
         result.length !== 0 &&
           this.$route.params.params == 'same-day-plant-delivery'
+      "
+    />
+    <all-plants
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'all-plants'"
+    />
+    <bonsai-and-bamboo
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'bonsai-&-bamboo'
+      "
+    />
+    <green-plants
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'green-plants'"
+    />
+    <office-plants
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'office-plants'"
+    />
+    <succulents-suc
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'succulents-&-cacti'
+      "
+    />
+    <all-flowering-plants
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'all-flowering-plants'
+      "
+    />
+    <azalea-plants
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'azalea-plants'"
+    />
+    <bulbs-indoor-gardens
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'bulbs-&-indoor-gardens'
+      "
+    />
+    <calla-lilies
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'calla-lilies'"
+    />
+    <peace-lily-plants
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'peace-lily-plants'
+      "
+    />
+    <potted-rose-plants
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'potted-rose-plants'
+      "
+    />
+    <best-selling-gifts
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'best-selling-gifts'
+      "
+    />
+    <flowers-gifts-bundles
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'bundles-bun'"
+    />
+    <all-gift-baskets
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'all-gift-baskets'
+      "
+    />
+    <fruit-gift-baskets
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'fruit-gift-baskets'
+      "
+    />
+    <meat-cheese-baskets
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'meat-&-cheese-baskets'
+      "
+    />
+    <span-gift-baskets
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'span-gift-baskets'
+      "
+    />
+    <starbucks-gift-baskets
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'starbucks-gift-baskets'
+      "
+    />
+    <all-gourmet-food-gifts
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'all-gourmet-food-gifts'
+      "
+    />
+    <candy-gifts
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="result.length !== 0 && this.$route.params.params == 'candy-gifts'"
+    />
+    <chocolate-covered-strawberry
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'chocolate-covered-strawberries'
+      "
+    />
+    <chocolate-gifts
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'chocolate-gifts'
+      "
+    />
+    <desserts-baked-goods
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 &&
+          this.$route.params.params == 'desserts-&-baked-goods'
+      "
+    />
+    <godiva-chocolates
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'godiva-chocolates'
+      "
+    />
+    <mrs-fields-cookies
+      class="my-4"
+      @itemsLength="resultLength"
+      v-if="
+        result.length !== 0 && this.$route.params.params == 'mrs-fields-cookies'
       "
     />
   </div>
@@ -356,10 +688,118 @@ import FriendGiftFlower from "@/components/products/tabs-componets/occasions/fri
 import SisterFlowers from "@/components/products/tabs-componets/occasions/sister-flowers";
 import SameDayFlowersGiftsDelivery from "@/components/products/tabs-componets/flowers/same-day-flowers-gifts-delivery";
 import FlowersByMail from "@/components/products/tabs-componets/flowers/flowers-by-mail";
+import AllFlowers from "@/components/products/tabs-componets/flowers/all-flowers";
+import Alstroemerias from "@/components/products/tabs-componets/flowers/alstroemerias";
+import Carnations from "@/components/products/tabs-componets/flowers/carnations";
+import Daisies from "@/components/products/tabs-componets/flowers/daisies";
+import GerberaDaisies from "@/components/products/tabs-componets/flowers/gerbera-daisies";
+import Hydrangeas from "@/components/products/tabs-componets/flowers/hydrangeas";
+import Irises from "@/components/products/tabs-componets/flowers/irises";
+import Lilies from "@/components/products/tabs-componets/flowers/lilies";
+import MixedFlowerBouquets from "@/components/products/tabs-componets/flowers/mixed-flower-bouquets";
+import Orchids from "@/components/products/tabs-componets/flowers/orchids";
+import Roses from "@/components/products/tabs-componets/flowers/roses";
+import Snapdragons from "@/components/products/tabs-componets/flowers/snapdragons";
+import Sunflowers from "@/components/products/tabs-componets/flowers/sunflowers";
+import Tulips from "@/components/products/tabs-componets/flowers/tulips";
+import BlueBouquets from "@/components/products/tabs-componets/flowers/blue-bouquets";
+import GreenFlowers from "@/components/products/tabs-componets/flowers/green-flowers";
+import LavenderFlowers from "@/components/products/tabs-componets/flowers/lavender-flowers";
+import MultiColorFlowers from "@/components/products/tabs-componets/flowers/multi-color-flowers";
+import OrangeFlowers from "@/components/products/tabs-componets/flowers/orange-flowers";
+import PinkFlowers from "@/components/products/tabs-componets/flowers/pink-flowers";
+import PurpleFlowers from "@/components/products/tabs-componets/flowers/purple-flowers";
+import RedFlowers from "@/components/products/tabs-componets/flowers/red-flowers";
+import WhiteFlowers from "@/components/products/tabs-componets/flowers/white-flowers";
+import YellowFlowers from "@/components/products/tabs-componets/flowers/yellow-flowers";
+import BlueRoses from "@/components/products/tabs-componets/flowers/blue-roses";
+import MultiColorRoses from "@/components/products/tabs-componets/flowers/multi-color-roses";
+import OrangeRoses from "@/components/products/tabs-componets/flowers/orange-roses";
+import PinkRoses from "@/components/products/tabs-componets/flowers/pink-roses";
+import RainbowRoses from "@/components/products/tabs-componets/flowers/rainbow-roses";
+import AllPlants from "@/components/products/tabs-componets/gift-plants/all-plants";
+import BonsaiAndBamboo from "@/components/products/tabs-componets/gift-plants/bonsai-and-bamboo";
+import GreenPlants from "@/components/products/tabs-componets/gift-plants/green-plants";
+import OfficePlants from "@/components/products/tabs-componets/gift-plants/office-plants";
+import SucculentsSuc from "@/components/products/tabs-componets/gift-plants/succulents-suc";
+import AllFloweringPlants from "@/components/products/tabs-componets/gift-plants/all-flowering-plants";
+import AzaleaPlants from "@/components/products/tabs-componets/gift-plants/azalea-plants";
+import BulbsIndoorGardens from "@/components/products/tabs-componets/gift-plants/bulbs-indoor-gardens";
+import CallaLilies from "@/components/products/tabs-componets/gift-plants/calla-lilies";
+import PeaceLilyPlants from "@/components/products/tabs-componets/gift-plants/peace-lily-plants";
+import PottedRosePlants from "@/components/products/tabs-componets/gift-plants/potted-rose-plants";
+import BestSellingGifts from "@/components/products/tabs-componets/gift-plants/best-selling-gifts";
+import FlowersGiftsBundles from "@/components/products/tabs-componets/gift-plants/flowers-gifts-bundles";
+import AllGiftBaskets from "@/components/products/tabs-componets/gift-plants/all-gift-baskets";
+import FruitGiftBaskets from "@/components/products/tabs-componets/gift-plants/fruit-gift-baskets";
+import MeatCheeseBaskets from "@/components/products/tabs-componets/gift-plants/meat-cheese-baskets";
+import SpanGiftBaskets from "@/components/products/tabs-componets/gift-plants/span-gift-baskets";
+import StarbucksGiftBaskets from "@/components/products/tabs-componets/gift-plants/starbucks-gift-baskets";
+import AllGourmetFoodGifts from "@/components/products/tabs-componets/gift-plants/all-gourmet-food-gifts";
+import CandyGifts from "@/components/products/tabs-componets/gift-plants/candy-gifts";
+import ChocolateCoveredStrawberry from "@/components/products/tabs-componets/gift-plants/chocolate-covered-strawberry";
+import ChocolateGifts from "@/components/products/tabs-componets/gift-plants/chocolate-gifts";
+import DessertsBakedGoods from "@/components/products/tabs-componets/gift-plants/desserts-baked-goods";
+import GodivaChocolates from "@/components/products/tabs-componets/gift-plants/godiva-chocolates";
+import MrsFieldsCookies from "@/components/products/tabs-componets/gift-plants/mrs-fields-cookies";
 
 export default {
   name: "tabs-components",
   components: {
+    MrsFieldsCookies,
+    GodivaChocolates,
+    DessertsBakedGoods,
+    ChocolateGifts,
+    ChocolateCoveredStrawberry,
+    CandyGifts,
+    AllGourmetFoodGifts,
+    StarbucksGiftBaskets,
+    SpanGiftBaskets,
+    MeatCheeseBaskets,
+    FruitGiftBaskets,
+    AllGiftBaskets,
+    FlowersGiftsBundles,
+    BestSellingGifts,
+    PottedRosePlants,
+    PeaceLilyPlants,
+    CallaLilies,
+    BulbsIndoorGardens,
+    AzaleaPlants,
+    AllFloweringPlants,
+    SucculentsSuc,
+    OfficePlants,
+    GreenPlants,
+    BonsaiAndBamboo,
+    AllPlants,
+    RainbowRoses,
+    PinkRoses,
+    OrangeRoses,
+    MultiColorRoses,
+    BlueRoses,
+    YellowFlowers,
+    WhiteFlowers,
+    RedFlowers,
+    PurpleFlowers,
+    PinkFlowers,
+    OrangeFlowers,
+    MultiColorFlowers,
+    LavenderFlowers,
+    GreenFlowers,
+    BlueBouquets,
+    Tulips,
+    Sunflowers,
+    Snapdragons,
+    Roses,
+    Orchids,
+    MixedFlowerBouquets,
+    Lilies,
+    Irises,
+    Hydrangeas,
+    GerberaDaisies,
+    Daisies,
+    Carnations,
+    Alstroemerias,
+    AllFlowers,
     FlowersByMail,
     SameDayFlowersGiftsDelivery,
     SisterFlowers,

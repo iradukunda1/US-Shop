@@ -156,7 +156,7 @@
       />
     </div>
     <div
-      class="w-100 row mx-0 'housewarning-flowers-image"
+      class="w-100 row mx-0 housewarning-flowers-image"
       v-if="this.$route.params.params == 'housewarning-flowers'"
     >
       <img
@@ -166,13 +166,118 @@
       />
     </div>
     <div
-      class="w-100 row mx-0 'same-day-flowers-gifts-image"
+      class="w-100 row mx-0 same-day-flowers-gifts-image"
       v-if="this.$route.params.params == 'same-day-flowers-gifts'"
     >
       <img
         src="/img/same-day-flowers-gifts.png"
         class="w-100"
         alt="same-day-flowers-gifts-image"
+      />
+    </div>
+    <div
+      class="w-100 row mx-0 gerbera-daisies"
+      v-if="this.$route.params.params == 'gerberas'"
+    >
+      <img
+        src="/img/gerbera-daisies.png"
+        class="w-100"
+        alt="gerbera-daisies-image"
+      />
+    </div>
+    <div
+      class="w-100 row mx-0 irises"
+      v-if="this.$route.params.params == 'irises'"
+    >
+      <img src="/img/irises.png" class="w-100" alt="irises-image" />
+    </div>
+    <div
+      class="w-100 row mx-0 lilies"
+      v-if="this.$route.params.params == 'lilies'"
+    >
+      <img src="/img/lilies.png" class="w-100" alt="lilies-image" />
+    </div>
+    <div
+      class="w-100 row mx-0 mixed-flower-bouquets"
+      v-if="this.$route.params.params == 'mixed-flower-bouquets'"
+    >
+      <img
+        src="/img/mixed-flower-bouquets.png"
+        class="w-100"
+        alt="mixed-flower-bouquets-image"
+      />
+    </div>
+    <div
+      class="w-100 row mx-0 roses"
+      v-if="
+        this.$route.params.params == 'roses' ||
+          this.$route.params.params == 'all-roses'
+      "
+    >
+      <img src="/img/roses.png" class="w-100" alt="roses-image" />
+    </div>
+    <div
+      class="w-100 row mx-0 sunflowers"
+      v-if="this.$route.params.params == 'sunflowers'"
+    >
+      <img src="/img/sunflowers.png" class="w-100" alt="sunflowers-image" />
+    </div>
+    <div
+      class="w-100 row mx-0 tulips"
+      v-if="this.$route.params.params == 'tulips'"
+    >
+      <img src="/img/tulips.png" class="w-100" alt="tulips-image" />
+    </div>
+    <div
+      class="w-100 row mx-0 bonsai-&-bamboo"
+      v-if="this.$route.params.params == 'bonsai-&-bamboo'"
+    >
+      <img src="/img/bonsai.png" class="w-100" alt="bonsai-&-bamboo-image" />
+    </div>
+    <div
+      class="w-100 row mx-0 green-plants"
+      v-if="this.$route.params.params == 'green-plants'"
+    >
+      <img src="/img/green-plants.png" class="w-100" alt="green-plants-image" />
+    </div>
+    <div
+      class="w-100 row mx-0 green-plants"
+      v-if="this.$route.params.params == 'office-plants'"
+    >
+      <img
+        src="/img/office-plants.png"
+        class="w-100"
+        alt="office-plants-image"
+      />
+    </div>
+    <div
+      class="w-100 row mx-0 succulents-success-plants"
+      v-if="this.$route.params.params == 'succulents-&-cacti'"
+    >
+      <img
+        src="/img/succulents.png"
+        class="w-100"
+        alt="succulents-success-image"
+      />
+    </div>
+    <div
+      class="w-100 row mx-0 all-flowering-plants"
+      v-if="this.$route.params.params == 'all-flowering-plants'"
+    >
+      <img
+        src="/img/all-flowering-plants.png"
+        class="w-100"
+        alt="all-flowering-plants-image"
+      />
+    </div>
+    <div
+      class="w-100 row mx-0 bulbs-indoor-gardens"
+      v-if="this.$route.params.params == 'bulbs-&-indoor-gardens'"
+    >
+      <img
+        src="/img/bulbs-indoor-gardens.png"
+        class="w-100"
+        alt="bulbs-indoor-gardens-image"
       />
     </div>
   </div>

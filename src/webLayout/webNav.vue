@@ -370,15 +370,60 @@
           </ul>
           <ul>
             <p class="font-weight-bold fa-14">Shop by Flower Type</p>
-            <li v-for="type in shop_by_type" :key="type">{{ type }}</li>
+            <li
+              v-for="type in shop_by_type"
+              :key="type"
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: {
+                    params: type.replace(/\s/g, '-').toLowerCase()
+                  }
+                }),
+                  (showFlower = !showFlower)
+              "
+            >
+              {{ type }}
+            </li>
           </ul>
           <ul>
             <p class="font-weight-bold fa-14">Shop Flowers by Color</p>
-            <li v-for="color in shop_by_color" :key="color">{{ color }}</li>
+            <li
+              v-for="color in shop_by_color"
+              :key="color"
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: {
+                    params: color
+                      .replace(/\s/g, '-')
+                      .replace('Bouquets', 'flowers')
+                      .toLowerCase()
+                  }
+                }),
+                  (showFlower = !showFlower)
+              "
+            >
+              {{ color }}
+            </li>
           </ul>
           <ul class="border-left">
             <p class="font-weight-bold fa-14">Shop Roses by Color</p>
-            <li v-for="rose in shop_by_roses" :key="rose">{{ rose }}</li>
+            <li
+              v-for="rose in shop_by_roses"
+              :key="rose"
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: {
+                    params: rose.replace(/\s/g, '-').toLowerCase()
+                  }
+                }),
+                  (showFlower = !showFlower)
+              "
+            >
+              {{ rose }}
+            </li>
           </ul>
         </div>
       </div>
@@ -712,28 +757,100 @@
               {{ featPlant }}
             </li>
             <p class="font-weight-bold fa-14">Shop Plants</p>
-            <li v-for="shopPlant in shop_plants" :key="shopPlant">
+            <li
+              v-for="shopPlant in shop_plants"
+              :key="shopPlant"
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: {
+                    params: shopPlant.replace(/\s/g, '-').toLowerCase()
+                  }
+                }),
+                  (showGift = !showGift)
+              "
+            >
               {{ shopPlant }}
             </li>
           </ul>
           <ul>
             <p class="font-weight-bold fa-14">Flowering Plants</p>
-            <li v-for="floPlant in flowering_plants" :key="floPlant">
+            <li
+              v-for="floPlant in flowering_plants"
+              :key="floPlant"
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: {
+                    params: floPlant.replace(/\s/g, '-').toLowerCase()
+                  }
+                }),
+                  (showGift = !showGift)
+              "
+            >
               {{ floPlant }}
             </li>
           </ul>
           <ul class="mr-5">
             <p class="font-weight-bold fa-14">Shop Gifts</p>
-            <li>Best Selling Gifts</li>
-            <li>Flowers & Gifts Bundles</li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: {
+                    params: 'best-selling-gifts'
+                  }
+                }),
+                  (showGift = !showGift)
+              "
+            >
+              Best Selling Gifts
+            </li>
+            <li
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: {
+                    params: 'bundles-bun'
+                  }
+                }),
+                  (showGift = !showGift)
+              "
+            >
+              Flowers & Gifts Bundles
+            </li>
             <p class="font-weight-bold fa-14">Gift Baskets</p>
-            <li v-for="giftBasket in gift_baskets" :key="giftBasket">
+            <li
+              v-for="giftBasket in gift_baskets"
+              :key="giftBasket"
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: {
+                    params: giftBasket.replace(/\s/g, '-').toLowerCase()
+                  }
+                }),
+                  (showGift = !showGift)
+              "
+            >
               {{ giftBasket }}
             </li>
           </ul>
           <ul class="border-left">
             <p class="font-weight-bold fa-14">Gourmet Food Gifts</p>
-            <li v-for="gourmetFood in gourmet_foods" :key="gourmetFood">
+            <li
+              v-for="gourmetFood in gourmet_foods"
+              :key="gourmetFood"
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: {
+                    params: gourmetFood.replace(/\s/g, '-').toLowerCase()
+                  }
+                }),
+                  (showGift = !showGift)
+              "
+            >
               {{ gourmetFood }}
             </li>
           </ul>
@@ -821,25 +938,24 @@ export default {
         "Limited Edition Collection"
       ],
       shop_by_type: [
-        " All Flowers",
+        "All Flowers",
         "Alstroemerias",
         "Carnations",
         "Daisies",
         "Gerberas",
-        " Hydrangeas",
+        "Hydrangeas",
         "Irises",
-        " Lilies",
-        " Mixed Flower",
-        " Bouquets",
-        " Orchids",
-        " Peonies",
-        " Roses",
-        " Snapdragons",
-        " Sunflowers ",
+        "Lilies",
+        "Mixed Flower Bouquets",
+        "Orchids",
+        "Roses",
+        "Snapdragons",
+        "Sunflowers",
         "Tulips"
       ],
       shop_by_color: [
-        " Blue Bouquets",
+        "Blue Bouquets",
+        "Green Bouquets",
         "Lavender Bouquets",
         "Multi-Color Bouquets",
         "Orange Bouquets",
@@ -850,15 +966,15 @@ export default {
         "Yellow Bouquets"
       ],
       shop_by_roses: [
-        " All Roses",
+        "All Roses",
         "Blue Roses",
         "Multi-Color Roses",
         "Orange Roses",
         "Pink Roses",
-        "Purple Roses",
-        " Rainbow Roses",
-        " Red Roses",
-        " White Roses"
+        // "Purple Roses",
+        "Rainbow Roses"
+        // "Red Roses",
+        // "White Roses"
       ],
       shop_by_birthday: [
         "Birthday for Mom",
@@ -873,41 +989,36 @@ export default {
         "Same Day Plant Delivery"
       ],
       shop_plants: [
-        "All Plants ",
+        "All Plants",
         "Bonsai & Bamboo",
         "Green Plants",
-        " Office Plants",
+        "Office Plants",
         "Succulents & Cacti"
       ],
       flowering_plants: [
         "All Flowering Plants",
         "Azalea Plants",
-        "Bulbs & Indoor",
-        " Gardens",
-        "Calla ",
-        "Lilies",
-        " Orchids",
-        " Peace",
-        " Lily Plants",
-        " Potted Rose Plants"
+        "Bulbs & Indoor Gardens",
+        "Calla Lilies",
+        "Orchids",
+        "Peace Lily Plants",
+        "Potted Rose Plants"
       ],
       gift_baskets: [
         "All Gift Baskets",
         "Fruit Gift Baskets",
-        " Meat & Cheese Baskets",
-        " Span Gift Baskets",
-        " Starbucks Gift Baskets"
+        "Meat & Cheese Baskets",
+        "Span Gift Baskets",
+        "Starbucks Gift Baskets"
       ],
       gourmet_foods: [
-        "All Gourmet",
-        "Food Gifts",
+        "All Gourmet Food Gifts",
         "Candy Gifts",
-        " Chocolate",
-        "Covered Strawberries",
-        " Chocolate Gifts",
+        "Chocolate Covered Strawberries",
+        "Chocolate Gifts",
         "Desserts & Baked Goods",
-        " Godiva Chocolates",
-        " Mrs Fields Cookies"
+        "Godiva Chocolates",
+        "Mrs Fields Cookies"
       ]
     };
   },

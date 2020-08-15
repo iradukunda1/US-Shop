@@ -31,8 +31,62 @@
       <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/birthDays/birthday-for-him.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/birthDays/birthday-for-mom.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/birthDays/birthday-for-wife.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/all-flowers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/alstroemerias.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/blue-bouquets.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/blue-roses.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/carnations.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/daisies.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/flowers-by-mail.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/gerbera-daisies.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/green-flowers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/hydrangeas.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/irises.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/lavender-flowers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/lilies.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/mixed-flower-bouquets.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/multi-color-flowers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/multi-color-roses.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/orange-flowers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/orange-roses.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/orchids.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/pink-flowers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/pink-roses.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/purple-flowers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/rainbow-roses.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/red-flowers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/roses.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/same-day-flowers-gifts-delivery.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/snapdragons.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/sunflowers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/tulips.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/white-flowers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/yellow-flowers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/all-flowering-plants.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/all-gift-baskets.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/all-gourmet-food-gifts.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/all-plants.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/azalea-plants.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/best-selling-gifts.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/bonsai-and-bamboo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/bulbs-indoor-gardens.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/calla-lilies.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/candy-gifts.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/chocolate-covered-strawberry.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/chocolate-gifts.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/desserts-baked-goods.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/flowers-gifts-bundles.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/fruit-gift-baskets.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/godiva-chocolates.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/green-plants.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/meat-cheese-baskets.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/mrs-fields-cookies.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/office-plants.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/peace-lily-plants.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/potted-rose-plants.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/span-gift-baskets.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/starbucks-gift-baskets.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/succulents-suc.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/occasions/congratulation-flowers.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/occasions/corporate-gift-flowers.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/occasions/engagement-flowers.vue" afterDir="false" />
@@ -53,6 +107,9 @@
       <change beforePath="$PROJECT_DIR$/src/components/products/tabs-components.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-components.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/products/tabs-componets/birthDays/birth-day-collection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/birthDays/birth-day-collection.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/new-flowers-limited.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/flowers/new-flowers-limited.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/best-selling-plants.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/best-selling-plants.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/new-plants.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/new-plants.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/same-day-plant-delivery.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/tabs-componets/gift-plants/same-day-plant-delivery.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shared/gift-card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/gift-card.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shared/images-container.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/images-container.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/login.vue" afterDir="false" />
@@ -127,7 +184,7 @@
       <workItem from="1596850207180" duration="53160000" />
       <workItem from="1597077649087" duration="275000" />
       <workItem from="1597079333869" duration="49499000" />
-      <workItem from="1597419435485" duration="13533000" />
+      <workItem from="1597419435485" duration="45030000" />
     </task>
     <servers />
   </component>
