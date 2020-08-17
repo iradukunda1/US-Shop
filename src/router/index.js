@@ -44,7 +44,7 @@ const router = new vueRouter({
         {
           path: "/shop/:params",
           name: "Shop the SU-Flower",
-          component: () => import('../components/products/ProductsList')
+          component: () => import("../components/products/ProductsList")
         },
         // {
         //   path: "/Me",
@@ -113,7 +113,7 @@ const router = new vueRouter({
         {
           path: "/order-status",
           name: "Track-Order",
-          component: () => import('@/components/products/orders/order-status')
+          component: () => import("@/components/products/orders/order-status")
         },
         {
           path: "/payments",
@@ -273,9 +273,15 @@ const router = new vueRouter({
       name: "404-page",
       component: () => import("../404-page")
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { x: 0, y: 0 };
+    }
+  }
 });
-
 router.beforeResolve((to, from, next) => {
   if (to.name) {
     NProgress.start();

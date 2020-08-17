@@ -4,15 +4,12 @@
       class="header-content-container border-left shadow bg-white position-absolute"
     >
       <div
-        class="header position-relative w-100 border-bottom d-flex justify-content-between align-items-center px-3 py-2"
+        class="header position-relative w-100 border-bottom row justify-content-between px-4 py-3"
       >
-        <div>
-          <i class="mr-2"></i>
           <span class="font-weight-bold">{{ title.toUpperCase() }}</span>
-        </div>
-        <span class="fa fa-times back-btn" @click="close"></span>
+          <span class="fa fa-times back-btn" @click="close"></span>
       </div>
-      <div class="different-content">
+      <div class="different-content ">
         <login v-if="title.toLowerCase() == 'login'" />
         <checkout v-if="title.toLowerCase() == 'checkout'" />
         <forget-password v-if="title.toLowerCase() == 'forgot password'" />
@@ -33,9 +30,9 @@ export default {
   methods: {
     close() {
       this.$store.dispatch("setView");
-    },
+    }
   },
-  mounted() {},
+  mounted() {}
 };
 </script>
 <style scoped lang="scss">

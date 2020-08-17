@@ -27,7 +27,7 @@
           class="form-control cursor-pointer"
         />
       </div>
-      <button class="btn text-white bg-default h-25">
+      <button class="btn text-white bg-default h-25" @click="shopNow()">
         Shop Now
       </button>
     </div>
@@ -35,8 +35,26 @@
 </template>
 
 <script>
+/* eslint-disable */
 export default {
-  name: "delivery-timer-component"
+  name: "delivery-timer-component",
+  data() {
+    return {};
+  },
+  methods: {
+    shopNow() {
+      if (this.$route.name !== "Shop the SU-Flower") {
+        this.$router.push({
+          name: 'Shop the SU-Flower',
+          params: { params: "all-flowers" }
+        });
+      } else {
+        return false;
+      }
+    }
+  },
+  mounted() {
+  }
 };
 </script>
 

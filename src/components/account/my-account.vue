@@ -88,7 +88,7 @@
           <div class="reminder-header mr-auto">
             <p class="mb-0 font-weight-bold fa-16 reminder-title">Reminders</p>
             <p class="mb-0 reminder-context">
-              Save and update your remnders for those special occasions.
+              Save and update your reminders for those special occasions.
             </p>
           </div>
           <i class="fas fa-angle-right py-3"></i>

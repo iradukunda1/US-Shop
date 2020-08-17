@@ -8,14 +8,14 @@
             <span class="text-info h4 mt-1">BOUQUETS</span>
           </div>
           <span class="small ml-5">an FTD company</span>
-          <div class="row mt-5">
+          <div class="row mt-5 pt-4">
             <label class="bold">SUBSCRIBE FOR EMAIL OFFERS</label>
             <input
               type="email"
-              class="form-control w-50 mr-3"
+              class="form-control w-50 mr-3 rounded-0  h-50px"
               placeholder="example@gmail.com"
             />
-            <button class="btn text-white bg-button">
+            <button class="btn text-white bg-button rounded-0 h-50px">
               SIGN UP
             </button>
           </div>

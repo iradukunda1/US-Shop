@@ -4,7 +4,7 @@
   >
     <div class="navbar-header row mb-0 px-3 mx-0 w-100">
       <div
-        class="header-log d-block mt-3"
+        class="header-log d-block mt-3 cursor-pointer"
         @click="$router.push({ name: 'Home' })"
         @mouseover="
           (showHelp = false),
@@ -193,7 +193,15 @@
               HELP
             </p>
           </li>
-          <li class="web-navbar-search d-block mr-0">
+          <li
+            class="web-navbar-search d-block mr-0"
+            @click="
+              $store.dispatch('setResources', [
+                'trigger',
+                { triggerSearchFormModal: true }
+              ])
+            "
+          >
             <i class="fas fa-search fa-15 mx-2"></i>&nbsp;
             <p class="mb-0 fa-12">SEARCH</p>
           </li>

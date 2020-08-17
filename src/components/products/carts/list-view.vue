@@ -20,11 +20,22 @@
         <div class="cart-detail ml-4 pt-3 w-100">
           <div
             class="delivery-details pb-2 border-bottom row mx-0 w-100 justify-content-between"
-            :class="{'border-bottom-0 pb-0':borderBottom == false}"
+            :class="{ 'border-bottom-0 pb-0': borderBottom == false }"
           >
             <div class="d-block">
               <p class="fa-13 mb-0 pb-2">{{ cart.name }}</p>
-              <span class="text-info cursor-pointer mr-2 fa-13">Edit</span>
+              <span
+                class="text-info cursor-pointer mr-2 fa-13"
+                @click="
+                  $router.push({
+                    name: 'Profile',
+                    params: { id: cart.id },
+                    query: { editId: '280320922' }
+                  }),
+                    $store.dispatch('setResources', ['product', cart])
+                "
+                >Edit</span
+              >
               <span class="text-info cursor-pointer fa-13">Remove</span>
             </div>
             <p class="font-weight-bold fa-13">
@@ -51,7 +62,7 @@
 <script>
 export default {
   name: "list-view",
-  props:["borderBottom"],
+  props: ["borderBottom"],
   data() {
     return {
       carts: [
