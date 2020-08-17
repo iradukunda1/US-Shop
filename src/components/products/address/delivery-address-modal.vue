@@ -1,6 +1,5 @@
 <template>
-  <div
-    class="delivery-address-modal  w-100 h-100 d-block justify-content-center"
+  <div class="delivery-address-modal  w-100 h-100 d-block justify-content-center"
   >
     <div class="delivery-address-modal-container p-3 position-relative">
       <b-row class="delivery-address-header mx-0 w-100 p-2">

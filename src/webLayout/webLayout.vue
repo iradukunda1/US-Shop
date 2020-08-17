@@ -1,6 +1,7 @@
 <template>
   <div class="web-layout-content">
     <transition name="fade" mode="out-in">
+      <global-search v-if="resources.trigger.triggerSearchFormModal" />
       <delivery-address-modal v-if="resources.trigger.triggerDeliveryAddress" />
     </transition>
     <transition name="slide">
@@ -19,10 +20,12 @@ import webFooter from "./webFooter";
 import webContent from "./webContent";
 import { mapGetters } from "vuex";
 import DeliveryAddressModal from "@/components/products/address/delivery-address-modal";
+import GlobalSearch from "@/components/shared/global-search";
 
 export default {
   name: "webLayout",
   components: {
+    GlobalSearch,
     DeliveryAddressModal,
     webFooter,
     webContent,
@@ -40,7 +43,7 @@ export default {
 </script>
 
 <style lang="scss">
-html{
+html {
   height: 100vh;
   width: 100%;
 }

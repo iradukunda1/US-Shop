@@ -12,7 +12,15 @@
             <p class="text-center">
               Get the scoop on our biggest summer savings.
             </p>
-            <button class="btn text-dark bg-white p-2 mx-auto d-flex">
+            <button
+              class="btn text-dark bg-white p-2 mx-auto d-flex"
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'best-selling-plants' }
+                })
+              "
+            >
               SHOP SALE
             </button>
           </div>
@@ -37,7 +45,17 @@
             <card-template :item="product" :showOptions="false" />
           </div>
         </div>
-        <div class="p-2 shop-sale-button">Shop July Sale</div>
+        <div
+          class="p-2 shop-sale-button"
+          @click="
+            $router.push({
+              name: 'Shop the SU-Flower',
+              params: { params: 'best-selling-flowers' }
+            })
+          "
+        >
+          Shop Best Sale
+        </div>
       </div>
       <div class="separation-image w-100 d-inline-flex" style="height: 30rem;">
         <img class="home-images w-100 h-100 d-block" src="/img/22.jpg" />
@@ -50,7 +68,15 @@
             <p class="text-center">
               Bold & beautiful, flowers are perfect for a Leo.
             </p>
-            <button class="btn text-white p-2 d-flex mx-auto bg-button">
+            <button
+              class="btn text-white p-2 d-flex mx-auto bg-button"
+              @click="
+                $router.push({
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'birthday-flowers' }
+                })
+              "
+            >
               SHOP BIRTHDAY FLOWER
             </button>
           </div>
