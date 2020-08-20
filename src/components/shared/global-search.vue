@@ -307,14 +307,13 @@ export default {
       height: 55px;
       .back-btn {
         top: 35%;
-        right: 22%;
+        right: 20%;
         &:hover {
           opacity: 0.7;
         }
       }
     }
   }
-
   .search-form {
     width: 85%;
     height: 40px;

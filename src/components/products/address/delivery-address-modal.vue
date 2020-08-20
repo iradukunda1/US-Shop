@@ -75,8 +75,8 @@ export default {
           verified: "Use The Verified Address",
           street: "KK-74",
           address: "Sonatube",
-          city: "New York",
-          state: "NY",
+          city: "Kigali",
+          state: "KG",
           zip_code: "12345"
         },
         {
@@ -84,7 +84,7 @@ export default {
           street: "KK-125",
           address: "Gishushu",
           city: "Kigali",
-          state: "NY",
+          state: "KG",
           zip_code: "12345"
         }
       ]

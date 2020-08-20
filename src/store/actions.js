@@ -25,23 +25,23 @@ export default {
 
   login({ commit, state }, user) {
     return auth
-        .login(user)
-        .then(async res => {
-          await commit("ADD_LOGGED_USER", res);
-          if (state.auth.user.roles.includes("Admin")) {
-            router.push({ name: "Admin" });
-          } else if (state.auth.user.roles.includes("User")) {
-            router.push({ name: "web layout" });
-          } else {
-            // router.push({ name: "Login" });
-            throw new Error("Unauthorized to access platform");
-          }
-        })
-        .catch(async err => {
-          // localStorage.removeItem("token")
-          commit("resetState");
-          throw err;
-        });
+      .login(user)
+      .then(async res => {
+        await commit("ADD_LOGGED_USER", res);
+        if (state.auth.user.roles.includes("Admin")) {
+          router.push({ name: "Admin" });
+        } else if (state.auth.user.roles.includes("User")) {
+          router.push({ name: "web layout" });
+        } else {
+          // router.push({ name: "Login" });
+          throw new Error("Unauthorized to access platform");
+        }
+      })
+      .catch(async err => {
+        // localStorage.removeItem("token")
+        commit("resetState");
+        throw err;
+      });
   },
 
   logout({ commit }) {
@@ -51,10 +51,10 @@ export default {
 
   /*------------------users controllers-----------------*/
 
-  fetchUsers({ commit },page) {
+  fetchUsers({ commit }, page) {
     return users
-        .findAll(page)
-        .then(data => commit("setResources", ["users", data]));
+      .findAll(page)
+      .then(data => commit("setResources", ["users", data]));
   },
 
   fetchUser({ commit }, userId) {
@@ -84,26 +84,26 @@ export default {
 
   fetchAddresses({ commit }) {
     return addresses
-        .findAll()
-        .then(data => commit("setResources", ["addresses", data]));
+      .findAll()
+      .then(data => commit("setResources", ["addresses", data]));
   },
 
   fetchAddress({ commit }, addresses) {
     return addresses
-        .findOne(addresses)
-        .then(data => commit("setResources", ["address", data]));
+      .findOne(addresses)
+      .then(data => commit("setResources", ["address", data]));
   },
 
   fetchAllUserAddresses({ commit }, userId) {
     return addresses
-        .findAllUserId(userId)
-        .then(data => commit("setResources", ["addresses", data]));
+      .findAllUserId(userId)
+      .then(data => commit("setResources", ["addresses", data]));
   },
 
   fetchOneAddress({ commit }, user) {
     return addresses
-        .findOne_userId_addressId(user)
-        .then(data => commit("setResources", ["address", data]));
+      .findOne_userId_addressId(user)
+      .then(data => commit("setResources", ["address", data]));
   },
 
   createAddress(_, address) {
@@ -118,36 +118,40 @@ export default {
     return addresses.update(address);
   },
 
+  /*-------------------gifts controllers------------------*/
+  fetchGift({ commit }, data) {
+    return commit("setResources", ["gift", data]);
+  },
   /*-------------------products controllers------------------*/
 
-  fetchProducts({ commit },page) {
+  fetchProducts({ commit }, page) {
     return products
-        .findAll(page)
-        .then(data => commit("setResources", ["products", data]));
+      .findAll(page)
+      .then(data => commit("setResources", ["products", data]));
   },
 
   fetchProduct({ commit }, productId) {
     return products
-        .findOne_id(productId)
-        .then(data => commit("setResources", ["product", data]));
+      .findOne_id(productId)
+      .then(data => commit("setResources", ["product", data]));
   },
 
   fetchProductSlug({ commit }, slug) {
     return products
-        .findOne_slug(slug)
-        .then(data => commit("setResources", ["product", data]));
+      .findOne_slug(slug)
+      .then(data => commit("setResources", ["product", data]));
   },
 
   createProduct({ commit }, product) {
     return products
-        .create(product)
-        .then(data => commit("setResources", ["products", data]));
+      .create(product)
+      .then(data => commit("setResources", ["products", data]));
   },
 
   UpdateProduct({ commit }, product) {
     return products
-        .update(product)
-        .then(data => commit("setResources", ["products", data]));
+      .update(product)
+      .then(data => commit("setResources", ["products", data]));
   },
   deleteProduct(_, productId) {
     return products.deleteOne(productId);
@@ -176,8 +180,8 @@ export default {
 
   fetchOrder({ commit }, orderId) {
     return orders
-        .findOne(orderId)
-        .then(data => commit("setResources", ["order", data]));
+      .findOne(orderId)
+      .then(data => commit("setResources", ["order", data]));
   },
 
   fetchAllUserOrders({ commit }) {
@@ -197,8 +201,8 @@ export default {
 
   fetchOneOrder({ commit }, user) {
     return orders
-        .findOne_userId_addressId(user)
-        .then(data => commit("setResources", ["order", data]));
+      .findOne_userId_addressId(user)
+      .then(data => commit("setResources", ["order", data]));
   },
 
   createOrder(_, order) {
@@ -214,16 +218,16 @@ export default {
   },
 
   /* ------------------Categories controllers---------------------- */
-  fetchCategories({ commit },pages) {
+  fetchCategories({ commit }, pages) {
     return categories
-        .findAll(pages)
-        .then(data => commit("setResources", ["categories", data]));
+      .findAll(pages)
+      .then(data => commit("setResources", ["categories", data]));
   },
 
   fetchCategory({ commit }, category) {
     return categories
-        .findOne(category)
-        .then(data => commit("setResources", ["category", data]));
+      .findOne(category)
+      .then(data => commit("setResources", ["category", data]));
   },
 
   createCategory(_, category) {
@@ -242,14 +246,14 @@ export default {
 
   findOneProduct({ commit }, productId) {
     return comments
-        .findOne_productId(productId)
-        .then(data => commit("setResources", ["comment", data]));
+      .findOne_productId(productId)
+      .then(data => commit("setResources", ["comment", data]));
   },
 
   fetchComment({ commit }, slug) {
     return comments
-        .findOne_slug(slug)
-        .then(data => commit("setResources", ["comment", data]));
+      .findOne_slug(slug)
+      .then(data => commit("setResources", ["comment", data]));
   },
 
   createComment(_, comment) {
@@ -266,14 +270,16 @@ export default {
 
   /* ------------------Sub-Categories controllers---------------------- */
 
-  fetchSubCategories({ commit },pages) {
-    return tags.findAll(pages).then(data => commit("setResources", ["tags", data]));
+  fetchSubCategories({ commit }, pages) {
+    return tags
+      .findAll(pages)
+      .then(data => commit("setResources", ["tags", data]));
   },
 
   fetchSubCategory({ commit }, tagId) {
     return tags
-        .findOne(tagId)
-        .then(data => commit("setResources", ["tag", data]));
+      .findOne(tagId)
+      .then(data => commit("setResources", ["tag", data]));
   },
 
   createSubCategory(_, tag) {

@@ -23,39 +23,69 @@
             </p>
           </div>
           <div class="w-100 mb-2 select-payment-method-area">
-            <div class="w-75 d-flex select-payment-method">
-              <b-form-radio></b-form-radio>
-              <p class="pr-2">Credit Card</p>
-            </div>
-          </div>
-          <div class="w-100 mb-2 card-number-area">
-            <label class="fa-12 font-weight-bold">CARD NUMBER</label>
-            <div class="w-75 h-50px d-flex card-number border rounded-0">
-              <input
-                placeholder="Card Number"
-                type="text"
-                class="form-control border-0 w-90 rounded-0 h-100"
-              />
-              <i class="fa fa-lock fa-12 py-3 ml-auto mr-2 text-muted"></i>
-            </div>
-          </div>
-          <div class="w-100 mb-5 card-info-area pb-3">
-            <div class="w-75 h-50px card-info d-flex">
-              <div class="state-area w-50 h-100">
-                <label class="fa-12 fa">EXPIRED DATE</label>
-                <input
-                  placeholder="MMYY"
-                  type="text"
-                  class="form-control  rounded-0  h-100"
-                />
+            <div class="w-75 select-payment-method">
+              <div class="credit-card-payment form-check mb-2">
+                <b-form-radio
+                  type="radio"
+                  class="form-check-input"
+                  id="credit-card"
+                  v-model="selected"
+                  value="card"
+                  name="paymentMethods"
+                  >Credit Card</b-form-radio
+                >
+                <b-form-radio
+                  type="radio"
+                  class="form-check-input"
+                  id="mobile-card"
+                  v-model="selected"
+                  value="mobile"
+                  name="paymentMethods"
+                  >Mobile Money</b-form-radio
+                >
               </div>
-              <div class="w-50 zip-number-area ml-2 h-100">
-                <label class="fa-12 fa">CREDIT CODE</label>
+            </div>
+          </div>
+          <div class="w-100 mb-2 mobile-method" v-if="selected == 'mobile'">
+            <label class="fa-12 font-weight-bold">MOBILE MONEY NUMBER</label>
+            <div class="w-75 h-50px d-flex mobile-card border rounded-0">
+              <vue-tel-input
+                id="phoneNumber"
+                class="form-control rounded-0  h-100"
+                v-bind="phoneNumber"
+              />
+            </div>
+          </div>
+          <div class="card-methods" v-if="selected == 'card'">
+            <div class="w-100 mb-2 card-number-area">
+              <label class="fa-12 font-weight-bold">CARD NUMBER</label>
+              <div class="w-75 h-50px d-flex card-number border rounded-0">
                 <input
-                  placeholder="CVC"
+                  placeholder="Card Number"
                   type="text"
-                  class="form-control  rounded-0  h-100"
+                  class="form-control border-0 w-90 rounded-0 h-100"
                 />
+                <i class="fa fa-lock fa-12 py-3 ml-auto mr-2 text-muted"></i>
+              </div>
+            </div>
+            <div class="w-100 mb-5 card-info-area pb-3">
+              <div class="w-75 h-50px card-info d-flex">
+                <div class="state-area w-50 h-100">
+                  <label class="fa-12 fa">EXPIRED DATE</label>
+                  <input
+                    placeholder="MMYY"
+                    type="text"
+                    class="form-control  rounded-0  h-100"
+                  />
+                </div>
+                <div class="w-50 zip-number-area ml-2 h-100">
+                  <label class="fa-12 fa">CREDIT CODE</label>
+                  <input
+                    placeholder="CVC"
+                    type="text"
+                    class="form-control  rounded-0  h-100"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -81,9 +111,32 @@
 import PurchaseItemsCalculator from "@/components/products/purchase/purchase-items-calculator";
 import ListView from "@/components/products/carts/list-view";
 import DeliveryAddressForm from "@/components/products/address/delivery-address-form";
+import { VueTelInput } from "vue-tel-input";
 export default {
+  components: {
+    DeliveryAddressForm,
+    ListView,
+    PurchaseItemsCalculator,
+    VueTelInput
+  },
   name: "payment",
-  components: { DeliveryAddressForm, ListView, PurchaseItemsCalculator }
+  data() {
+    return {
+      phoneNumber: {
+        placeholder: "78xxxxxxx",
+        required: true,
+        inputId: "phoneNumber",
+        defaultCountry: "RW",
+        disabledFetchingCountry: true,
+        validCharactersOnly: true,
+        maxLen: 15,
+        autocomplete: "off",
+        enabledCountryCode: false
+      },
+      mobileMoney: false,
+      selected: "card"
+    };
+  }
 };
 </script>
 
@@ -171,7 +224,7 @@ export default {
         .header {
           font-size: 0.9rem !important;
         }
-        .sub-header{
+        .sub-header {
           margin-bottom: 0 !important;
         }
       }

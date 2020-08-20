@@ -44,13 +44,24 @@
           <h5>Links</h5>
           <ul>
             <li>
-              <router-link to="#" class="text-dark">Home</router-link>
+              <router-link :to="{ name: 'Home' }" class="text-dark"
+                >Home</router-link
+              >
             </li>
             <li>
-              <router-link to="#" class="text-dark">Flowers</router-link>
+              <router-link
+                :to="{
+                  name: 'Shop the SU-Flower',
+                  params: { params: 'all-flowers' }
+                }"
+                class="text-dark"
+                >Flowers</router-link
+              >
             </li>
             <li>
-              <router-link to="#" class="text-dark">About</router-link>
+              <router-link :to="{ name: 'About' }" class="text-dark"
+                >About</router-link
+              >
             </li>
             <li>
               <router-link to="#" class="text-dark">Contacts</router-link>
@@ -87,11 +98,11 @@
           <span class="small ml-5">an FTD company</span>
         </div>
         <div class="footer-image-container col-md-8">
-          <img
-            class="footer-image d-block mb-2 w-100"
-            src="/img/footer_image.png"
-            alt="companies-image"
-          />
+          <!--          <img-->
+          <!--            class="footer-image d-block mb-2 w-100"-->
+          <!--            src="/img/footer_image.png"-->
+          <!--            alt="companies-image"-->
+          <!--          />-->
         </div>
       </div>
     </div>

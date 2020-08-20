@@ -14,21 +14,23 @@ export default {
   },
   resources: {
     totalPrice: "",
-    users:[],
-    user:{},
-    addresses:[],
-    address:{},
-    products:[],
-    product:{},
-    comments:[],
-    comment:{},
-    orders:[],
-    order:{},
-    categories:[],
-    category:{},
-    tags:[],
-    tag:{},
-    trigger:{}
+    users: [],
+    user: {},
+    addresses: [],
+    address: {},
+    products: [],
+    product: {},
+    comments: [],
+    comment: {},
+    orders: [],
+    order: {},
+    categories: [],
+    category: {},
+    tags: [],
+    tag: {},
+    gifts: [],
+    gift: {},
+    trigger: {}
   },
   accessories: {
     view: null,
@@ -36,8 +38,8 @@ export default {
     loading: {
       area: null,
       context: null,
-      bg:"",
-      textColor:""
+      bg: "",
+      textColor: ""
     },
     modalAlert: {
       title: null,

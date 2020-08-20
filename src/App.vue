@@ -20,8 +20,8 @@ export default {
   computed: {
     ...mapGetters({
       context: "loading",
-      modal: "alertModal",
-    }),
+      modal: "alertModal"
+    })
   },
   created() {
     Array.prototype.firstThree = function() {
@@ -43,10 +43,10 @@ export default {
       return firstName + secondName;
     };
     this.$axios.interceptors.response.use(
-      (response) => {
+      response => {
         return response;
       },
-      (error) => {
+      error => {
         if (error.response) {
           switch (error.response.status) {
             case 401:
@@ -68,7 +68,7 @@ export default {
     //     throw err;
     //   });
     // });
-  },
+  }
 };
 </script>
 <style></style>
@@ -91,6 +91,9 @@ export default {
 .w-80 {
   width: 80% !important;
 }
+.w-85 {
+  width: 85% !important;
+}
 .w-70 {
   width: 70% !important;
 }
@@ -109,10 +112,13 @@ export default {
 .w-20 {
   width: 20% !important;
 }
+.w-15 {
+  width: 15% !important;
+}
 .h-50px {
   height: 50px !important;
 }
-.h-90px{
+.h-90px {
   height: 90px !important;
 }
 .g-text {
@@ -142,19 +148,19 @@ export default {
     color: white !important;
   }
 }
-.pointer-events{
-  pointer-events:none !important;
+.pointer-events {
+  pointer-events: none !important;
   opacity: 0.4 !important;
 }
-  .button-collection {
-    a {
-      color: black !important;
-      border: 2px solid black !important;
-      &:hover {
-        color: white !important;
-        border: 2px solid rgb(0, 124, 173) !important;
-        background: rgb(0, 124, 173) !important;
-      }
+.button-collection {
+  a {
+    color: black !important;
+    border: 2px solid black !important;
+    &:hover {
+      color: white !important;
+      border: 2px solid rgb(0, 124, 173) !important;
+      background: rgb(0, 124, 173) !important;
     }
   }
+}
 </style>

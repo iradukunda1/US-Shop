@@ -6,8 +6,8 @@
       <div
         class="header position-relative w-100 border-bottom row justify-content-between px-4 py-3"
       >
-          <span class="font-weight-bold">{{ title.toUpperCase() }}</span>
-          <span class="fa fa-times back-btn" @click="close"></span>
+        <span class="font-weight-bold">{{ title.toUpperCase() }}</span>
+        <span class="fa fa-times back-btn" @click="close"></span>
       </div>
       <div class="different-content ">
         <login v-if="title.toLowerCase() == 'login'" />
