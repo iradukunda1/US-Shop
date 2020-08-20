@@ -193,7 +193,7 @@
                     ></i>
                   </div>
                   <div class="header-content px-4 mx-auto">
-                    <p class="px-4 fa-15" style="text-align: center">
+                    <p class="px-4 fa-15 text-center">
                       Select a delivery date
                     </p>
                     <p class="justify-content-between row">
@@ -233,12 +233,15 @@
           </div>
         </div>
       </div>
-      <div class="product-description row mx-0 mt-5">
+      <div class="product-description row my-5 mx-0">
         <div class="col-md-5">
-          <p class="description text-justify pb-4">{{ product.description }}</p>
+          <p class="description-title fa-16 mb-0 pb-2 font-weight-bold">
+           PRODUCT DESCRIPTION
+          </p>
+          <p class="description text-justify pb-4 fa-13">{{ product.description }}</p>
           <div class="d-flex justify-content-between">
             <ul class="pl-3">
-              <p class="font-weight-bold f-12">DETAILS</p>
+              <p class="font-weight-bold ">DETAILS</p>
               <li class="fa-12 pb-2">
                 Better bouquet is approximately 11"H x 14"W
               </li>
@@ -248,7 +251,7 @@
               </li>
             </ul>
             <ul>
-              <p class="font-weight-bold f-12">STEMS</p>
+              <p class="font-weight-bold ">STEMS</p>
               <li class="fa-12 pb-2">Carnation</li>
               <li class="fa-12 pb-2">Rose</li>
               <li class="fa-12 pb-2">Sunflower</li>

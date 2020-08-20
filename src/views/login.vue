@@ -19,7 +19,7 @@
           <input
             type="email"
             id="email"
-            class="form-control mb-3"
+            class="form-control mb-3 rounded-0"
             v-model="user.email"
             placeholder="Email address"
             required
@@ -30,22 +30,20 @@
             <input
               id="password"
               v-model="user.password"
-              class="form-control"
-              style="width:85%"
+              class="form-control rounded-0 w-85"
               placeholder="Password"
               required
               autocomplete="current-password"
               :type="passwordVisible ? 'text' : 'password'"
             />
             <div
-              style="width:15%"
-              class="form-control bg-light h-100 rounded-0 cursor-pointer"
+              class="form-control bg-light h-100 w-15 rounded-0 cursor-pointer"
               @click="togglePasswordVisibility"
             >
               <i
                 :class="{
                   'fa fa-eye-slash fa-12': !passwordVisible,
-                  'fa fa-eye fa-12': passwordVisible,
+                  'fa fa-eye fa-12': passwordVisible
                 }"
               ></i>
             </div>
@@ -88,7 +86,7 @@ import CreateAccount from "@/components/CreateAccount";
 import { encryptUser } from "../components/shared/service/authService";
 import {
   successToaster,
-  errorToaster,
+  errorToaster
 } from "../components/shared/service/ErrorHandler.js";
 
 import { mapState, mapActions, mapMutations } from "vuex";
@@ -104,8 +102,8 @@ export default {
       isSignUp: false,
       error: {},
       offline: {
-        message: "You Seem to be offline",
-      },
+        message: "You Seem to be offline"
+      }
     };
   },
   methods: {
@@ -135,8 +133,8 @@ export default {
       //       errorToaster("Login Error", `${this.offline.message}`);
       //     }
       //   });
-    },
-  },
+    }
+  }
 };
 </script>
 <style>

@@ -43,13 +43,27 @@
         v-if="this.$route.params.params == 'delivery'"
       >
         <label class="fa-12 fa">Company / Business Name</label>
-        <div class="w-75 h-50px Company-businessName">
+        <div class="w-75 h-50px Company-businessName d-flex">
           <input
-            placeholder="Company/Business Name"
+            placeholder="Company/Business Name(optional)"
             type="text"
             v-model="delivery.businessName"
             class="form-control  rounded-0  h-100"
+            :class="{ 'pointer-events': disableCompanyInput }"
           />
+          <span
+            class="optional-select pl-2 my-auto"
+            @click="disableCompanyInput = !disableCompanyInput"
+          >
+            <i
+              class="fas fa-eye text-info cursor-pointer fa-12"
+              v-if="!disableCompanyInput"
+            ></i>
+            <i
+              class="fas fa-eye-slash text-danger cursor-pointer fa-12 "
+              v-if="disableCompanyInput"
+            ></i>
+          </span>
         </div>
       </div>
       <div class="w-100 mb-2 street-address-area">
@@ -65,13 +79,27 @@
       </div>
       <div class="w-100 mb-2 apartment-area">
         <label class="fa-12 fa">Apartment or Suite</label>
-        <div class="w-75 h-50px apartment">
+        <div class="w-75 h-50px apartment d-flex">
           <input
             placeholder="Apartment or Suite (optional)"
             type="text"
             v-model="delivery.apartment"
             class="form-control  rounded-0  h-100"
+            :class="{ 'pointer-events': disableApartmentInput }"
           />
+          <span
+            class="optional-select pl-2 my-auto"
+            @click="disableApartmentInput = !disableApartmentInput"
+          >
+            <i
+              class="fas fa-eye text-info cursor-pointer fa-12"
+              v-if="!disableApartmentInput"
+            ></i>
+            <i
+              class="fas fa-eye-slash text-danger cursor-pointer fa-12 "
+              v-if="disableApartmentInput"
+            ></i>
+          </span>
         </div>
       </div>
       <div class="w-100 mb-2 city-area">
@@ -83,27 +111,6 @@
             v-model="delivery.city"
             class="form-control  rounded-0  h-100"
           />
-        </div>
-      </div>
-      <div class="w-100 mb-5 state-zip-area">
-        <div class="w-75 h-50px d-flex state-zip-inputs">
-          <div class="state-area w-50 h-100">
-            <label class="fa-12 fa">SELECT STATE</label>
-            <b-form-select
-              v-model="delivery.state"
-              :options="states"
-              class="form-control cursor-pointer rounded-0  h-100"
-            ></b-form-select>
-          </div>
-          <div class="w-50 zip-number-area ml-2 h-100">
-            <label class="fa-12 fa">DELIVERY ZIP</label>
-            <input
-              placeholder="enter zip code"
-              type="text"
-              v-model="delivery.zip"
-              class="form-control  rounded-0  h-100"
-            />
-          </div>
         </div>
       </div>
       <div class="w-100 mb-2 country-area">
@@ -201,6 +208,8 @@ export default {
         state: null,
         country: null
       },
+      disableCompanyInput: false,
+      disableApartmentInput: false,
       phoneNumber: {
         placeholder: "78xxxxxxx",
         required: true,

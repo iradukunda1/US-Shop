@@ -199,7 +199,13 @@
               $store.dispatch('setResources', [
                 'trigger',
                 { triggerSearchFormModal: true }
-              ])
+              ]),
+                (showHelp = false),
+                (showSympathy = false),
+                (showFlower = false),
+                (showBirthDay = false),
+                (showOccasion = false),
+                (showGift = false)
             "
           >
             <i class="fas fa-search fa-15 mx-2"></i>&nbsp;
@@ -247,7 +253,10 @@
         </ul>
       </div>
     </div>
-    <div class="tabs-component-container">
+    <div
+      class="tabs-component-container"
+      v-if="!resources.trigger.triggerSearchFormModal"
+    >
       <div
         class="bg-white position-relative sympathy-tab rounded-0 jumbotron border-top w-100"
         @mouseleave="showSympathy = !showSympathy"
@@ -332,9 +341,9 @@
         </div>
       </div>
       <div
+        v-if="showFlower"
         class="bg-white position-relative flower-tab rounded-0 px-2 pt-5 border-top"
         @mouseleave="showFlower = !showFlower"
-        v-if="showFlower"
       >
         <div class="row mx-0 w-100 justify-content-center">
           <ul>
@@ -436,8 +445,8 @@
         </div>
       </div>
       <div
-        class="bg-white position-relative birthday-tab rounded-0 jumbotron border-top"
         v-if="showBirthDay"
+        class="bg-white position-relative birthday-tab rounded-0 jumbotron border-top"
         @mouseleave="showBirthDay = !showBirthDay"
       >
         <div class="row mx-0 w-100 justify-content-between px-5">
@@ -537,8 +546,8 @@
         </div>
       </div>
       <div
-        class="bg-white occasion-tab position-relative rounded-0 jumbotron border-top"
         v-if="showOccasion"
+        class="bg-white occasion-tab position-relative rounded-0 jumbotron border-top"
         @mouseleave="showOccasion = !showOccasion"
       >
         <div class="row mx-0 w-100 justify-content-center">
@@ -742,9 +751,9 @@
         </div>
       </div>
       <div
+        v-if="showGift"
         class="bg-white plants-gifts-tab position-relative rounded-0 jumbotron border-top"
         @mouseleave="showGift = !showGift"
-        v-if="showGift"
       >
         <div class="row mx-0 w-100 justify-content-center">
           <ul>
@@ -865,9 +874,9 @@
         </div>
       </div>
       <div
+        v-if="showHelp"
         class="bg-white help-tab position-relative rounded-0 jumbotron border-top"
         @mouseleave="showHelp = !showHelp"
-        v-if="showHelp"
       >
         <div class="row mx-0 w-100 justify-content-center">
           <ul>
@@ -880,7 +889,12 @@
             >
               Customer service
             </p>
-            <p class="font-weight-bold fa-14 menu-option">About Us</p>
+            <p
+              class="font-weight-bold fa-14 menu-option"
+              @click="$router.push({ name: 'About' }), (showHelp = !showHelp)"
+            >
+              About Us
+            </p>
             <p class="font-weight-bold fa-14 menu-option">Flower Guides</p>
             <p class="font-weight-bold fa-14 menu-option">Plant Guides</p>
           </ul>
@@ -921,10 +935,6 @@
 <script>
 /* eslint-disable */
 import { mapState, mapGetters, mapMutations } from "vuex";
-import {
-  getLoggedInUser,
-  isLoggedIn
-} from "../components/shared/service/authService";
 
 export default {
   data() {
@@ -1033,7 +1043,7 @@ export default {
   computed: {
     ...mapState(["cartProducts", "loggedUser"]),
 
-    ...mapGetters(["auth", "accessories"]),
+    ...mapGetters(["auth", "accessories", "resources"]),
 
     user() {
       return this.auth;

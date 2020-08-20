@@ -9,17 +9,17 @@
         </p>
         <i class="fa fa-angle-double-right mt-3 pt-4 mx-2 fa-15"></i>
         <div class="delivery-zip">
-          <label for="delivery-zip" class="font-italic">Delivery-Zip</label>
+          <label for="delivery-address" class="font-italic">Delivery-Address</label>
           <input
             type="text"
-            id="delivery-zip"
-            placeholder="ie:.12345"
+            id="delivery-address"
+            placeholder="KK-st 764"
             class="form-control"
           />
         </div>
       </div>
       <div class="delivery-date mx-2">
-        <label for="delivery-zip" class="font-italic">Delivery-Date</label>
+        <label for="delivery-date" class="font-italic">Delivery-Date</label>
         <input
           type="date"
           id="delivery-date"
