@@ -1,5 +1,5 @@
 <template>
-  <div class="gift-for-parent w-100 position-relative pt-2 pl-5 pr-5">
+  <div class="friend-gift-flower w-100 position-relative pt-2 pl-5 pr-5">
     <div class="header-content">
       <p class="h3">Shop for Friendship Flowers</p>
       <p class="text-justify fa-14">

@@ -24,14 +24,14 @@
             $router.push({ name: 'My-Profile', query: { tab: 'profile' } }),
               $store.dispatch('setResources', [
                 'trigger',
-                { AccountOptionsContainer: true },
+                { AccountOptionsContainer: true }
               ])
           "
         >
           <i class="fas fa-user-alt py-3 fa-15 text-info mr-5"></i>
           <div class="profile-header mr-auto">
             <p class="mb-0 font-weight-bold fa-16 profile-title">Profile</p>
-            <p class="mb-0 profile-context">
+            <p class="mb-0 profile-context fa-14">
               Manage your profile details, billing address and email
               preferences.
             </p>
@@ -49,7 +49,7 @@
           <i class="fas fa-feather-alt py-3 fa-15 text-info mr-5"></i>
           <div class="order-header mr-auto">
             <p class="mb-0 font-weight-bold fa-16 order-title">Orders</p>
-            <p class="mb-0 order-context">
+            <p class="mb-0 order-context fa-14">
               Review the details and status of your orders.
             </p>
           </div>
@@ -68,7 +68,7 @@
             <p class="mb-0 font-weight-bold fa-16 address-title">
               Address Book
             </p>
-            <p class="mb-0 address-context">
+            <p class="mb-0 address-context fa-14">
               Manage your saved delivery addresses.
             </p>
           </div>
@@ -87,7 +87,7 @@
           <i class="fas fa-calendar-alt py-3 fa-15 text-info mr-5"></i>
           <div class="reminder-header mr-auto">
             <p class="mb-0 font-weight-bold fa-16 reminder-title">Reminders</p>
-            <p class="mb-0 reminder-context">
+            <p class="mb-0 reminder-context fa-14">
               Save and update your reminders for those special occasions.
             </p>
           </div>
@@ -106,7 +106,7 @@
             <p class="mb-0 font-weight-bold fa-16 reminder-title">
               Customer Service
             </p>
-            <p class="mb-0 customer-context">
+            <p class="mb-0 customer-context fa-14">
               Chat with us 24 hours a day, 7 days a week.
             </p>
           </div>
@@ -121,7 +121,40 @@ export default {
   name: "my-account",
   data() {
     return {};
-  },
+  }
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@media screen and (max-width: 768px) {
+  .my-account-component {
+    .body-text-container {
+      font-size: 75% !important;
+    }
+    .profile-link {
+      .fa-angle-right {
+        padding-top: 1.5rem !important;
+      }
+    }
+    .profile-context {
+      font-size: 72% !important;
+    }
+    .order-context {
+      font-size: 75% !important;
+    }
+    .reminder-context {
+      font-size: 75% !important;
+    }
+    .customer-context {
+      font-size: 75% !important;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .my-account-component {
+  }
+}
+@media screen and( max-width: 320px) {
+  .my-account-component {
+  }
+}
+</style>

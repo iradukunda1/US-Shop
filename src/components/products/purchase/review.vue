@@ -2,7 +2,7 @@
   <div class="review-component w-100 h-auto position-relative">
     <p class="help row mx-0 d-flex w-100 justify-content-end pr-4 pt-3">
       <span class="fa-12 pl-3 pt-1"
-        ><a href="javascript:;;">Need Help? +250780633340</a>
+        ><a href="javascript:;;">Need Help? +250788514704</a>
       </span>
     </p>
     <div class="row review-content-container justify-content-center mx-0 w-100 my-4 pb-5">

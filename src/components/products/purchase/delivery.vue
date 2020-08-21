@@ -5,7 +5,7 @@
         ><i class="fas fa-comment-dots pr-3"></i>
         <a href="javascript:;;" class="fa-12">Click to Chat</a></span
       ><span class="fa-12 pl-3 pt-1 contact-link-container"
-        ><a href="javascript:;;">Need Help? +250780633340</a>
+        ><a href="javascript:;;">Need Help? +250788514704</a>
       </span>
     </p>
     <div

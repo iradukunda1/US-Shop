@@ -179,22 +179,41 @@ export default {
         maxLen: 15,
         autocomplete: "off",
         enabledCountryCode: false,
-        disabledFetchingCountry: false,
+        disabledFetchingCountry: false
       },
       user: {
         firstName: "Jhon",
         lastName: "Doe",
         email: "jhon@bouquet.org",
-        phoneNumber: "078853367",
+        phoneNumber: "078853367"
       },
       saved: {},
       editContact: false,
-      editPassword: false,
+      editPassword: false
     };
   },
   mounted() {
     this.saved = { ...this.user };
-  },
+  }
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@media screen and (max-width: 768px) {
+  .user-profile {
+    .update-contact-form {
+      width: 50% !important;
+    }
+    .update-password-form-container {
+      width: 50% !important;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .user-profile {
+  }
+}
+@media screen and( max-width: 320px) {
+  .user-profile {
+  }
+}
+</style>

@@ -150,4 +150,19 @@ export default {
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .reminders-component {
+    .create-reminder-form {
+      width: 55% !important;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .reminders-component {
+  }
+}
+@media screen and( max-width: 320px) {
+  .reminders-component {
+  }
+}
 </style>

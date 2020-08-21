@@ -64,7 +64,7 @@ export default {
   }
 }
 .different-content {
-  height: calc(100vh - 40px);
+  height: calc(100vh - 60px);
   overflow-y: overlay;
 }
 .different-content::-webkit-scrollbar {

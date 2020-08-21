@@ -142,14 +142,14 @@
                 <form @submit.prevent>
                   <div class="mt-3 d-block">
                     <label for="deliveryZip" class="col-md fa fa-12"
-                      >DELIVERY ZIP</label
+                      >DELIVERY ADDRESS</label
                     >
                     <div class="col-md-12">
                       <input
                         id="deliveryZip"
-                        v-model="location.zip"
+                        v-model="location.address"
                         class="form-control rounded-0 fa-12 py-4"
-                        placeholder="delivery zip ie:.097456"
+                        placeholder="delivery address ie:.KK 74"
                         required
                         autocomplete="off"
                       />
@@ -566,7 +566,7 @@ export default {
       .cart-card-container {
         min-height: 38.8rem !important;
         .cart-content {
-          height: calc(100vh - 100px) !important;
+          height: calc(100vh - 2px) !important;
         }
       }
     }

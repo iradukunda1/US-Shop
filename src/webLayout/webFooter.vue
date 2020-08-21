@@ -29,14 +29,13 @@
           <dl class="contact-list">
             <dt>email:</dt>
             <dd>
-              <a href="mailto:#" class="text-dark">SUBouquet@gmail.com</a>
+              <a href="mailto:#" class="text-dark">subouquets@gmail.com</a>
             </dd>
           </dl>
           <dl class="contact-list">
             <dt>phones:</dt>
             <dd>
-              <a href="tel:#">+250789871587 </a> <span> or </span>
-              <a href="tel:#">+250785384373</a>
+              <a href="tel:#">+250788514704</a>
             </dd>
           </dl>
         </div>
@@ -68,7 +67,7 @@
             </li>
             <li class="pt-3">
               <h6>CONNECT</h6>
-              <div class="col">
+              <div class="row mx-0">
                 <span class="cursor-pointer"
                   ><img src="/img/icons/facebook .png" alt="fIcon"
                 /></span>

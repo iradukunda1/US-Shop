@@ -100,27 +100,6 @@
               />
             </div>
           </div>
-          <div class="w-100 mb-5 state-zip-area">
-            <div class="h-50px d-flex state-zip-inputs">
-              <div class="state-area w-50 h-100">
-                <label class="fa-12 fa">SELECT STATE</label>
-                <b-form-select
-                  v-model="delivery.state"
-                  :options="states"
-                  class="form-control cursor-pointer rounded-0  h-100"
-                ></b-form-select>
-              </div>
-              <div class="w-50 zip-number-area ml-2 h-100">
-                <label class="fa-12 fa">DELIVERY ZIP</label>
-                <input
-                  placeholder="enter zip code"
-                  type="text"
-                  v-model="delivery.zipCode"
-                  class="form-control  rounded-0  h-100"
-                />
-              </div>
-            </div>
-          </div>
           <div class="w-100 mb-2 country-area">
             <label class="fa-12 fa" for="deliveryCountry">COUNTRY</label>
             <div class="w-80 h-50px country-input">
@@ -225,15 +204,6 @@ export default {
         enabledCountryCode: false,
         disabledFetchingCountry: false,
       },
-      states: [
-        { value: null, text: "Please select state", disabled: true },
-        { value: "Kigali", text: "Kigali" },
-        { value: "New York", text: "New York" },
-        { value: "Bujumbura", text: "Bujumbura" },
-        { value: "Nairobi", text: "Nairobi" },
-        { value: "Other", text: "Other" },
-        { value: "Schenectady", text: "Schenectady" }
-      ],
       countries: [
         { value: null, text: "Please select country", disabled: true },
         { value: "Rwanda", text: "Rwanda" },
@@ -250,3 +220,20 @@ export default {
   },
 };
 </script>
+<style scoped lang="scss">
+@media screen and (max-width: 768px) {
+  .address-book-list {
+    .create-address-form {
+      width: 55% !important;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .address-book-list {
+  }
+}
+@media screen and( max-width: 320px) {
+  .address-book-list {
+  }
+}
+</style>
