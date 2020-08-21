@@ -1,5 +1,5 @@
 <template>
-  <div class="wedding-flowers w-100 position-relative pt-2 pl-5 pr-5">
+  <div class="retirement-flowers w-100 position-relative pt-2 pl-5 pr-5">
     <div class="header-content">
       <p class="h3">Retirement Gifts</p>
       <p class="text-justify fa-14">

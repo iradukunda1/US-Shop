@@ -9,7 +9,9 @@
         </p>
         <i class="fa fa-angle-double-right mt-3 pt-4 mx-2 fa-15"></i>
         <div class="delivery-zip">
-          <label for="delivery-address" class="font-italic">Delivery-Address</label>
+          <label for="delivery-address" class="font-italic"
+            >Delivery-Address</label
+          >
           <input
             type="text"
             id="delivery-address"
@@ -45,7 +47,7 @@ export default {
     shopNow() {
       if (this.$route.name !== "Shop the SU-Flower") {
         this.$router.push({
-          name: 'Shop the SU-Flower',
+          name: "Shop the SU-Flower",
           params: { params: "all-flowers" }
         });
       } else {
@@ -53,8 +55,6 @@ export default {
       }
     }
   },
-  mounted() {
-  }
 };
 </script>
 

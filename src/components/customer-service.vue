@@ -318,7 +318,7 @@
             <p>
               <i class="fas fa-calculator pr-2"></i>
               <span class="cursor-pointer font-weight-bold text-black-50"
-                >(+250)-78063334098</span
+                >(+250)-788514704</span
               >
             </p>
           </div>

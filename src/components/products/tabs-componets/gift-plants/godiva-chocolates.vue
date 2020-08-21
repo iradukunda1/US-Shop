@@ -1,5 +1,5 @@
 <template>
-  <div class="g w-100 position-relative pt-2 pl-5 pr-5">
+  <div class="godiva-chocolates w-100 position-relative pt-2 pl-5 pr-5">
     <div class="header-content">
       <p class="pb-2 h2">Godiva Chocolates & Gift Baskets</p>
     </div>

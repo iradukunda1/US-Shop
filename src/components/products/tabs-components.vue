@@ -927,6 +927,222 @@ export default {
     .sympathy-plants {
       padding: 1rem !important;
     }
+    .birthday-for-mom {
+      padding: 1rem !important;
+    }
+    .birthday-for-friend {
+      padding: 1rem !important;
+    }
+    .birthday-for-wife {
+      padding: 1rem !important;
+    }
+    .birthday-for-daughter {
+      padding: 1rem !important;
+    }
+    .birthday-for-him {
+      padding: 1rem !important;
+    }
+    .funeral-sprays {
+      padding: 1rem !important;
+    }
+    .funeral-flowers {
+      padding: 1rem !important;
+    }
+    .thinking-of-you-flowers {
+      padding: 1rem !important;
+    }
+    .congratulation-flowers {
+      padding: 1rem !important;
+    }
+    .thank-you-flowers {
+      padding: 1rem !important;
+    }
+    .engagement-flowers {
+      padding: 1rem !important;
+    }
+    .sorry-flowers {
+      padding: 1rem !important;
+    }
+    .wedding-flowers {
+      padding: 1rem !important;
+    }
+    .retirement-flowers {
+      padding: 1rem !important;
+    }
+    .housewarning-flowers {
+      padding: 1rem !important;
+    }
+    .corporate-gift-flowers {
+      padding: 1rem !important;
+    }
+    .gift-for-parent {
+      padding: 1rem !important;
+    }
+    .friend-gift-flower {
+      padding: 1rem !important;
+    }
+    .same-day-flowers-gifts-delivery {
+      padding: 1rem !important;
+    }
+    .flowers-by-mail {
+      padding: 1rem !important;
+    }
+    .all-flowers {
+      padding: 1rem !important;
+    }
+    .alstroemerias {
+      padding: 1rem !important;
+    }
+    .carnations {
+      padding: 1rem !important;
+    }
+    .daisies {
+      padding: 1rem !important;
+    }
+    .gerbera-daisies {
+      padding: 1rem !important;
+    }
+    .hydrangeas {
+      padding: 1rem !important;
+    }
+    .irises {
+      padding: 1rem !important;
+    }
+    .lilies {
+      padding: 1rem !important;
+    }
+    .mixed-flower-bouquets {
+      padding: 1rem !important;
+    }
+    .roses {
+      padding: 1rem !important;
+    }
+    .snapdragons {
+      padding: 1rem !important;
+    }
+    .blue-bouquets {
+      padding: 1rem !important;
+    }
+    .green-flowers {
+      padding: 1rem !important;
+    }
+    .lavender-flowers {
+      padding: 1rem !important;
+    }
+    .multi-color-flowers {
+      padding: 1rem !important;
+    }
+    .orange-flowers {
+      padding: 1rem !important;
+    }
+    .pink-flowers {
+      padding: 1rem !important;
+    }
+    .purple-flowers {
+      padding: 1rem !important;
+    }
+    .red-flowers {
+      padding: 1rem !important;
+    }
+    .white-flowers {
+      padding: 1rem !important;
+    }
+    .roses {
+      padding: 1rem !important;
+    }
+    .blue-roses {
+      padding: 1rem !important;
+    }
+    .multi-color-roses {
+      padding: 1rem !important;
+    }
+    .orange-roses {
+      padding: 1rem !important;
+    }
+    .pink-roses {
+      padding: 1rem !important;
+    }
+    .rainbow-roses {
+      padding: 1rem !important;
+    }
+    .all-plants {
+      padding: 1rem !important;
+    }
+    .bonsai-and-bamboo {
+      padding: 1rem !important;
+    }
+    .green-plants {
+      padding: 1rem !important;
+    }
+    .office-plants {
+      padding: 1rem !important;
+    }
+    .succulents-suc {
+      padding: 1rem !important;
+    }
+    .all-flowering-plants {
+      padding: 1rem !important;
+    }
+    .azalea-plants {
+      padding: 1rem !important;
+    }
+    .bulbs-indoor-gardens {
+      padding: 1rem !important;
+    }
+    .calla-lilies {
+      padding: 1rem !important;
+    }
+    .orchids {
+      padding: 1rem !important;
+    }
+    .peace-lily-plants {
+      padding: 1rem !important;
+    }
+    .potted-rose-plants {
+      padding: 1rem !important;
+    }
+    .best-shop-sellers {
+      padding: 1rem !important;
+    }
+    .flowers-gifts-bundles {
+      padding: 1rem !important;
+    }
+    .all-gift-baskets {
+      padding: 1rem !important;
+    }
+    .fruit-gift-baskets {
+      padding: 1rem !important;
+    }
+    .meat-cheese-baskets {
+      padding: 1rem !important;
+    }
+    .span-gift-baskets {
+      padding: 1rem !important;
+    }
+    .starbucks-gift-baskets {
+      padding: 1rem !important;
+    }
+    .all-gourmet-food-gifts {
+      padding: 1rem !important;
+    }
+    .candy-gifts {
+      padding: 1rem !important;
+    }
+    .chocolate-covered-strawberry {
+      padding: 1rem !important;
+    }
+    .chocolate-gifts {
+      padding: 1rem !important;
+    }
+    .desserts-baked-goods {
+      padding: 1rem !important;
+    }
+    .godiva-chocolates {
+      padding: 1rem !important;
+    }
+    .mrs-fields-cookies {
+      padding: 1rem !important;
+    }
   }
 }
 @media screen and( max-width: 425px) {
@@ -995,6 +1211,222 @@ export default {
       padding: 1rem !important;
     }
     .sympathy-plants {
+      padding: 1rem !important;
+    }
+    .birthday-for-mom {
+      padding: 1rem !important;
+    }
+    .birthday-for-friend {
+      padding: 1rem !important;
+    }
+    .birthday-for-wife {
+      padding: 1rem !important;
+    }
+    .birthday-for-daughter {
+      padding: 1rem !important;
+    }
+    .birthday-for-him {
+      padding: 1rem !important;
+    }
+    .funeral-sprays {
+      padding: 1rem !important;
+    }
+    .funeral-flowers {
+      padding: 1rem !important;
+    }
+    .thinking-of-you-flowers {
+      padding: 1rem !important;
+    }
+    .congratulation-flowers {
+      padding: 1rem !important;
+    }
+    .thank-you-flowers {
+      padding: 1rem !important;
+    }
+    .engagement-flowers {
+      padding: 1rem !important;
+    }
+    .sorry-flowers {
+      padding: 1rem !important;
+    }
+    .wedding-flowers {
+      padding: 1rem !important;
+    }
+    .retirement-flowers {
+      padding: 1rem !important;
+    }
+    .housewarning-flowers {
+      padding: 1rem !important;
+    }
+    .corporate-gift-flowers {
+      padding: 1rem !important;
+    }
+    .gift-for-parent {
+      padding: 1rem !important;
+    }
+    .friend-gift-flower {
+      padding: 1rem !important;
+    }
+    .same-day-flowers-gifts-delivery {
+      padding: 1rem !important;
+    }
+    .flowers-by-mail {
+      padding: 1rem !important;
+    }
+    .all-flowers {
+      padding: 1rem !important;
+    }
+    .alstroemerias {
+      padding: 1rem !important;
+    }
+    .carnations {
+      padding: 1rem !important;
+    }
+    .daisies {
+      padding: 1rem !important;
+    }
+    .gerbera-daisies {
+      padding: 1rem !important;
+    }
+    .hydrangeas {
+      padding: 1rem !important;
+    }
+    .irises {
+      padding: 1rem !important;
+    }
+    .lilies {
+      padding: 1rem !important;
+    }
+    .mixed-flower-bouquets {
+      padding: 1rem !important;
+    }
+    .roses {
+      padding: 1rem !important;
+    }
+    .snapdragons {
+      padding: 1rem !important;
+    }
+    .blue-bouquets {
+      padding: 1rem !important;
+    }
+    .green-flowers {
+      padding: 1rem !important;
+    }
+    .lavender-flowers {
+      padding: 1rem !important;
+    }
+    .multi-color-flowers {
+      padding: 1rem !important;
+    }
+    .orange-flowers {
+      padding: 1rem !important;
+    }
+    .pink-flowers {
+      padding: 1rem !important;
+    }
+    .purple-flowers {
+      padding: 1rem !important;
+    }
+    .red-flowers {
+      padding: 1rem !important;
+    }
+    .white-flowers {
+      padding: 1rem !important;
+    }
+    .roses {
+      padding: 1rem !important;
+    }
+    .blue-roses {
+      padding: 1rem !important;
+    }
+    .multi-color-roses {
+      padding: 1rem !important;
+    }
+    .orange-roses {
+      padding: 1rem !important;
+    }
+    .pink-roses {
+      padding: 1rem !important;
+    }
+    .rainbow-roses {
+      padding: 1rem !important;
+    }
+    .all-plants {
+      padding: 1rem !important;
+    }
+    .bonsai-and-bamboo {
+      padding: 1rem !important;
+    }
+    .green-plants {
+      padding: 1rem !important;
+    }
+    .office-plants {
+      padding: 1rem !important;
+    }
+    .succulents-suc {
+      padding: 1rem !important;
+    }
+    .all-flowering-plants {
+      padding: 1rem !important;
+    }
+    .azalea-plants {
+      padding: 1rem !important;
+    }
+    .bulbs-indoor-gardens {
+      padding: 1rem !important;
+    }
+    .calla-lilies {
+      padding: 1rem !important;
+    }
+    .orchids {
+      padding: 1rem !important;
+    }
+    .peace-lily-plants {
+      padding: 1rem !important;
+    }
+    .potted-rose-plants {
+      padding: 1rem !important;
+    }
+    .best-shop-sellers {
+      padding: 1rem !important;
+    }
+    .flowers-gifts-bundles {
+      padding: 1rem !important;
+    }
+    .all-gift-baskets {
+      padding: 1rem !important;
+    }
+    .fruit-gift-baskets {
+      padding: 1rem !important;
+    }
+    .meat-cheese-baskets {
+      padding: 1rem !important;
+    }
+    .span-gift-baskets {
+      padding: 1rem !important;
+    }
+    .starbucks-gift-baskets {
+      padding: 1rem !important;
+    }
+    .all-gourmet-food-gifts {
+      padding: 1rem !important;
+    }
+    .candy-gifts {
+      padding: 1rem !important;
+    }
+    .chocolate-covered-strawberry {
+      padding: 1rem !important;
+    }
+    .chocolate-gifts {
+      padding: 1rem !important;
+    }
+    .desserts-baked-goods {
+      padding: 1rem !important;
+    }
+    .godiva-chocolates {
+      padding: 1rem !important;
+    }
+    .mrs-fields-cookies {
       padding: 1rem !important;
     }
   }
@@ -1067,6 +1499,138 @@ export default {
     .sympathy-plants {
       padding: 1rem !important;
     }
+    .birthday-for-mom {
+      padding: 1rem !important;
+    }
+    .birthday-for-friend {
+      padding: 1rem !important;
+    }
+    .birthday-for-wife {
+      padding: 1rem !important;
+    }
+    .birthday-for-daughter {
+      padding: 1rem !important;
+    }
+    .birthday-for-him {
+      padding: 1rem !important;
+    }
+    .funeral-sprays {
+      padding: 1rem !important;
+    }
+    .funeral-flowers {
+      padding: 1rem !important;
+    }
+    .thinking-of-you-flowers {
+      padding: 1rem !important;
+    }
+    .congratulation-flowers {
+      padding: 1rem !important;
+    }
+    .thank-you-flowers {
+      padding: 1rem !important;
+    }
+    .engagement-flowers {
+      padding: 1rem !important;
+    }
+    .sorry-flowers {
+      padding: 1rem !important;
+    }
+    .wedding-flowers {
+      padding: 1rem !important;
+    }
+    .retirement-flowers {
+      padding: 1rem !important;
+    }
+    .housewarning-flowers {
+      padding: 1rem !important;
+    }
+    .corporate-gift-flowers {
+      padding: 1rem !important;
+    }
+    .gift-for-parent {
+      padding: 1rem !important;
+    }
+    .friend-gift-flower {
+      padding: 1rem !important;
+    }
+    .all-plants {
+      padding: 1rem !important;
+    }
+    .bonsai-and-bamboo {
+      padding: 1rem !important;
+    }
+    .green-plants {
+      padding: 1rem !important;
+    }
+    .office-plants {
+      padding: 1rem !important;
+    }
+    .succulents-suc {
+      padding: 1rem !important;
+    }
+    .all-flowering-plants {
+      padding: 1rem !important;
+    }
+    .azalea-plants {
+      padding: 1rem !important;
+    }
+    .bulbs-indoor-gardens {
+      padding: 1rem !important;
+    }
+    .calla-lilies {
+      padding: 1rem !important;
+    }
+    .orchids {
+      padding: 1rem !important;
+    }
+    .peace-lily-plants {
+      padding: 1rem !important;
+    }
+    .potted-rose-plants {
+      padding: 1rem !important;
+    }
+    .best-shop-sellers {
+      padding: 1rem !important;
+    }
+    .flowers-gifts-bundles {
+      padding: 1rem !important;
+    }
+    .all-gift-baskets {
+      padding: 1rem !important;
+    }
+    .fruit-gift-baskets {
+      padding: 1rem !important;
+    }
+    .meat-cheese-baskets {
+      padding: 1rem !important;
+    }
+    .span-gift-baskets {
+      padding: 1rem !important;
+    }
+    .starbucks-gift-baskets {
+      padding: 1rem !important;
+    }
+    .all-gourmet-food-gifts {
+      padding: 1rem !important;
+    }
+    .candy-gifts {
+      padding: 1rem !important;
+    }
+    .chocolate-covered-strawberry {
+      padding: 1rem !important;
+    }
+    .chocolate-gifts {
+      padding: 1rem !important;
+    }
+    .desserts-baked-goods {
+      padding: 1rem !important;
+    }
+    .godiva-chocolates {
+      padding: 1rem !important;
+    }
+    .mrs-fields-cookies {
+      padding: 1rem !important;
+    }
   }
 }
 @media screen and( max-width: 320px) {
@@ -1135,6 +1699,222 @@ export default {
       padding: 1rem !important;
     }
     .sympathy-plants {
+      padding: 1rem !important;
+    }
+    .birthday-for-mom {
+      padding: 1rem !important;
+    }
+    .birthday-for-friend {
+      padding: 1rem !important;
+    }
+    .birthday-for-wife {
+      padding: 1rem !important;
+    }
+    .birthday-for-daughter {
+      padding: 1rem !important;
+    }
+    .birthday-for-him {
+      padding: 1rem !important;
+    }
+    .funeral-sprays {
+      padding: 1rem !important;
+    }
+    .funeral-flowers {
+      padding: 1rem !important;
+    }
+    .thinking-of-you-flowers {
+      padding: 1rem !important;
+    }
+    .congratulation-flowers {
+      padding: 1rem !important;
+    }
+    .thank-you-flowers {
+      padding: 1rem !important;
+    }
+    .engagement-flowers {
+      padding: 1rem !important;
+    }
+    .sorry-flowers {
+      padding: 1rem !important;
+    }
+    .wedding-flowers {
+      padding: 1rem !important;
+    }
+    .retirement-flowers {
+      padding: 1rem !important;
+    }
+    .housewarning-flowers {
+      padding: 1rem !important;
+    }
+    .corporate-gift-flowers {
+      padding: 1rem !important;
+    }
+    .gift-for-parent {
+      padding: 1rem !important;
+    }
+    .friend-gift-flower {
+      padding: 1rem !important;
+    }
+    .same-day-flowers-gifts-delivery {
+      padding: 1rem !important;
+    }
+    .flowers-by-mail {
+      padding: 1rem !important;
+    }
+    .all-flowers {
+      padding: 1rem !important;
+    }
+    .alstroemerias {
+      padding: 1rem !important;
+    }
+    .carnations {
+      padding: 1rem !important;
+    }
+    .daisies {
+      padding: 1rem !important;
+    }
+    .gerbera-daisies {
+      padding: 1rem !important;
+    }
+    .hydrangeas {
+      padding: 1rem !important;
+    }
+    .irises {
+      padding: 1rem !important;
+    }
+    .lilies {
+      padding: 1rem !important;
+    }
+    .mixed-flower-bouquets {
+      padding: 1rem !important;
+    }
+    .roses {
+      padding: 1rem !important;
+    }
+    .snapdragons {
+      padding: 1rem !important;
+    }
+    .blue-bouquets {
+      padding: 1rem !important;
+    }
+    .green-flowers {
+      padding: 1rem !important;
+    }
+    .lavender-flowers {
+      padding: 1rem !important;
+    }
+    .multi-color-flowers {
+      padding: 1rem !important;
+    }
+    .orange-flowers {
+      padding: 1rem !important;
+    }
+    .pink-flowers {
+      padding: 1rem !important;
+    }
+    .purple-flowers {
+      padding: 1rem !important;
+    }
+    .red-flowers {
+      padding: 1rem !important;
+    }
+    .white-flowers {
+      padding: 1rem !important;
+    }
+    .roses {
+      padding: 1rem !important;
+    }
+    .blue-roses {
+      padding: 1rem !important;
+    }
+    .multi-color-roses {
+      padding: 1rem !important;
+    }
+    .orange-roses {
+      padding: 1rem !important;
+    }
+    .pink-roses {
+      padding: 1rem !important;
+    }
+    .rainbow-roses {
+      padding: 1rem !important;
+    }
+    .all-plants {
+      padding: 1rem !important;
+    }
+    .bonsai-and-bamboo {
+      padding: 1rem !important;
+    }
+    .green-plants {
+      padding: 1rem !important;
+    }
+    .office-plants {
+      padding: 1rem !important;
+    }
+    .succulents-suc {
+      padding: 1rem !important;
+    }
+    .all-flowering-plants {
+      padding: 1rem !important;
+    }
+    .azalea-plants {
+      padding: 1rem !important;
+    }
+    .bulbs-indoor-gardens {
+      padding: 1rem !important;
+    }
+    .calla-lilies {
+      padding: 1rem !important;
+    }
+    .orchids {
+      padding: 1rem !important;
+    }
+    .peace-lily-plants {
+      padding: 1rem !important;
+    }
+    .potted-rose-plants {
+      padding: 1rem !important;
+    }
+    .best-shop-sellers {
+      padding: 1rem !important;
+    }
+    .flowers-gifts-bundles {
+      padding: 1rem !important;
+    }
+    .all-gift-baskets {
+      padding: 1rem !important;
+    }
+    .fruit-gift-baskets {
+      padding: 1rem !important;
+    }
+    .meat-cheese-baskets {
+      padding: 1rem !important;
+    }
+    .span-gift-baskets {
+      padding: 1rem !important;
+    }
+    .starbucks-gift-baskets {
+      padding: 1rem !important;
+    }
+    .all-gourmet-food-gifts {
+      padding: 1rem !important;
+    }
+    .candy-gifts {
+      padding: 1rem !important;
+    }
+    .chocolate-covered-strawberry {
+      padding: 1rem !important;
+    }
+    .chocolate-gifts {
+      padding: 1rem !important;
+    }
+    .desserts-baked-goods {
+      padding: 1rem !important;
+    }
+    .godiva-chocolates {
+      padding: 1rem !important;
+    }
+    .mrs-fields-cookies {
       padding: 1rem !important;
     }
   }

@@ -916,7 +916,7 @@
             </li>
             <li>
               <i class="fas fa-phone"></i>
-              <a href="javascript:;;" class="font-weight-bold">0789334672321</a>
+              <a href="javascript:;;" class="font-weight-bold">+250788514704</a>
             </li>
             <li>
               <i class="fas fa-envelope"></i>
@@ -1202,6 +1202,7 @@ export default {
         padding: 0 1.5rem 0 0 !important;
         &:nth-child(3) {
           padding-right: 0 !important;
+          margin-right: 2rem !important;
         }
         &:nth-child(4) {
           padding-left: 1.5rem !important;

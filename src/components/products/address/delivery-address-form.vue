@@ -152,7 +152,7 @@
             v-if="this.$route.params.params === 'payment'"
           >
             Yes! I'm interested in receiving exclusive email offers and
-            promotions from ProFlowers
+            promotions from S.U-Flowers
           </p>
         </div>
       </div>
