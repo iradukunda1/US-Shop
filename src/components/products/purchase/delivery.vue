@@ -1,13 +1,21 @@
 <template>
   <div class="delivery-component w-100 h-auto position-relative">
-    <p class="help row mx-0  w-100 justify-content-end pr-4 pt-3">
-      <span class="chat-link-container"
-        ><i class="fas fa-comment-dots pr-3"></i>
-        <a href="javascript:;;" class="fa-12">Click to Chat</a></span
-      ><span class="fa-12 pl-3 pt-1 contact-link-container"
-        ><a href="javascript:;;">Need Help? +250788514704</a>
-      </span>
-    </p>
+    <div class="d-flex pt-3">
+      <p
+        class="back-to-cart-btn d-none cursor-pointer px-2 py-1  fa-12 border"
+        @click="$router.push({ name: 'Cart' })"
+      >
+        CART
+      </p>
+      <p class="help row mx-0  w-100 justify-content-end pr-4">
+        <span class="chat-link-container"
+          ><i class="fas fa-comment-dots pr-3"></i>
+          <a href="javascript:;;" class="fa-12">Click to Chat</a></span
+        ><span class="fa-12 pl-3 pt-1 contact-link-container"
+          ><a href="javascript:;;">Need Help? +250788514704</a>
+        </span>
+      </p>
+    </div>
     <div
       class="row justify-content-center mx-0 w-100 my-4 pb-5 delivery-content-container"
     >
@@ -77,30 +85,49 @@ export default {
     }
   }
 }
-@media (min-width: 375px) and (max-width: 425px) {
+@media screen and (max-width: 740px) {
+  .delivery-component {
+    .back-to-cart-btn {
+      flex: 1;
+      margin-left: 2rem;
+      display: flex !important;
+    }
+  }
+}
+@media screen and (max-width: 705px) {
   .delivery-component {
     .delivery-content-container {
       .delivery-info-container {
-        width: 100% !important;
+        width: 85% !important;
         .header {
-          font-size: 1.6rem !important;
+          font-size: 1.5rem !important;
+        }
+      }
+      .delivery-items {
+        margin-top: 3rem !important;
+        width: 85% !important;
+      }
+    }
+  }
+}
+@media screen and(max-width: 425px) {
+  .delivery-component {
+    .delivery-content-container {
+      padding: 0 2rem !important;
+      .delivery-info-container {
+        width: 95% !important;
+        .header {
+          font-size: 1.2rem !important;
         }
       }
       .delivery-items {
         width: 95% !important;
       }
     }
-  }
-}
-@media screen and(max-width: 375px) {
-  .delivery-component {
-    .delivery-content-container .delivery-info-container .header {
-      font-size: 1.3rem !important;
-    }
     .chat-link-container {
       font-size: 70%;
       padding-top: 0.25rem;
-      i{
+      i {
         padding-right: 0.25rem !important;
       }
       a {
@@ -111,21 +138,6 @@ export default {
       padding-left: 0.5rem !important;
       a {
         font-size: 84% !important;
-      }
-    }
-  }
-}
-@media screen and( max-width: 320px) {
-  .delivery-component {
-    .delivery-content-container {
-      .delivery-info-container {
-        width: 100% !important;
-        .header {
-          font-size: 0.9rem !important;
-        }
-      }
-      .delivery-items {
-        width: 95% !important;
       }
     }
   }

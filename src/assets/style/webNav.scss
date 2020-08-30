@@ -1,6 +1,19 @@
 .web-nav-layout {
+  .navbar-header{
+    align-items: center;
+  }
   .header-log {
     width: 20%;
+  }
+  .burger {
+    display: none;
+    p{
+      width: 25px;
+      height: 3px;
+      background-color: rgb(33 ,37 ,41);
+      margin: 0.2rem;
+      transition: all 0.3s ease;
+    }
   }
   .su-header-logo {
     font-size: 1.7rem;

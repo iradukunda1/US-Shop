@@ -243,42 +243,7 @@ export default {
     }
   }
 }
-@media (min-width: 375px) and (max-width: 425px) {
-  .home-component {
-    .images {
-      height: 15rem !important;
-    }
-    .image-discount-desc {
-      .discount-container {
-        padding-top: 0 !important;
-      }
-    }
-    .shop-details {
-      font-size: 76%;
-      line-height: 1.5rem;
-      .shop-details-header {
-        font-size: 1.55rem;
-        margin-bottom: 0.5rem;
-        font-weight: 500;
-        line-height: 1.2;
-      }
-    }
-    .separation-image {
-      height: 12rem !important;
-    }
-    .show-birthday-container {
-      height: 12rem !important;
-      font-size: 66% !important;
-      p:nth-child(1) {
-        font-size: 1.75rem !important;
-      }
-      button {
-        font-size: 100% !important;
-      }
-    }
-  }
-}
-@media screen and( max-width: 320px) {
+@media screen and (max-width: 570px) {
   .home-component {
     .images {
       height: 15rem !important;
@@ -287,7 +252,7 @@ export default {
       .discount-container {
         padding-top: 0 !important;
         p:nth-child(1) {
-          font-size: 1.75rem !important;
+          font-size: 1.5rem !important;
           margin-bottom: 0.5rem !important;
           font-weight: 500 !important;
           line-height: 1.2 !important;
@@ -307,13 +272,13 @@ export default {
       height: 10rem !important;
       .show-birthday-container-text {
         p:nth-child(1) {
-          font-size: 1.75rem !important;
+          font-size: 1.5rem !important;
           margin-bottom: 0.5rem !important;
           font-weight: 500 !important;
           line-height: 1.2 !important;
         }
         p:nth-child(2) {
-          font-size: 56% !important;
+          font-size: 60% !important;
         }
         button {
           font-size: 65% !important;
@@ -324,10 +289,10 @@ export default {
       width: 50% !important;
     }
     .shop-details {
-      font-size: 65% !important;
-      line-height: 1.3rem;
+      font-size: 75% !important;
+      line-height: 1.5rem;
       .shop-details-header {
-        font-size: 1.5rem !important;
+        font-size: 1.3rem !important;
         margin-bottom: 0.5rem !important;
         font-weight: 500;
         line-height: 1.2;

@@ -16,31 +16,27 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@media screen and (max-width: 1024px) {
+  .discount-ads {
+    div {
+      font-size: 85%;
+      line-height: 1.5rem;
+    }
+  }
+}
 @media screen and (max-width: 768px) {
   .discount-ads {
     div {
-      font-size: 70%;
+      font-size: 68%;
+      line-height: 1.2rem;
     }
   }
 }
-@media (min-width: 375px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .discount-ads {
     div {
-      font-size: 55%;
-    }
-  }
-}
-@media screen and(max-width: 375px) {
-  .discount-ads {
-    div {
-      font-size: 55%;
-    }
-  }
-}
-@media screen and( max-width: 320px) {
-  .discount-ads {
-    div {
-      font-size: 45%;
+      font-size: 50%;
+      line-height: 1.2em;
     }
   }
 }

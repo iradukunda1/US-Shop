@@ -9,7 +9,7 @@
       </span>
     </p>
     <p
-      class="justify-content-end d-flex go-to-shop w-25"
+      class="justify-content-start d-flex go-to-shop pl-5 ml-5"
       @click="$router.push({ name: 'Home' })"
     >
       <i class="fas fa-angle-left pr-2"></i
@@ -107,55 +107,42 @@ export default {
     }
   }
 }
-@media (min-width: 375px) and (max-width: 425px) {
+@media screen and (max-width: 1024px) {
   .cart-products {
     .go-to-shop {
-      width: 40% !important;
+      margin-left: 0 !important;
+      padding: 0 !important;
+      padding-left: 1.5rem !important;
       a {
         font-size: 75% !important;
       }
     }
     .delivery-info-container {
-      width: 90% !important;
-      margin-left: 2rem !important;
+      width: 55% !important;
+      margin-left: 0rem !important;
     }
     .delivery-items {
       margin-top: 3rem !important;
-      width: 80% !important;
+      width: 40% !important;
     }
   }
 }
-@media ( min-width: 320px)  and (max-width: 375px) {
-  .cart-products {
-    .delivery-items {
-      width: 90% !important;
-    }
-    .go-to-shop {
-      width: 45% !important;
-      padding-left: 1rem;
-      margin-top: 2rem;
-      a {
-        font-size: 70% !important;
-      }
-    }
-  }
-}
-@media screen and( max-width: 320px) {
+@media screen and( max-width: 500px) {
   .cart-products {
     .chat-link-container {
-      font-size: 70%;
+      font-size: 75%;
       padding-top: 0.25rem;
-      i{
+      i {
         padding-right: 0.25rem !important;
       }
-     a {
+      a {
         font-size: 90% !important;
       }
     }
     .contact-link-container {
       padding-left: 0.5rem !important;
       a {
-        font-size: 84% !important;
+        font-size: 90% !important;
       }
     }
     .go-to-shop {
@@ -177,6 +164,8 @@ export default {
       }
     }
     .delivery-items {
+      margin-top: 3rem !important;
+      width: 75% !important;
       .sign-button {
         width: 25% !important;
         padding: 0.5rem 0 !important;

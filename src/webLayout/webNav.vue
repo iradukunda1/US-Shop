@@ -2,9 +2,13 @@
   <main
     class="main web-nav-layout position-relative border-bottom d-block h-100 w-100"
   >
-    <div class="navbar-header row mb-0 px-3 mx-0 w-100">
-      <div
-        class="header-log d-block mt-3 cursor-pointer"
+    <div class="navbar-header d-flex mb-0 px-3 mx-0 w-100">
+      <div class="burger cursor-pointer" :class="{'toggle':resources.trigger.triggerMobileSideBar}" @click="togglerSideBar()">
+        <p class="line1"></p>
+        <p class="line2"></p>
+        <p class="line3"></p>
+      </div>
+      <div class="header-log mt-3 cursor-pointer"
         @click="$router.push({ name: 'Home' })"
         @mouseover="
           (showHelp = false),
@@ -21,8 +25,7 @@
         </div>
         <p class="small text-center mb-0 ftd-company">an FTD company</p>
       </div>
-      <div
-        class="header-content row mx-0 mt-3 justify-content-around px-4"
+      <div class="header-content row mx-0 mt-3 justify-content-around px-4"
         v-if="$route.name !== 'Purchase'"
       >
         <div class="nav-item BIRTH-DAY">
@@ -106,8 +109,7 @@
           </p>
         </div>
       </div>
-      <div
-        class="purchase-navbar row mx-0 mt-4 pt-2 justify-content-between px-4"
+      <div class="purchase-navbar row mx-0 mt-4 pt-2 justify-content-between px-4"
         v-if="$route.name == 'Purchase'"
       >
         <div class="back-button-container fa-12 font-weight-bold">
@@ -164,8 +166,7 @@
           </p>
         </div>
       </div>
-      <div
-        class="header-options px-4 mt-3"
+      <div class="header-options px-4 mt-3"
         v-if="$route.name !== 'Purchase'"
         @mouseover="
           (showSympathy = false),
@@ -253,8 +254,7 @@
         </ul>
       </div>
     </div>
-    <div
-      class="tabs-component-container"
+    <div class="tabs-component-container"
       v-if="!resources.trigger.triggerSearchFormModal"
     >
       <div
@@ -1070,6 +1070,15 @@ export default {
     }
   },
   methods: {
+    togglerSideBar(){
+      // document.querySelector(".burger").classList.toggle('toggle')
+      this.$store.dispatch("setResources", [
+        "trigger",
+        {
+          triggerMobileSideBar: true
+        }
+      ]);
+    },
     view(data) {
       if (this.user.token) {
         this.$store.dispatch("setResources", ["user", this.user]);
@@ -1112,12 +1121,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "../assets/style/webNav";
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 1024px) {
   .web-nav-layout {
     .su-header-logo {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
-    .header-content .nav-item p {
+    .header-content .nav-item p{
       font-size: 60%;
     }
     .purchase-navbar {
@@ -1217,439 +1227,73 @@ export default {
     }
   }
 }
-@media (min-width: 375px) and (max-width: 425px) {
+@media screen and (max-width: 740px) {
   .web-nav-layout {
     .navbar-header {
-      padding: 0 5px !important;
+      align-items: center;
+      padding: 0 0.5rem !important;
+      height: 100%;
+      justify-content: space-around;
+    }
+    .burger {
+      display: block;
+    }
+    .toggle{
+      .line1{
+        transform: rotate(-45deg) translate(-5px, 4px);
+      }
+      .line2{
+        opacity: 0;
+      }
+      .line3{
+        transform: rotate(45deg) translate(-5px, -4px);
+      }
     }
     .header-log {
-      padding-top: 0.5rem !important;
-    }
-    .ftd-company {
-      font-size: 55% !important;
+      margin: 0 auto !important;
+      width: auto;
     }
     .su-header-logo {
-      font-size: 65%;
+      font-size: 1.3rem;
     }
     .header-content {
-      padding: 0 !important ;
-      .nav-item p {
-        font-size: 43% !important;
-      }
+     display: none !important;
     }
-    .purchase-navbar {
-      width: 76% !important;
-      padding: 1rem 0 0 0 !important;
-      .back-button-container {
-        font-size: 9px !important;
-        padding-top: 0.25rem !important;
-      }
-      .purchase-tab {
-        div:nth-child(2) {
-          margin: 0 !important;
-        }
-      }
-      .nav-item p {
-        font-size: 70% !important;
-        margin: 0 0.8rem 0 0 !important;
-      }
-      .secure-tab {
-        display: none !important;
-      }
+    .purchase-navbar{
+      display: none !important;
     }
     .header-options {
       padding: 0 !important;
-      ul {
-        margin-top: 0.5rem !important;
-        justify-content: center !important;
-      }
-      li {
-        font-size: 14px !important;
-        i {
-          font-size: 85% !important;
-        }
-        p {
-          display: none;
-        }
-      }
-    }
-    .birthday-tab {
-      div {
-        justify-content: space-around !important;
-        padding: 0 !important;
-      }
-      ul {
-        padding: 0 !important;
-        &:nth-child(4) {
-          border-left: 0 !important;
-          padding-left: 1.5rem !important;
-        }
-        p {
-          font-size: 55% !important;
-        }
-        li {
-          font-size: 50% !important;
-        }
-      }
-    }
-    .sympathy-tab {
-      div {
-        justify-content: space-around !important;
-        padding: 0 !important;
-      }
-      ul {
-        padding: 0 !important;
-        &:nth-child(2) {
-          margin: 0 1rem !important;
-        }
-        &:nth-child(3) {
-          padding-left: 0.5rem !important;
-        }
-        p {
-          font-size: 55% !important;
-        }
-        li {
-          font-size: 50% !important;
-        }
-      }
-    }
-    .occasion-tab {
-      div {
-        justify-content: space-around !important;
-        padding: 0 !important;
-      }
-      ul {
-        padding: 0 !important;
-        p {
-          font-size: 55% !important;
-        }
-        li {
-          font-size: 50% !important;
-        }
-      }
-    }
-    .flower-tab {
-      div {
-        justify-content: space-around !important;
-        padding: 0 !important;
-      }
-      ul {
-        padding: 0 0.1rem !important;
-        &:nth-child(4) {
-          border-left: 0 !important;
-          padding-left: 0 !important;
-        }
-        p {
-          font-size: 55% !important;
-        }
-        li {
-          font-size: 50% !important;
-        }
-      }
-    }
-    .plants-gifts-tab {
-      div {
-        justify-content: space-around !important;
-        padding: 0 !important;
-      }
-      ul {
-        padding: 0 0.5rem !important;
-        &:nth-child(3) {
-          margin: 0 !important;
-        }
-        &:nth-child(4) {
-          border-left: 0 !important;
-          padding-left: 0.5rem !important;
-        }
-        p {
-          font-size: 55% !important;
-        }
-        li {
-          font-size: 50% !important;
-        }
-      }
-    }
-    .help-tab {
-      div:nth-child(1) {
-        justify-content: space-around !important;
-        padding: 0 !important;
-      }
-      ul {
-        &:nth-child(1) {
-          p {
-            font-size: 70% !important;
-          }
-        }
-        padding: 0 !important;
-      }
-      .contact-container {
-        padding-left: 1.5rem !important;
-        p:nth-child(1) {
-          font-size: 85% !important;
-          margin-bottom: 0 !important;
-        }
-        p:nth-child(2) {
-          font-size: 60% !important;
-        }
-        li {
-          font-size: 65% !important;
-          padding-bottom: 1rem !important;
-          i {
-            padding-right: 0.5rem;
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and(max-width: 375px) {
-  .web-nav-layout {
-    .header-log {
-      width: 24% !important;
-    }
-    .header-content {
-      width: 63% !important;
-      padding: 0 !important ;
-      .nav-item p {
-        font-size: 42% !important;
-      }
-    }
-    .purchase-navbar {
-      .nav-item p {
-        margin: 0 0.5rem 0 0 !important;
-        i {
-          margin: 0 !important;
-        }
-      }
-    }
+      margin: 0 !important;
 
-    .header-options {
-      width: 12% !important;
-      li {
-        &:nth-child(2),
-        &:nth-child(4) {
+      ul {
+        justify-content: space-around !important;
+        .web-navbar-help {
           display: none !important;
         }
-        &:nth-child(1) {
+        .web-navbar-search{
+          margin-right: 0.2rem !important
+        }
+        .web-navbar-account {
+          display: none !important;
+        }
+
+        li {
+          font-size: 0.8rem !important;
+
           i {
-            padding: 0 !important;
-            margin-right: 0.25rem !important;
+            font-size: 1.2rem !important;
           }
-        }
-      }
-    }
-    .sympathy-tab {
-      div {
-        justify-content: space-around !important;
-        padding: 0 !important;
-        display: flex !important;
-        flex-wrap: nowrap;
-      }
-      ul {
-        padding: 0 !important;
-        &:nth-child(2) {
-          margin: 0 !important;
-        }
-        &:nth-child(3) {
-          padding-left: 0.5rem !important;
-        }
-        p {
-          font-size: 55% !important;
-        }
-        li {
-          font-size: 50% !important;
-        }
-      }
-    }
-  }
-}
-@media screen and( max-width: 320px) {
-  .web-nav-layout {
-    .navbar-header {
-      padding: 0 5px !important;
-    }
-    .header-log {
-      width: 24% !important;
-      padding-top: 0.5rem !important;
-    }
-    .ftd-company {
-      font-size: 55% !important;
-    }
-    .su-header-logo {
-      font-size: 65%;
-    }
-    .header-content {
-      width: 63% !important;
-      padding: 0 !important ;
-      .nav-item p {
-        font-size: 45% !important;
-      }
-    }
-    .purchase-navbar {
-      width: 76% !important;
-      padding: 1rem 0 0 0 !important;
-      .back-button-container {
-        font-size: 58% !important;
-        padding-top: 0.25rem !important;
-      }
-      .purchase-tab {
-        div:nth-child(2) {
-          margin: 0 !important;
-        }
-      }
-      .nav-item p {
-        font-size: 60% !important;
-        margin: 0 0.25rem 0 0 !important;
-        i {
-          margin: 0 !important;
-        }
-      }
-      .secure-tab {
-        display: none !important;
-      }
-    }
-    .header-options {
-      padding: 0 !important;
-      ul {
-        margin-top: 0.5rem !important;
-        justify-content: center !important;
-      }
-      li {
-        font-size: 14px !important;
-        i {
-          font-size: 85% !important;
-        }
-        p {
-          display: none;
-        }
-      }
-    }
-    .birthday-tab {
-      div {
-        justify-content: space-around !important;
-        padding: 0 !important;
-      }
-      ul {
-        padding: 0 !important;
-        &:nth-child(4) {
-          border-left: 0 !important;
-          padding-left: 1.5rem !important;
-        }
-        p {
-          font-size: 55% !important;
-        }
-        li {
-          font-size: 50% !important;
-        }
-      }
-    }
-    .sympathy-tab {
-      div {
-        justify-content: space-around !important;
-        padding: 0 !important;
-      }
-      ul {
-        padding: 0 !important;
-        &:nth-child(2) {
-          margin: 0 1rem !important;
-        }
-        &:nth-child(3) {
-          padding-left: 0.5rem !important;
-        }
-        p {
-          font-size: 55% !important;
-        }
-        li {
-          font-size: 50% !important;
-        }
-      }
-    }
-    .occasion-tab {
-      div {
-        justify-content: space-around !important;
-        padding: 0 !important;
-      }
-      ul {
-        padding: 0 !important;
-        p {
-          font-size: 55% !important;
-        }
-        li {
-          font-size: 50% !important;
-        }
-      }
-    }
-    .flower-tab {
-      div {
-        justify-content: space-around !important;
-        padding: 0 !important;
-      }
-      ul {
-        padding: 0 0.1rem !important;
-        &:nth-child(4) {
-          border-left: 0 !important;
-          padding-left: 0 !important;
-        }
-        p {
-          font-size: 55% !important;
-        }
-        li {
-          font-size: 50% !important;
-        }
-      }
-    }
-    .plants-gifts-tab {
-      div {
-        justify-content: space-around !important;
-        padding: 0 !important;
-      }
-      ul {
-        padding: 0 0.5rem !important;
-        &:nth-child(3) {
-          margin: 0 !important;
-        }
-        &:nth-child(4) {
-          border-left: 0 !important;
-          padding-left: 0.5rem !important;
-        }
-        p {
-          font-size: 55% !important;
-        }
-        li {
-          font-size: 50% !important;
-        }
-      }
-    }
-    .help-tab {
-      div:nth-child(1) {
-        justify-content: space-around !important;
-        padding: 0 !important;
-      }
-      ul {
-        &:nth-child(1) {
+
           p {
-            font-size: 70% !important;
+            font-size: 10px !important;
           }
         }
-        padding: 0 !important;
+
       }
-      .contact-container {
-        padding-left: 1.5rem !important;
-        p:nth-child(1) {
-          font-size: 85% !important;
-          margin-bottom: 0 !important;
-        }
-        p:nth-child(2) {
-          font-size: 60% !important;
-        }
-        li {
-          font-size: 65% !important;
-          padding-bottom: 1rem !important;
-          i {
-            padding-right: 0.5rem;
-          }
-        }
-      }
+    }
+    .tabs-component-container{
+      display: none !important;
     }
   }
 }

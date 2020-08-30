@@ -581,15 +581,18 @@ export default {
     }
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 660px) {
   .product-details {
     .images-container {
       width: 100% !important;
-      height: 30rem !important;
+      height: 25rem !important;
     }
     .image-discount-desc {
       .images-list-back-button {
         margin-left: 0.5rem !important;
+      }
+      .images-list-back-button {
+          margin-top: 0.5rem !important;
       }
       .back-button {
         font-size: 65% !important;
@@ -612,16 +615,6 @@ export default {
       width: 90% !important;
       padding: 0 !important;
       margin: 5rem auto !important;
-    }
-  }
-}
-@media screen and( max-width: 320px) {
-  .product-details {
-    .images-container {
-      height: 25rem !important;
-    }
-    .image-discount-desc .images-list-back-button {
-      margin-top: 0.5rem !important;
     }
   }
 }
