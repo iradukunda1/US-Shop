@@ -12,7 +12,7 @@
           <p class="mx-2 text-center text-white text-header mb-0">
             Customer Service
           </p>
-          <p class="text-center text-white py-2 font-weight-bold fa-16">
+          <p class="text-center text-priority text-white py-2 font-weight-bold fa-16">
             At S.U-Bouquets your satisfaction is our priority
           </p>
           <button
@@ -291,15 +291,15 @@
           <div class="other-help border-top py-3 border-bottom">
             <p
               class="row w-100 mx-0 justify-content-between cursor-pointer mb-0 pr-2"
-              @click="satitsty = !satitsty"
+              @click="satisfy = !satisfy"
             >
               <span class="font-weight-bold fa-16"
                 >WHAT IF I’M NOT SATISFIED WITH MY ORDER?</span
               >
-              <i class="fas fa-plus text-info fa-14" v-if="!satitsty"></i>
-              <i class="fas fa-minus text-info fa-14" v-if="satitsty"></i>
+              <i class="fas fa-plus text-info fa-14" v-if="!satisfy"></i>
+              <i class="fas fa-minus text-info fa-14" v-if="satisfy"></i>
             </p>
-            <div class="satitsty-content py-3 pr-4" v-if="satitsty">
+            <div class="satitsty-content py-3 pr-4" v-if="satisfy">
               <p class="text-justify mb-0 pb-1 fa-14">
                 We guarantee your satisfaction! Your flowers, plants or any
                 other preserved items are guaranteed to last at least seven days
@@ -352,7 +352,7 @@ export default {
       payment: false,
       policy: false,
       delivery: false,
-      satitsty: false,
+      satisfy: false,
     };
   },
 };
@@ -415,6 +415,120 @@ export default {
     .account-links-container {
       p:hover {
         color: blue !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 520px){
+  .customer-service {
+    .image-text-desc {
+      .text-container {
+        .text-header {
+          font-size: 2.5rem !important;
+        }
+        .text-priority{
+          font-size: 1rem !important;
+        }
+        .order-status-button {
+          font-size: 0.7rem !important;
+        }
+      }
+    }
+    .image-container{
+      height: 15rem !important;
+    }
+    .order-links-container{
+      div{
+        font-size: 1.2rem !important;
+      }
+      p{
+        font-size: 0.8rem !important;
+      }
+    }
+    .my-order-card {
+      .order-logo-container {
+        .logo-background {
+          width: 120px !important;
+          height: 120px !important;
+          i{
+            font-size: 3.5rem !important;
+          }
+        }
+      }
+    }
+    .account-links-container{
+      div{
+        font-size: 1.2rem !important;
+      }
+      p{
+        font-size: 0.8rem !important;
+      }
+    }
+    .my-account-card{
+      .account-logo-container {
+        .logo-background {
+          width: 120px !important;
+          height: 120px !important;
+          i{
+            font-size: 3.5rem !important;
+          }
+        }
+      }
+    }
+    .question-header{
+      p{
+        &:nth-child(1) {
+          font-size: 1.8rem !important;
+        }
+        &:nth-child(2){
+          font-size: 0.8rem !important;
+        }
+      }
+    }
+    .payment-option-help{
+      p{
+       span{
+         font-size: 0.8rem !important;
+       }
+        i{
+          font-size: 0.8rem !important;
+        }
+      }
+    }
+    .our-policy{
+      p{
+       span{
+         font-size: 0.8rem !important;
+       }
+        i{
+          font-size: 0.8rem !important;
+        }
+      }
+    }
+    .other-help{
+      p{
+       span{
+         font-size: 0.7rem !important;
+       }
+        i{
+          font-size: 0.8rem !important;
+        }
+      }
+    }
+    .contact-content{
+      p:nth-child(1){
+        font-size:1.6rem !important;
+      }
+    }
+    .warning-container{
+      p{
+        font-size: 20px  !important;
+      }
+      ul{
+        margin: 0 !important;
+        li{
+          font-size: 75% !important;
+        }
       }
     }
   }

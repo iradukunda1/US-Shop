@@ -339,7 +339,6 @@ export default {
       appearance: none;
     }
   }
-
   .search-button {
     position: absolute;
     top: 12px;
@@ -359,7 +358,6 @@ export default {
       opacity: 0.7;
     }
   }
-
   .different-content {
     overflow: hidden;
     transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -392,6 +390,51 @@ export default {
     display: block;
     width: 18px;
     height: 18px;
+  }
+}
+@media screen and (max-width: 740px) {
+  .global-search-modal {
+    .header-content-container {
+      .header {
+        .back-btn {
+          right: 10% !important;
+        }
+      }
+      .search-area {
+        width: 90% !important;
+      }
+    }
+    .search-form {
+      width: 90% !important;
+    }
+    .search-input{
+      left: 2% !important;
+      width: 90% !important;
+      font-size: 75% !important;
+    }
+    .search-button{
+      right: 3% !important;
+      font-size: 75% !important;
+    }
+    .different-content {
+      div{
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        justify-content: space-around !important;
+
+        ul {
+          padding: 0 1.5rem 2rem 1.5rem !important;
+
+          p {
+            font-size: 80% !important;
+          }
+
+          li {
+            font-size: 75% !important;
+          }
+        }
+      }
+    }
   }
 }
 </style>

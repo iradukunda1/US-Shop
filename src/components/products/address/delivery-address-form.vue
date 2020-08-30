@@ -261,12 +261,14 @@ export default {
 @media screen and (max-width: 425px) {
   .delivery-address-form {
     .continue-payment-button {
-      width: 80% !important;
+      width: 95% !important;
       margin: 2rem 0 !important;
+      font-size: 0.7rem !important;
     }
     .review-button {
-      width: 80% !important;
+      width: 95% !important;
       margin: 2rem 0 !important;
+      font-size: 0.7rem !important;
     }
   }
 }
@@ -307,10 +309,6 @@ export default {
     .subscription-area,
     .email-area {
       width: 100% !important;
-    }
-    .continue-payment-button {
-      width: 90% !important;
-      font-size: 70% !important;
     }
     .review-button {
       width: 90% !important;

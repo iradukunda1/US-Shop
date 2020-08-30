@@ -73,3 +73,13 @@ export default {
   components: { discountAds },
 };
 </script>
+<style scoped lang="scss">
+@media screen and (max-width: 450px){
+  .order-status{
+    .order-status-content{
+      margin: 0 2rem 2rem 2rem !important;
+      padding: 0 !important;
+    }
+  }
+}
+</style>

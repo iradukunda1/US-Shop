@@ -1,10 +1,20 @@
 <template>
   <div class="review-component w-100 h-auto position-relative">
-    <p class="help row mx-0 d-flex w-100 justify-content-end pr-4 pt-3">
+    <div class="d-flex pt-3">
+        <span
+            class="back-to-payment-btn d-none cursor-pointer pt-1"
+            @click="
+            $router.push({ name: 'Purchase', params: { params: 'payment' } })
+          "
+        >
+          <i class="fas fa-arrow-left"></i>
+        </span>
+    <p class="help row mx-0 d-flex w-100 justify-content-end pr-4">
       <span class="fa-12 pl-3 pt-1"
         ><a href="javascript:;;">Need Help? +250788514704</a>
       </span>
     </p>
+    </div>
     <div class="row review-content-container justify-content-center mx-0 w-100 my-4 pb-5">
       <div class="review-info-container w-50">
         <div class="w-75 cart-items pt-2">
@@ -20,6 +30,7 @@
         <div class="w-100">
           <div
             class="sign-button text-white btn rounded-0 mb-2 font-weight-bold bg-button w-100 fa-13 py-3 px-4"
+            @click="placeOrder()"
           >
             PLACE YOUR ORDER
           </div>
@@ -79,7 +90,12 @@
 import ListView from "@/components/products/carts/list-view";
 export default {
   name: "review",
-  components: { ListView }
+  components: { ListView },
+  methods:{
+    placeOrder(){
+      this.$router.push({name:'Home'})
+    }
+  }
 };
 </script>
 
@@ -107,12 +123,21 @@ export default {
     }
   }
 }
-@media (min-width: 375px) and (max-width: 425px) {
+@media screen and (max-width: 740px) {
+  .review-component {
+    .back-to-payment-btn{
+      flex: 1;
+      margin-left: 2rem;
+      display: flex !important;
+    }
+  }
+}
+@media screen and (max-width: 705px) {
   .review-component {
     .review-content-container {
       padding: 0 3rem 3rem 3rem !important;
       .review-info-container {
-        width: 100% !important;
+        width: 85% !important;
         .cart-items{
           width: 100% !important;
           .place-order-button{
@@ -121,7 +146,8 @@ export default {
         }
       }
       .review-items {
-        width: 95% !important;
+        width: 85% !important;
+        margin-top: 3rem !important;
         .sign-button{
           margin: 2rem 0 !important;
         }
@@ -129,10 +155,10 @@ export default {
     }
   }
 }
-@media screen and( max-width: 320px) {
+@media screen and( max-width: 425px) {
   .review-component {
     .review-content-container {
-      padding:0 2rem 3rem 1rem !important;
+      padding:0 2rem 3rem 2rem !important;
       .review-info-container {
         width: 100% !important;
         .cart-items{
@@ -145,7 +171,9 @@ export default {
       .review-items {
         width: 95% !important;
         .sign-button{
+          width: 95% !important;
           margin: 2rem 0 !important;
+          font-size: 0.7rem !important;
         }
       }
     }

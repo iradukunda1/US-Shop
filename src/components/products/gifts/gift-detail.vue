@@ -88,6 +88,7 @@ export default {
     height: 160px;
     background-color: #fcbebe;
     background-size: cover;
+    //filter: drop-shadow(0px 5px 3px black);
   }
 }
 </style>

@@ -1,13 +1,23 @@
 <template>
   <div class="payment w-100 h-auto position-relative">
-    <p class="help row mx-0 d-flex w-100 justify-content-end pr-4 pt-3">
-      <span class="chat-link-container"
-        ><i class="fas fa-comment-dots pr-3"></i>
-        <a href="javascript:;;" class="fa-12">Click to Chat</a></span
-      ><span class="fa-12 pl-3 pt-1 contact-link-container"
-        ><a href="javascript:;;">Need Help? +250788514704</a>
-      </span>
-    </p>
+    <div class="d-flex pt-3">
+        <span
+            class="back-to-delivery-btn d-none cursor-pointer pt-1"
+            @click="
+            $router.push({ name: 'Purchase', params: { params: 'delivery' } })
+          "
+        >
+          <i class="fas fa-arrow-left"></i>
+        </span>
+      <p class="help d-flex mx-0 d-flex w-100 justify-content-end pr-4">
+        <span class="chat-link-container"
+          ><i class="fas fa-comment-dots pr-3"></i>
+          <a href="javascript:;;" class="fa-12">Click to Chat</a></span
+        ><span class="fa-12 pl-3 pt-1 contact-link-container"
+          ><a href="javascript:;;">Need Help? +250788514704</a>
+        </span>
+      </p>
+    </div>
     <div
       class="row justify-content-center payment-content-container mx-0 w-100 my-4 pb-5"
     >
@@ -174,25 +184,44 @@ export default {
     }
   }
 }
-@media (min-width: 375px) and (max-width: 425px) {
+@media screen and (max-width: 740px) {
+  .payment {
+    .back-to-delivery-btn{
+      flex: 1;
+      margin-left: 2rem;
+      display: flex !important;
+    }
+  }
+}
+@media screen and (max-width: 705px) {
   .payment {
     .payment-content-container {
       .payment-info-container {
-        width: 100% !important;
+        width: 85% !important;
         .header {
-          font-size: 1.6rem !important;
+          font-size: 1.5rem !important;
+        }
+      }
+      .payment-items {
+        margin-top: 3rem !important;
+        width: 85% !important;
+      }
+    }
+  }
+}
+@media screen and(max-width: 425px) {
+  .payment {
+    .payment-content-container {
+      padding: 0 2rem !important;
+      .payment-info-container {
+        width: 95% !important;
+        .header {
+          font-size: 1.2rem !important;
         }
       }
       .payment-items {
         width: 95% !important;
       }
-    }
-  }
-}
-@media screen and(max-width: 375px) {
-  .payment {
-    .payment-content-container .payment-info-container .header {
-      font-size: 1.3rem !important;
     }
     .chat-link-container {
       font-size: 70%;
@@ -213,28 +242,6 @@ export default {
     .card-number,
     .card-info {
       width: 95% !important;
-    }
-  }
-}
-@media screen and( max-width: 320px) {
-  .payment {
-    .payment-content-container {
-      .payment-info-container {
-        width: 100% !important;
-        .header {
-          font-size: 0.9rem !important;
-        }
-        .sub-header {
-          margin-bottom: 0 !important;
-        }
-      }
-      .payment-items {
-        width: 95% !important;
-      }
-    }
-    .card-number,
-    .card-info {
-      width: 100% !important;
     }
   }
 }

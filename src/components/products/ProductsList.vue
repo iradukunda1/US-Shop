@@ -341,9 +341,9 @@ export default {
   }
   .show-hide-list {
     i {
-      transition: 300ms all;
+      transition: transform 300ms ease;
       &::before {
-        transform: rotate(360deg);
+        transform: rotate(270deg);
       }
 
       &::after {

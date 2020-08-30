@@ -13,17 +13,29 @@ export default {
 };
 </script>
 <style>
-.slide-enter-active {
+.slide-right-enter-active {
   transition: all 1s ease;
 }
-.slide-leave-active {
+.slide-right-leave-active {
   transition: all 1s ease;
 }
-.slide-enter {
+.slide-right-enter {
   transform: translateX(500px);
 }
-.slide-leave-to {
+.slide-right-leave-to {
   transform: translateX(500px);
+}
+.slide-left-enter-active {
+  transition: all 1s ease;
+}
+.slide-left-leave-active {
+  transition: all 1s ease;
+}
+.slide-left-enter {
+  transform: translateX(-500px);
+}
+.slide-left-leave-to {
+  transform: translateX(-500px);
 }
 .fade-enter-active,
 .fade-leave-active {

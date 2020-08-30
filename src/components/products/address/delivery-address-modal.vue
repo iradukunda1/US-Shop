@@ -144,11 +144,11 @@ export default {
     }
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 530px) {
   .delivery-address-modal {
     .delivery-address-modal-container {
       width: 85% !important;
-      height: 80% !important;
+      height: 72% !important;
       .delivery-address-header {
         .form-title {
           width: 90% !important;
@@ -168,11 +168,11 @@ export default {
     }
   }
 }
-@media screen and(max-width: 375px) {
+@media screen and(max-width: 425px) {
   .delivery-address-modal {
     .delivery-address-modal-container {
       width: 80% !important;
-      height: 70% !important;
+      height: 68% !important;
       .delivery-address-header {
         .form-title {
           width: 90% !important;
@@ -197,10 +197,16 @@ export default {
         font-size: 65% !important;
       }
     }
-  }
-}
-@media screen and( max-width: 320px) {
-  .delivery-address-modal {
+    .location-address{
+      p{
+        font-size: 0.7rem !important;
+      }
+    }
+    .delivery-address-lists{
+      p{
+        font-size: 13px !important;
+      }
+    }
   }
 }
 </style>

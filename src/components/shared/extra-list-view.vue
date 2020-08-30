@@ -32,7 +32,6 @@ export default {
       this.$store.dispatch("setView");
     }
   },
-  mounted() {}
 };
 </script>
 <style scoped lang="scss">
@@ -78,14 +77,14 @@ export default {
 .different-content::-webkit-scrollbar-track {
   background-color: transparent;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .extra-list-view {
     .header-content-container {
-      width: 50%;
+      width: 70%;
     }
   }
 }
-@media (min-width: 375px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .extra-list-view {
     .header-content-container {
       width: 80%;
@@ -93,13 +92,6 @@ export default {
   }
 }
 @media screen and(max-width: 375px) {
-  .extra-list-view {
-    .header-content-container {
-      width: 90%;
-    }
-  }
-}
-@media screen and( max-width: 320px) {
   .extra-list-view {
     .header-content-container {
       width: 100%;

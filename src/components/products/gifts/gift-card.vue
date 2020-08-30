@@ -136,4 +136,15 @@ export default {
     }
   }
 }
+@media screen and ( max-width: 627px) {
+  .gift-cards {
+    .gift-profile {
+      width: 45px !important;
+      height:45px !important;
+    }
+    p{
+      font-size:75% !important;
+    }
+  }
+}
 </style>
