@@ -255,8 +255,8 @@ export default {
   },
 
   mounted() {
-    this.getAllOrders();
-    console.log(this.allOrders);
+    // this.getAllOrders();
+    // console.log(this.allOrders);
   },
   computed: {
     

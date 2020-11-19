@@ -23,7 +23,11 @@
           <i class="fas fa-angle-left pr-2" v-if="title !== 'SHOP'"></i
           >{{ title.toUpperCase() }}
         </span>
-        <span class="fa fa-times back-btn" @click="close"></span>
+        <div class="toggle" :class="{'back-btn': !resources.trigger.triggerMobileSideBar}" @click="close">
+          <p class="line1"></p>
+          <p class="line2"></p>
+          <p class="line3"></p>
+        </div>
       </div>
       <div class="mobile-context w-100">
         <div
@@ -881,7 +885,8 @@
                     class="font-weight-bold"
                     @click="
                       $router.push({ name: 'Track-Order' }),
-                        (showHelp = !showHelp)
+                        (showHelp = !showHelp),
+                        close()
                     "
                     >Track Your Order</a
                   >
@@ -1065,9 +1070,40 @@ export default {
     .header {
       height: 10vh;
       .back-btn {
+        .line1 {
+          transform: rotate(180deg) translate(0px, 0px);;
+        }
+        .line2 {
+          opacity: 1;
+        }
+        .line3 {
+          transform: rotate(180deg) translate(0px, 0px);
+        }
         cursor: pointer;
         &:hover {
           opacity: 0.7;
+        }
+      }
+      .toggle{
+        cursor: pointer;
+        &:hover {
+          opacity: 0.7;
+        }
+        p {
+          width: 20px;
+          height: 3px;
+          background-color: rgb(33, 37, 41);
+          margin: 0.2rem;
+          transition: all 1s ease;
+        }
+        .line1 {
+          transform: rotate(-45deg) translate(-5px, 4px);
+        }
+        .line2 {
+          opacity: 0;
+        }
+        .line3 {
+          transform: rotate(45deg) translate(-5px, -4px);
         }
       }
     }

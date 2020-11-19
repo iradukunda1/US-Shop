@@ -37,11 +37,11 @@ export default {
       overflow: visible;
   }  
   .right-side-menu-sidebar{
-      background-color: white;
       grid-area: sidebar;
       width: 252px;
       height: auto;
       transition: all 1s !important;
+     background: linear-gradient(270deg, #dc35454f, transparent);
   }
   .content-page{
       grid-area: content;

@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import Vue from "vue";
-import vueRouter from "vue-router";
+import VueRouter from "vue-router";
 import store from "../store/index";
 import Home from "../views/Home.vue";
 import NProgress from "nprogress";
@@ -9,14 +9,14 @@ import "../../node_modules/nprogress/nprogress.css";
 import adminDashboard from "@/components/dashboardLayout/layout/Dashboard.vue";
 import webLayout from "../webLayout/webLayout";
 
-const routerPush = vueRouter.prototype.push;
-vueRouter.prototype.push = function push(location) {
+const routerPush = VueRouter.prototype.push;
+VueRouter.prototype.push = function push(location) {
   return routerPush.call(this, location).catch(error => error);
 };
 
-Vue.use(vueRouter);
+Vue.use(VueRouter);
 
-const router = new vueRouter({
+const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
@@ -159,21 +159,21 @@ const router = new vueRouter({
       ]
     },
     {
-      path: "/adminDFG",
+      path: "/admin",
       component: adminDashboard,
       name: "Admin",
-      meta: {
-        requiresAuth: true
-      },
-      beforeEnter: (_to, _from, next) => {
-        if (
-          store.getters.auth.user.roles &&
-          store.getters.auth.user.roles.includes("Admin")
-        ) {
-          return next();
-        }
-        return store.dispatch("logout");
-      },
+      // meta: {
+      //   requiresAuth: true
+      // },
+      // beforeEnter: (_to, _from, next) => {
+      //   if (
+      //     store.getters.auth.user.roles &&
+      //     store.getters.auth.user.roles.includes("Admin")
+      //   ) {
+      //     return next();
+      //   }
+      //   return store.dispatch("logout");
+      // },
       children: [
         {
           name: "Create product",
@@ -245,11 +245,11 @@ const router = new vueRouter({
           component: () =>
             import("../components/dashboardLayout/pages/product/product-list")
         },
-        // {
-        //   name: "admin profile",
-        //   path: "profile",
-        //   component: () => import("../components/dashboardLayout/pages/profile")
-        // },
+        {
+          name: "admin profile",
+          path: "profile",
+          component: () => import("../components/dashboardLayout/pages/profile")
+        },
         {
           name: "Create Category",
           path: "category",

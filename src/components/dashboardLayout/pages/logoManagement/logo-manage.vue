@@ -44,16 +44,16 @@
                         <a><img :src="logo.image" alt="logo" height="50"/></a>
                       </td>
                       <td>
-                        <span class="badge badge-info"
-                          ><img :src="logo.favicon" alt="favicon" height="50"
+                        <span class="badge"
+                          ><img :src="logo.favicon" alt="favicon" class="h-50px"
                         /></span>
                       </td>
                       <td>{{ logo.disabled }}</td>
                       <td>
-                        <span title="edit" class="pr-2"
+                        <span title="edit" class="pr-2 cursor-pointer"
                           ><i class="fa fa-edit"></i
                         ></span>
-                        <span style="cursor: pointer" title="delete">
+                        <span class="cursor-pointer" title="delete">
                           <i class="fa fa-trash-alt"></i
                         ></span>
                       </td>
@@ -76,16 +76,16 @@ export default {
     return {
       logos: [
         {
-          title: 'Tsapl',
-          image: '/assets/images/logo-light.png',
+          title: 'SU-Bouquet gold',
+          image: '/img/logos/2gold-logo.png',
           disabled: '1',
-          favicon: 'favicon.icon'
+          favicon: '/img/icons/tsapal.ico'
         },
         {
-          title: 'logo',
-          image: '/assets/images/logo.jpg',
+          title: 'US-Bouquet black',
+          image: '/img/logos/black-logo.png',
           disabled: '0',
-          favicon: 'favicon.icon'
+          favicon: '/img/icons/tsapal.ico'
         }
       ]
     }

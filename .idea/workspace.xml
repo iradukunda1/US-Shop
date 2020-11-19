@@ -26,30 +26,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2282b4ea-dcd3-41e6-9e55-05835be1a1bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/style/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webLayout/mobile-sidebar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/style/webNav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/webNav.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/customer-service.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/customer-service.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/ProductDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/ProductDetail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/ProductsList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/ProductsList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/address/delivery-address-form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/address/delivery-address-form.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/address/delivery-address-modal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/address/delivery-address-modal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/carts/cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/carts/cart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/gifts/gift-card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/gifts/gift-card.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/gifts/gift-detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/gifts/gift-detail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/orders/order-status.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/orders/order-status.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/purchase/delivery.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/purchase/delivery.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/purchase/payment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/purchase/payment.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/purchase/review.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/purchase/review.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/discount-ads.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/discount-ads.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/extra-list-view.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/extra-list-view.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/global-search.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/global-search.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webLayout/webContent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/webLayout/webContent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webLayout/webLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/webLayout/webLayout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webLayout/webNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/webLayout/webNav.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboardLayout/layout/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboardLayout/layout/Dashboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboardLayout/layout/navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboardLayout/layout/navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboardLayout/layout/sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboardLayout/layout/sidebar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboardLayout/pages/logoManagement/logo-manage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboardLayout/pages/logoManagement/logo-manage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboardLayout/pages/orderManagement/orders.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboardLayout/pages/orderManagement/orders.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboardLayout/pages/product/product-list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboardLayout/pages/product/product-list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webLayout/mobile-sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/webLayout/mobile-sidebar.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +113,8 @@
       <workItem from="1597607165426" duration="30032000" />
       <workItem from="1597782774416" duration="28708000" />
       <workItem from="1598241508270" duration="396000" />
-      <workItem from="1598548233363" duration="61340000" />
+      <workItem from="1598548233363" duration="61977000" />
+      <workItem from="1599221242579" duration="8785000" />
     </task>
     <servers />
   </component>
@@ -161,6 +149,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="309" y="47" key="#Inspections" timestamp="1599225271539">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="309" y="47" key="#Inspections/0.0.1366.738@0.0.1366.738" timestamp="1599225271539" />
     <state x="251" y="42" width="800" height="687" key="#Prettier" timestamp="1596387731037">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

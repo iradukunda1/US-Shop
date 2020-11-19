@@ -1,21 +1,16 @@
 <template>
   <div class="admin-navbar bg-dark d-block">
-    <div class="d-flex">
-      <div class="logo-box">
-        <div
-          @click="$router.push({ name: 'Home' })"
-          class="logo"
-          style="cursor:pointer"
+    <div class="d-flex admin-navbar-context">
+        <div class="logo-container cursor-pointer"
+          @click="$router.push({ name: 'Admin' })"
         >
-          <img
-            class="tsapal-logo border-dark cursor-pointer bg-light"
-            alt="Tsapal-Logo"
-            height="80"
-            width="252"
-            src="/img/logos/logo.jpg"
+          <span
+            class="su-bouquet-logo border-dark cursor-pointer bg-light d-block h-100 w-100"
+            :style="{
+            backgroundImage: 'url(' + '/img/logos/gold-logo.png' + ')'
+            }"
           />
         </div>
-      </div>
       <div class="d-flex ml-auto align-items-center my-3 pr-3">
         <div class="app-search d-sm-block">
           <div class="app-search-box">
@@ -131,6 +126,14 @@ export default {
 
 <style scoped lang="scss">
 .admin-navbar {
+  .logo-container{
+    width: 251px;
+    height: 80px;
+    .su-bouquet-logo{
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
   .notification-icon {
     background-image: url("/img/icons/notify.png");
     cursor: pointer;

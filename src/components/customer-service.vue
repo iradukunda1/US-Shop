@@ -424,7 +424,7 @@ export default {
     .image-text-desc {
       .text-container {
         .text-header {
-          font-size: 2.5rem !important;
+          font-size: 2.4rem !important;
         }
         .text-priority{
           font-size: 1rem !important;

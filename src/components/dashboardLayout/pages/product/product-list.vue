@@ -202,10 +202,9 @@ export default {
     },
   },
   mounted() {
-    setTimeout(()=>
-      this.fetchAllProducts()
-    ,1000)
-    ;
+    // setTimeout(()=>
+    //   this.fetchAllProducts()
+    // ,1000)
   },
 };
 </script>

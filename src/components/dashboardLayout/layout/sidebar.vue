@@ -1,7 +1,7 @@
 <template>
   <div class="right-side-menu-sidebar border-right">
     <div class="silkscreen-menu">
-      <div class="px-4 pt-3 pb-4 mx-5" @click="$router.push('/admin')">
+      <div class="px-4 pt-3 pb-4 mx-5 cursor-pointer" @click="$router.push('/admin')">
         <span class="small">HOME</span>
       </div>
       <div class="side-menu pl-2">
@@ -161,7 +161,7 @@ export default {
     };
   },
   mounted() {
-    this.fetchingAllData();
+    // this.fetchingAllData();
   },
   methods: {
     fetchingAllData() {
@@ -179,9 +179,6 @@ export default {
         .catch(() => {
           this.loader(false);
         });
-    },
-    productEdit() {
-      this.$store.dispatch("productManagement");
     }
   }
 };
